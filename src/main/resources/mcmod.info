@@ -1,0 +1,16 @@
+[
+{
+  "modid": "justenoughmagiculture",
+  "name": "Just Enough Magiculture",
+  "description": "Provides a large number of JEI and JER integrations.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Invadermonky"],
+  "credits": "Authors of this project",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

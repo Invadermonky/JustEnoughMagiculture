@@ -1,0 +1,51 @@
+{
+  "pools": [{
+      "name": "common",
+      "rolls": 1,
+      "entries": [{
+        "type": "loot_table",
+        "name": "charm:treasure/common"
+      }]
+    },
+    {
+      "name": "uncommon",
+      "rolls": 1,
+      "entries": [{
+        "type": "loot_table",
+        "name": "charm:treasure/uncommon"
+      }]
+    },
+    {
+      "name": "valuable",
+      "rolls": 1,
+      "entries": [{
+        "type": "loot_table",
+        "name": "charm:treasure/valuable"
+      }]
+    },
+    {
+      "name": "rare",
+      "rolls": 1,
+      "entries": [{
+        "type": "loot_table",
+        "name": "charm:treasure/rare"
+      }]
+    },
+    {
+      "name": "dangerous",
+      "rolls": 1,
+      "entries": [{
+        "type": "loot_table",
+        "name": "charm:treasure/dangerous"
+      }]
+    },
+    {
+      "name": "explosive",
+      "rolls": 1,
+      "entries": [{
+        "type": "loot_table",
+        "name": "charm:treasure/explosive"
+      }]
+    }
+  ]
+}
