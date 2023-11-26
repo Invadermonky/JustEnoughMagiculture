@@ -1,11 +1,14 @@
 package com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer;
 
+import com.google.common.collect.Lists;
+import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.init.InitIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.plant.CustomPlantWrapper;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.CustomVillagerWrapper;
 import com.invadermonky.justenoughmagiculture.registry.CustomPlantRegistry;
 import com.invadermonky.justenoughmagiculture.registry.CustomVillagerRegistry;
 import com.invadermonky.justenoughmagiculture.util.LogHelper;
+import com.invadermonky.justenoughmagiculture.util.ModIds;
 import jeresources.entry.PlantEntry;
 import jeresources.entry.VillagerEntry;
 import jeresources.jei.JEIConfig;
@@ -19,6 +22,8 @@ import mezz.jei.collect.SetMultiMap;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CustomJEIConfig {
@@ -37,6 +42,7 @@ public class CustomJEIConfig {
         }
 
         if(registerCustomVillagers(registry)) {
+            removeBuggedVillagers(registry);
             registry.addRecipes(CustomVillagerRegistry.getInstance().getVillagers(), JEIConfig.VILLAGER);
         } else {
             LogHelper.warn("Failed to register custom villagers.");
@@ -150,5 +156,34 @@ public class CustomJEIConfig {
             LogHelper.error("Could not access ModRegistry, custom villager trades will not work properly.");
         }
         return false;
+    }
+
+    public static void removeBuggedVillagers(IModRegistry registry) {
+        try {
+            Field recipesField = registry.getClass().getDeclaredField("recipes");
+            recipesField.setAccessible(true);
+            ListMultiMap<String,Object> recipes = (ListMultiMap<String,Object>) recipesField.get(registry);
+
+            if(recipes.containsKey(JEIConfig.VILLAGER)) {
+                Object villagerEntriesObj = recipes.get(JEIConfig.VILLAGER);
+
+                ArrayList<VillagerEntry> villagerEntries = (ArrayList<VillagerEntry>) villagerEntriesObj;
+                ArrayList<String> removeVillagers = new ArrayList<>();
+                ArrayList<VillagerEntry> toRemove = new ArrayList<>();
+
+                if(ModIds.RATS.isLoaded && JEMConfig.RATS.fixJERVillagers) {
+                    removeVillagers.addAll(Arrays.asList("pet_shop_owner", "plague_doctor"));
+                }
+
+                for(VillagerEntry entry : villagerEntries) {
+                    if(removeVillagers.contains(entry.getName()))
+                        toRemove.add(entry);
+                }
+                villagerEntries.removeAll(toRemove);
+            }
+        } catch (Exception e) {
+            LogHelper.warn("Failed to remove erroring villager trades. Some villagers may not display correctly.");
+            e.printStackTrace();
+        }
     }
 }

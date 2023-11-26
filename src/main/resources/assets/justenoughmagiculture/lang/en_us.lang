@@ -20,6 +20,11 @@ dungeon.jem:charm.librarian=Village Librarian
 dungeon.jem:charm.priest=Village Priest
 dungeon.jem:charm.shepherd=Village Shepherd
 dungeon.jem:charm.smith=Village Smith
+#   EB Wizardry
+dungeon.jem:ebwizardry.library_ruins_bookshelf=Library Ruins
+dungeon.jem:ebwizardry.obelisk=Obelisk
+dungeon.jem:ebwizardry.shrine=Wizard Shrine
+dungeon.jem:ebwizardry.wizard_tower=Wizard Tower
 #   NetherEx
 dungeon.jem:netherex.base_village=Pigtificate Village
 dungeon.jem:netherex.ghast_queen_shrine=Ghast Queen Shrine
@@ -84,10 +89,12 @@ dungeon.jem:twilightforest.troll_vault=Troll Vault
 
 # Entity JER Strings
 entity.apocryphal_teacher.name=Apocryphal Teacher
-entity.despot.name=Demon Despot
-entity.noble.name=Demon Noble
+entity.despot.name=Despot
+entity.noble.name=Noble
 entity.jem:botania.fel_blaze.name=Fel Blaze
 entity.netherex:pigtificate_chief.name=Pigtificate Chief
+entity.rats:pet_shop_owner.name=Pet Shop Owner
+entity.rats:plague_doctor.name=Plague Doctor
 
 # JEI
 jei.justenoughmagiculture:loot_bag.title=Loot Bags
