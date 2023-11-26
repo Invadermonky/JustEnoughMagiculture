@@ -2,19 +2,26 @@ package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigHarvestcraft;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.plant.CustomPlantEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.plant.CustomPlantEntry;
+import com.pam.harvestcraft.HarvestCraft;
+import com.pam.harvestcraft.blocks.BlockRegistry;
 import com.pam.harvestcraft.blocks.CropRegistry;
 import com.pam.harvestcraft.blocks.FruitRegistry;
+import com.pam.harvestcraft.blocks.blocks.BlockBaseGarden;
 import com.pam.harvestcraft.blocks.growables.BlockPamCrop;
 import com.pam.harvestcraft.blocks.growables.BlockPamFruit;
 import com.pam.harvestcraft.blocks.growables.BlockPamFruitLog;
 import jeresources.api.drop.PlantDrop;
+import jeresources.entry.PlantEntry;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.IPlantable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class JERHarvestcraft extends JERBase implements IJERIntegration {
     private final JEMConfigHarvestcraft.JER jerConfig = JEMConfig.HARVESTCRAFT.JUST_ENOUGH_RESOURCES;
@@ -34,6 +41,7 @@ public class JERHarvestcraft extends JERBase implements IJERIntegration {
     public void registerModPlants() {
         if(jerConfig.enableCrops) registerHCCrops();
         if(jerConfig.enableFruit) registerHCFruit();
+        if(jerConfig.enableGardens) registerHCGardens();
         if(jerConfig.enableHarvestLogs) registerHCHarvestLogs();
     }
 
@@ -69,6 +77,18 @@ public class JERHarvestcraft extends JERBase implements IJERIntegration {
             entry.setSoil(Blocks.AIR.getDefaultState());
             registerCustomPlant(entry);
         }
+    }
+
+    private void registerHCGardens() {
+        BlockRegistry.gardens.forEach((name,garden) -> {
+            List<PlantDrop> plantDrops = new ArrayList<>();
+            int totalDrops = BlockBaseGarden.drops.get(name).size();
+            float chance = (float) Math.min(HarvestCraft.config.gardendropAmount, totalDrops) / totalDrops;
+            for(ItemStack stack : BlockBaseGarden.drops.get(name)) {
+                plantDrops.add(new PlantDrop(stack, chance));
+            }
+            registerCustomPlant(new PlantEntry(new ItemStack(garden, 1, 0), plantDrops.toArray(new PlantDrop[0])));
+        });
     }
 
     private void registerHCHarvestLogs() {

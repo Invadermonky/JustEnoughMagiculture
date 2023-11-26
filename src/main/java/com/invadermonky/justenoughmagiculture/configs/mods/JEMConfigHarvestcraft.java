@@ -23,6 +23,7 @@ public class JEMConfigHarvestcraft {
     public static class JER {
         public boolean enableCrops = true;
         public boolean enableFruit = true;
+        public boolean enableGardens = true;
         public boolean enableHarvestLogs = true;
     }
 }
