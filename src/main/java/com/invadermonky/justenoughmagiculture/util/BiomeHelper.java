@@ -50,6 +50,14 @@ public class BiomeHelper {
         return getBiomeNamesForBiomes(biomeNames.toArray(new Biome[0]));
     }
 
+    public static String[] getBiomeNamesForTypes(Type... types) {
+        ArrayList<Biome> biomeNames = new ArrayList<>();
+        for(Type type : types) {
+            biomeNames.addAll(BiomeDictionary.getBiomes(type));
+        }
+        return getBiomeNamesForBiomes(biomeNames.toArray(new Biome[0]));
+    }
+
     public static String[] getTypeNamesForTypes(Type... types) {
         List<String> typeNames = new ArrayList<>();
 

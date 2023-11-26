@@ -9,6 +9,8 @@ import com.sirsquidly.oe.Main;
 import com.tage.crimson_warfare.CrimsonWarfare;
 import com.tiviacz.pizzacraft.PizzaCraft;
 import crazypants.enderio.base.EnderIO;
+import electroblob.tfspellpack.TFSpellPack;
+import electroblob.wizardry.Wizardry;
 import familiarfauna.core.FamiliarFauna;
 import gaia.GaiaReference;
 import jeresources.reference.Reference;
@@ -33,13 +35,13 @@ import javax.annotation.Nullable;
 
 public enum ModIds {
     ANIMANIA(ConstantIds.ANIMANIA, ConstantNames.ANIMANIA),
-    ANIMANIA_EXTRA(ConstantIds.ANIMANIA_EXTRA, ConstantNames.ANIMANIA_EXTRA),
-    ANIMANIA_FARM(ConstantIds.ANIMANIA_FARM, ConstantNames.ANIMANIA_FARM),
     BEARWITHME(ConstantIds.BEARWITHME, ConstantNames.BEARWITHME),
     BEWITCHMENT(ConstantIds.BEWITCHMENT, ConstantNames.BEWITCHMENT),
     BOTANIA(ConstantIds.BOTANIA, ConstantNames.BOTANIA),
     CHARM(ConstantIds.CHARM , ConstantNames.CHARM),
     CRIMSONWARFARE(ConstantIds.CRIMSONWARFARE , ConstantNames.CRIMSONWARFARE),
+    EBWIZARDRY(ConstantIds.EBWIZARDRY, ConstantNames.EBWIZARDRY),
+    EBWIZARDRYTF(ConstantIds.EBWIZARDRYTF, ConstantNames.EBWIZARDRYTF),
     ENDERIO(ConstantIds.ENDERIO, ConstantNames.ENDERIO),
     FAMILIARFAUNA(ConstantIds.FAMILIARFAUNA, ConstantNames.FAMILIARFAUNA),
     FUTUREMC(ConstantIds.FUTUREMC, ConstantNames.FUTUREMC),
@@ -47,8 +49,6 @@ public enum ModIds {
     INDUSTRIALFOREGOING(ConstantIds.INDUSTRIALFOREGOING, ConstantNames.INDUSTRIALFOREGOING),
     HARVESTCRAFT(ConstantIds.HARVESTCRAFT, ConstantNames.HARVESTCRAFT),
     HARVESTERSNIGHT(ConstantIds.HARVESTERSNIGHT, ConstantNames.HARVESTERSNIGHT),
-    JUSTENOUGHITEMS(ConstantIds.JUSTENOUGHITEMS, ConstantNames.JUSTENOUGHITEMS),
-    JUSTENOUGHRESOURCES(ConstantIds.JUSTENOUGHRESOURCES, ConstantNames.JUSTENOUGHRESOURCES),
     NETHEREX(ConstantIds.NETHEREX, ConstantNames.NETHEREX),
     OCEANICEXPANSE(ConstantIds.OCEANICEXPANSE, ConstantNames.OCEANICEXPANSE),
     QUARK(ConstantIds.QUARK, ConstantNames.QUARK),
@@ -114,6 +114,8 @@ public enum ModIds {
         public static final String CHARM = Charm.MOD_ID;
         public static final String CRIMSONWARFARE = CrimsonWarfare.MODID;
         public static final String ENDERIO = EnderIO.MODID;
+        public static final String EBWIZARDRY = Wizardry.MODID;
+        public static final String EBWIZARDRYTF = TFSpellPack.MODID;
         public static final String FAMILIARFAUNA = FamiliarFauna.MOD_ID;
         public static final String FUTUREMC = FutureMC.ID;
         public static final String GRIMOIREOFGAIA = GaiaReference.MOD_ID;
@@ -122,7 +124,6 @@ public enum ModIds {
         public static final String INDUSTRIALFOREGOING = com.buuz135.industrial.utils.Reference.MOD_ID;
         public static final String JUSTENOUGHITEMS = Constants.MOD_ID;
         public static final String JUSTENOUGHRESOURCES = Reference.ID;
-        public static final String LIBRARYEX = LibraryEx.MOD_ID;
         public static final String NETHEREX = NetherEx.MOD_ID;
         public static final String OCEANICEXPANSE = Main.MOD_ID;
         public static final String PIZZACRAFT = PizzaCraft.MODID;
@@ -147,6 +148,8 @@ public enum ModIds {
         public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_NAME;
         public static final String CHARM = Charm.MOD_NAME;
         public static final String CRIMSONWARFARE = CrimsonWarfare.NAME;
+        public static final String EBWIZARDRY = Wizardry.NAME;
+        public static final String EBWIZARDRYTF = TFSpellPack.NAME;
         public static final String ENDERIO = EnderIO.MOD_NAME;
         public static final String FAMILIARFAUNA = FamiliarFauna.MOD_NAME;
         public static final String FUTUREMC = FutureMC.NAME;

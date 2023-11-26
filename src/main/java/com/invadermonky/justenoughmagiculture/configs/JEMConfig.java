@@ -58,6 +58,9 @@ public class JEMConfig {
     @Comment("Charm JER integration configuration.")
     public static final JEMConfigCharm CHARM = new JEMConfigCharm();
 
+    @Comment("Charm JER integration configuration.")
+    public static final JEMConfigEBWizardryTF EB_WIZARDRY_TF = new JEMConfigEBWizardryTF();
+
     @Comment("Ender IO JER integration configuration.")
     public static final JEMConfigEnderIO ENDER_IO = new JEMConfigEnderIO();
 

@@ -49,6 +49,7 @@ public class InitIntegration {
         if(ModIds.BEWITCHMENT.isLoaded) new JERBewitchment(BEWITCHMENT.enableJERMobs, BEWITCHMENT.enableJERPlants, BEWITCHMENT.enableJERVillagers);
         if(ModIds.BOTANIA.isLoaded) new JERBotania(BOTANIA.enableJERMobs);
         if(ModIds.CHARM.isLoaded) new JERCharm(CHARM.enableJERDungeons, CHARM.enableJERMobs);
+        if(ModIds.EBWIZARDRYTF.isLoaded) new JEREBWizardryTF(EB_WIZARDRY_TF.enableJERMobs);
         if(ModIds.FAMILIARFAUNA.isLoaded) new JERFamiliarFauna(FAMILIAR_FAUNA.enableJERMobs);
         if(ModIds.FUTUREMC.isLoaded) new JERFutureMC(FUTURE_MC.enableJERMobs, FUTURE_MC.enableJERPlants);
         if(ModIds.GRIMOIREOFGAIA.isLoaded) new JERGrimoireOfGaia(GRIMOIRE_OF_GAIA.enableJERMobs);
