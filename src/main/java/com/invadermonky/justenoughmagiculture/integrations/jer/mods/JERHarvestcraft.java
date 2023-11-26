@@ -87,7 +87,13 @@ public class JERHarvestcraft extends JERBase implements IJERIntegration {
             for(ItemStack stack : BlockBaseGarden.drops.get(name)) {
                 plantDrops.add(new PlantDrop(stack, chance));
             }
-            registerCustomPlant(new PlantEntry(new ItemStack(garden, 1, 0), plantDrops.toArray(new PlantDrop[0])));
+            PlantEntry plantEntry = new PlantEntry(new ItemStack(garden, 1, 0), plantDrops.toArray(new PlantDrop[0]));
+            if(name.equals(BlockRegistry.aridGarden)) {
+                plantEntry.setSoil(Blocks.SAND.getDefaultState());
+            } else {
+                plantEntry.setSoil(Blocks.GRASS.getDefaultState());
+            }
+            registerCustomPlant(plantEntry);
         });
     }
 
