@@ -33,6 +33,10 @@ dungeon.jem:oe.shell_sand=Shelly Sand
 dungeon.jem:oe.shipwreck_map=Shipwreck Map
 dungeon.jem:oe.shipwreck_supply=Shipwreck Supply
 dungeon.jem:oe.shipwreck_treasure=Shipwreck Treasure
+#   Rats: RatN
+dungeon.jem:rats.pet_shop=Pet Shop
+dungeon.jem:rats.pet_shop_upstairs=Pet Shop Upstairs
+dungeon.jem:rats.plague_doctor_house=Plague Doctor House
 #   Roguelike Dungeons
 dungeon.jem:roguelike.floor_0=Dungeon Floor 1
 dungeon.jem:roguelike.floor_1=Dungeon Floor 2
@@ -79,6 +83,9 @@ dungeon.jem:twilightforest.troll_garden=Troll Garden
 dungeon.jem:twilightforest.troll_vault=Troll Vault
 
 # Entity JER Strings
+entity.apocryphal_teacher.name=Apocryphal Teacher
+entity.despot.name=Demon Despot
+entity.noble.name=Demon Noble
 entity.jem:botania.fel_blaze.name=Fel Blaze
 entity.netherex:pigtificate_chief.name=Pigtificate Chief
 

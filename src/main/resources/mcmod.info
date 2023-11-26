@@ -5,12 +5,12 @@
   "description": "Provides a large number of JEI and JER integrations.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/just-enough-magiculture",
   "updateUrl": "",
   "authorList": ["Invadermonky"],
   "credits": "Authors of this project",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["Just Enough Items", "Just Enough Resources"]
 }
 ]
