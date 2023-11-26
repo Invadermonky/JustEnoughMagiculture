@@ -1,12 +1,8 @@
 package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
 import com.github.voxelfriend.rusticthaumaturgy.common.items.ModItemsRT;
-import com.github.voxelfriend.rusticthaumaturgy.configuration.RTConfiguration;
-import com.github.voxelfriend.rusticthaumaturgy.core.RusticThaumaturgy;
-import com.github.voxelfriend.rusticthaumaturgy.reference.Names;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigRusticThaumaturgy;
-import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigThaumicAugmentation;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import jeresources.api.drop.PlantDrop;

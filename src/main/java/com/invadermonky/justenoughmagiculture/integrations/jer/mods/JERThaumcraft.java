@@ -41,7 +41,7 @@ import thaumcraft.common.entities.monster.cult.EntityCultistKnight;
 import thaumcraft.common.entities.monster.tainted.*;
 import thecodex6824.thaumicaugmentation.api.TALootTables;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class JERThaumcraft extends JERBase implements IJERIntegration {
     private static JERThaumcraft instance;

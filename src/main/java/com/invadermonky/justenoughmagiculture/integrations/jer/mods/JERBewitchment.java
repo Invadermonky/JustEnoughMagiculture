@@ -10,29 +10,42 @@ import com.bewitchment.common.item.ItemModSeeds;
 import com.bewitchment.registry.ModObjects;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigBewitchment;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.CustomVillagerEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
+import com.invadermonky.justenoughmagiculture.registry.CustomVillagerRegistry;
 import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
+import com.invadermonky.justenoughmagiculture.util.LogHelper;
 import com.invadermonky.justenoughmagiculture.util.ModIds;
 import jeresources.api.conditionals.LightLevel;
 import jeresources.api.drop.LootDrop;
 import jeresources.api.drop.PlantDrop;
 import jeresources.util.LootTableHelper;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.VillagerRegistry.VillagerCareer;
+import net.minecraftforge.fml.common.registry.VillagerRegistry.VillagerProfession;
 
+import javax.annotation.Nonnull;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class JERBewitchment extends JERBase implements IJERIntegration {
     public final JEMConfigBewitchment.JER jerConfig = JEMConfig.BEWITCHMENT.JUST_ENOUGH_RESOURCES;
 
-    public JERBewitchment(boolean enableJERMobs, boolean enableJERPlants) {
+    public JERBewitchment(boolean enableJERMobs, boolean enableJERPlants, boolean enableJERVillagers) {
         if(enableJERMobs) registerModEntities();
         if(enableJERPlants) registerModPlants();
+        if(enableJERVillagers) registerModVillagers();
     }
 
     @Override
@@ -144,6 +157,50 @@ public class JERBewitchment extends JERBase implements IJERIntegration {
         if (jerConfig.JER_MOBS.enableWerewolf) {
             registerMob(new EntityWerewolf(world), LightLevel.any, BiomeHelper.getBiomeNamesForTypes(ModConfig.mobSpawns.werewolf.werewolfBiomes), new ResourceLocation(Bewitchment.MODID, "entities/werewolf"));
             adjustHumanoidRenderHook(EntityWerewolf.class);
+        }
+    }
+
+    @Override
+    public void registerModVillagers() {
+        //TODO: Demon trades
+        try {
+            EntityDemon demon = new EntityDemon(world);
+            VillagerProfession profession = demon.getProfessionForge();
+
+            Field careersField = profession.getClass().getDeclaredField("careers");
+            careersField.setAccessible(true);
+            List<VillagerCareer> careers = (List<VillagerCareer>) careersField.get(profession);
+
+            for(VillagerCareer career : careers) {
+                Field idField = career.getClass().getDeclaredField("id");
+                Field tradesField = career.getClass().getDeclaredField("trades");
+                idField.setAccessible(true);
+                tradesField.setAccessible(true);
+                int id = (int) idField.get(career);
+                List<List<EntityVillager.ITradeList>> trades = (List<List<EntityVillager.ITradeList>>) tradesField.get(career);
+
+                CustomVillagerEntry demonVillager = new CustomVillagerEntry(career.getName(), id, trades) {
+                    @Override
+                    public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+                        return demon;
+                    }
+
+                    @Override
+                    public String getDisplayName() {
+                        return super.getDisplayName();
+                    }
+
+                    @Override
+                    public float getRenderScale() {
+                        return 20.0f;
+                    }
+                };
+
+                CustomVillagerRegistry.getInstance().addVillagerEntry(demonVillager);
+            }
+
+        } catch(Exception e) {
+            LogHelper.warn("Failed to register Demon trades.");
         }
     }
 

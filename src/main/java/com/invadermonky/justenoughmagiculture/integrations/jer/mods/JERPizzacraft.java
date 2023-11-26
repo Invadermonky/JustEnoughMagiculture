@@ -2,9 +2,9 @@ package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigPizzacraft;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.plant.CustomPlantEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.plant.CustomPlantEntry;
 import com.tiviacz.pizzacraft.init.ModBlocks;
 import com.tiviacz.pizzacraft.init.ModItems;
 import jeresources.api.drop.PlantDrop;

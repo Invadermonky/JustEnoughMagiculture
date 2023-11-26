@@ -74,6 +74,9 @@ public class JEMConfig {
     public static final JEMConfigHarvestcraft HARVESTCRAFT = new JEMConfigHarvestcraft();
 
     @Comment("Industrial Foregoing JER integration configuration.")
+    public static final JEMConfigHarvestersNight HARVESTERSNIGHT = new JEMConfigHarvestersNight();
+
+    @Comment("Industrial Foregoing JER integration configuration.")
     public static final JEMConfigIndustrialForegoing INDUSTRIAL_FOREGOING = new JEMConfigIndustrialForegoing();
 
     @Comment("Minecraft JER integration configuration.")
@@ -90,6 +93,9 @@ public class JEMConfig {
 
     @Comment("Quark JER integration configuration.")
     public static final JEMConfigQuark QUARK = new JEMConfigQuark();
+
+    @Comment("Rats: ROTN JER integration configuration.")
+    public static final JEMConfigRats RATS = new JEMConfigRats();
 
     @Comment("Roguelike Dungeons JER integration configuration.")
     public static final JEMConfigRoguelikeDungeons ROGUELIKE_DUNGEONS = new JEMConfigRoguelikeDungeons();

@@ -6,7 +6,6 @@ import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villag
 import com.invadermonky.justenoughmagiculture.registry.CustomPlantRegistry;
 import com.invadermonky.justenoughmagiculture.registry.CustomVillagerRegistry;
 import com.invadermonky.justenoughmagiculture.util.LogHelper;
-import com.invadermonky.justenoughmagiculture.util.ModIds;
 import jeresources.entry.PlantEntry;
 import jeresources.entry.VillagerEntry;
 import jeresources.jei.JEIConfig;
@@ -29,8 +28,7 @@ public class CustomJEIConfig {
      * @param registry JEI IModRegistry post-JER register.
      */
     public static void injectRegister(IModRegistry registry) {
-        //Todo: remove before release
-        LogHelper.info("Registering Custom Entries.");
+        LogHelper.info("Registering Custom JER entries.");
 
         if(registerCustomPlants(registry)) {
             registry.addRecipes(CustomPlantRegistry.getInstance().getAllPlants(), JEIConfig.PLANT);
@@ -40,9 +38,6 @@ public class CustomJEIConfig {
 
         if(registerCustomVillagers(registry)) {
             registry.addRecipes(CustomVillagerRegistry.getInstance().getVillagers(), JEIConfig.VILLAGER);
-            if(ModIds.NETHEREX.isLoaded) {
-                registry.addRecipes(CustomVillagerRegistry.getInstance().getPigtificates(), JEIConfig.VILLAGER);
-            }
         } else {
             LogHelper.warn("Failed to register custom villagers.");
         }

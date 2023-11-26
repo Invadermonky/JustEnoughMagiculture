@@ -3,9 +3,7 @@ package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 import com.girafi.waddles.Waddles;
 import com.girafi.waddles.entity.EntityAdeliePenguin;
 import com.girafi.waddles.init.PenguinRegistry;
-import com.girafi.waddles.utils.BiomeDictionaryHelper;
 import com.girafi.waddles.utils.ConfigurationHandler;
-import com.google.common.base.CaseFormat;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigWaddles;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
@@ -15,7 +13,6 @@ import jeresources.api.conditionals.LightLevel;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
-import net.minecraftforge.common.BiomeDictionary;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

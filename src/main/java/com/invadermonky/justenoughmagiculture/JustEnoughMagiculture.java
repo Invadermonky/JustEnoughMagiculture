@@ -21,7 +21,7 @@ public class JustEnoughMagiculture {
     public static final String MOD_ID = "justenoughmagiculture";
     public static final String MOD_ALIAS = "jem";
     public static final String MOD_NAME = "Just Enough Magiculture";
-    public static final String MOD_VERSION = "1.12.2-1.0.0";
+    public static final String MOD_VERSION = "1.12.2-1.1.0";
     public static final String MC_VERSION = "[1.12.2]";
     public static final String DEPENDENCIES = (
             "required-after:" + ConstantIds.JUSTENOUGHITEMS + "@[4.7.0,)" +
@@ -36,11 +36,13 @@ public class JustEnoughMagiculture {
                     ";after:" + ConstantIds.FUTUREMC +
                     ";after:" + ConstantIds.GRIMOIREOFGAIA +
                     ";after:" + ConstantIds.HARVESTCRAFT +
+                    ";after:" + ConstantIds.HARVESTERSNIGHT +
                     ";after:" + ConstantIds.INDUSTRIALFOREGOING +
                     ";after:" + ConstantIds.NETHEREX +
                     ";after:" + ConstantIds.OCEANICEXPANSE +
                     ";after:" + ConstantIds.PIZZACRAFT +
                     ";after:" + ConstantIds.QUARK +
+                    ";after:" + ConstantIds.RATS +
                     ";after:" + ConstantIds.ROGUELIKEDUNGEONS +
                     ";after:" + ConstantIds.RUSTIC +
                     ";after:" + ConstantIds.RUSTICTHAUMATURGY +

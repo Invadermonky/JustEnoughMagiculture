@@ -46,18 +46,20 @@ public class InitIntegration {
             if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_FARM)) new JERAnimaniaFarm(ANIMANIA_FARM.enableJERMobs);
         }
         if(ModIds.BEARWITHME.isLoaded) new JERBearWithMe(BEAR_WITH_ME.enableJERMobs);
-        if(ModIds.BEWITCHMENT.isLoaded) new JERBewitchment(BEWITCHMENT.enableJERMobs, BEWITCHMENT.enableJERPlants);
+        if(ModIds.BEWITCHMENT.isLoaded) new JERBewitchment(BEWITCHMENT.enableJERMobs, BEWITCHMENT.enableJERPlants, BEWITCHMENT.enableJERVillagers);
         if(ModIds.BOTANIA.isLoaded) new JERBotania(BOTANIA.enableJERMobs);
         if(ModIds.CHARM.isLoaded) new JERCharm(CHARM.enableJERDungeons, CHARM.enableJERMobs);
         if(ModIds.FAMILIARFAUNA.isLoaded) new JERFamiliarFauna(FAMILIAR_FAUNA.enableJERMobs);
         if(ModIds.FUTUREMC.isLoaded) new JERFutureMC(FUTURE_MC.enableJERMobs, FUTURE_MC.enableJERPlants);
         if(ModIds.GRIMOIREOFGAIA.isLoaded) new JERGrimoireOfGaia(GRIMOIRE_OF_GAIA.enableJERMobs);
         if(ModIds.HARVESTCRAFT.isLoaded) new JERHarvestcraft(HARVESTCRAFT.enableJERPlants);
+        if(ModIds.HARVESTERSNIGHT.isLoaded) new JERHarvestersNight(HARVESTERSNIGHT.enableJERMobs);
         if(ModIds.INDUSTRIALFOREGOING.isLoaded) new JERIndustrialForegoing(INDUSTRIAL_FOREGOING.enableJERMobs);
         if(ModIds.NETHEREX.isLoaded) new JERNetherEx(NETHEREX.enableJERDungeons, NETHEREX.enableJERMobs, NETHEREX.enableJERVillagers);
         if(ModIds.OCEANICEXPANSE.isLoaded) new JEROceanicExpanse(OCEANIC_EXPANSE.enableJERDungeons, OCEANIC_EXPANSE.enableJERMobs);
         if(ModIds.PIZZACRAFT.isLoaded) new JERPizzacraft(PIZZACRAFT.enableJERPlants);
         if(ModIds.QUARK.isLoaded) new JERQuark(QUARK.enableJERDungeons, QUARK.enableJERMobs, QUARK.enableJERVillagers);
+        if(ModIds.RATS.isLoaded) new JERRats(RATS.enableJERDungeons, RATS.enableJERMobs);
         /* TODO: This is a massive amount of work and I'm not sure I want to go through with it. */ if(ModIds.ROGUELIKEDUNGEONS.isLoaded) new JERRoguelikeDungeons(ROGUELIKE_DUNGEONS.enableJERDungeons);
         if(ModIds.RUSTIC.isLoaded) new JERRustic(RUSTIC.enableJERPlants);
         if(ModIds.RUSTICTHAUMATURGY.isLoaded) new JERRusticThaumaturgy(RUSTIC_THAUMATURGY.enableJERPlants);

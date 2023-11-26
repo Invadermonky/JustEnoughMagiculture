@@ -8,10 +8,10 @@ import com.google.gson.JsonObject;
 import com.invadermonky.justenoughmagiculture.JustEnoughMagiculture;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigNetherEx;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.BasicTrade;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.CustomVillagerEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.BasicTrade;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.CustomPigtificateEntry;
 import com.invadermonky.justenoughmagiculture.registry.CustomVillagerRegistry;
 import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
 import com.invadermonky.justenoughmagiculture.util.ItemHelper;
@@ -86,15 +86,15 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
     public void registerModVillagers() {
         CustomVillagerRegistry registry = CustomVillagerRegistry.getInstance();
 
-        if(jerConfig.JER_VILLAGERS.enablePigtificateArmorsmith) registry.addPigtificateEntry(getPigtificateArmorsmith());
-        if(jerConfig.JER_VILLAGERS.enablePigtificateBrewer) registry.addPigtificateEntry(getPigtificateBrewer());
-        if(jerConfig.JER_VILLAGERS.enablePigtificateChief) registry.addPigtificateEntry(getPigtificateChief());
-        if(jerConfig.JER_VILLAGERS.enablePigtificateEnchanter) registry.addPigtificateEntry(getPigtificateEnchanter());
-        if(jerConfig.JER_VILLAGERS.enablePigtificateGatherer) registry.addPigtificateEntry(getPigtificateGatherer());
-        if(jerConfig.JER_VILLAGERS.enablePigtificateHunter) registry.addPigtificateEntry(getPigtificateHunter());
-        if(jerConfig.JER_VILLAGERS.enablePigtificateNincompoop) registry.addPigtificateEntry(getPigtificateNincompoop());
-        if(jerConfig.JER_VILLAGERS.enablePigtificateScavenger) registry.addPigtificateEntry(getPigtificateScavenger());
-        if(jerConfig.JER_VILLAGERS.enablePigtificateToolsmith) registry.addPigtificateEntry(getPigtificateToolsmith());
+        if(jerConfig.JER_VILLAGERS.enablePigtificateArmorsmith) registry.addVillagerEntry(getPigtificateArmorsmith());
+        if(jerConfig.JER_VILLAGERS.enablePigtificateBrewer) registry.addVillagerEntry(getPigtificateBrewer());
+        if(jerConfig.JER_VILLAGERS.enablePigtificateChief) registry.addVillagerEntry(getPigtificateChief());
+        if(jerConfig.JER_VILLAGERS.enablePigtificateEnchanter) registry.addVillagerEntry(getPigtificateEnchanter());
+        if(jerConfig.JER_VILLAGERS.enablePigtificateGatherer) registry.addVillagerEntry(getPigtificateGatherer());
+        if(jerConfig.JER_VILLAGERS.enablePigtificateHunter) registry.addVillagerEntry(getPigtificateHunter());
+        if(jerConfig.JER_VILLAGERS.enablePigtificateNincompoop) registry.addVillagerEntry(getPigtificateNincompoop());
+        if(jerConfig.JER_VILLAGERS.enablePigtificateScavenger) registry.addVillagerEntry(getPigtificateScavenger());
+        if(jerConfig.JER_VILLAGERS.enablePigtificateToolsmith) registry.addVillagerEntry(getPigtificateToolsmith());
     }
 
     private void registerHostile() {
@@ -259,7 +259,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         }));
     }
 
-    private CustomPigtificateEntry getPigtificateArmorsmith() {
+    private CustomVillagerEntry getPigtificateArmorsmith() {
         List<List<EntityVillager.ITradeList>> allTrades;
         String careerName = "armorsmith";
 
@@ -300,7 +300,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         PigtificateProfession.Career career = NetherExPigtificates.SMITH.getCareer(NetherEx.getResource(careerName));
         String name = NetherEx.getResource("pigtificate_" + careerName).toString();
 
-        return new CustomPigtificateEntry(name, career.getId(), allTrades) {
+        return new CustomVillagerEntry(name, career.getId(), allTrades) {
             @Override
             public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
                 EntityPigtificate entity = new EntityPigtificate(world, NetherExPigtificates.SMITH);
@@ -310,7 +310,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         };
     }
 
-    private CustomPigtificateEntry getPigtificateBrewer() {
+    private CustomVillagerEntry getPigtificateBrewer() {
         List<List<EntityVillager.ITradeList>> allTrades;
         String careerName = "brewer";
 
@@ -342,7 +342,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         PigtificateProfession.Career career = NetherExPigtificates.SORCERER.getCareer(NetherEx.getResource(careerName));
         String name = NetherEx.getResource("pigtificate_" + careerName).toString();
 
-        return new CustomPigtificateEntry(name, career.getId(), allTrades) {
+        return new CustomVillagerEntry(name, career.getId(), allTrades) {
             @Override
             public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
                 EntityPigtificate entity = new EntityPigtificate(world, NetherExPigtificates.SORCERER);
@@ -352,7 +352,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         };
     }
 
-    private CustomPigtificateEntry getPigtificateChief() {
+    private CustomVillagerEntry getPigtificateChief() {
         List<List<EntityVillager.ITradeList>> allTrades;
         String careerName = "chief";
 
@@ -365,7 +365,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         PigtificateProfession.Career career = NetherExPigtificates.LEADER.getCareer(NetherEx.getResource(careerName));
         String name = NetherEx.getResource("pigtificate_" + careerName).toString();
 
-        return new CustomPigtificateEntry(name, career.getId(), allTrades) {
+        return new CustomVillagerEntry(name, career.getId(), allTrades) {
             @Override
             public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
                 EntityPigtificateLeader entity = new EntityPigtificateLeader(world);
@@ -376,7 +376,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         };
     }
 
-    private CustomPigtificateEntry getPigtificateEnchanter() {
+    private CustomVillagerEntry getPigtificateEnchanter() {
         List<List<EntityVillager.ITradeList>> allTrades;
         String careerName = "enchanter";
 
@@ -413,7 +413,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         PigtificateProfession.Career career = NetherExPigtificates.SORCERER.getCareer(NetherEx.getResource(careerName));
         String name = NetherEx.getResource("pigtificate_" + careerName).toString();
 
-        return new CustomPigtificateEntry(name, career.getId(), allTrades) {
+        return new CustomVillagerEntry(name, career.getId(), allTrades) {
             @Override
             public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
                 EntityPigtificate entity = new EntityPigtificate(world, NetherExPigtificates.SORCERER);
@@ -423,7 +423,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         };
     }
 
-    private CustomPigtificateEntry getPigtificateGatherer() {
+    private CustomVillagerEntry getPigtificateGatherer() {
         List<List<EntityVillager.ITradeList>> allTrades;
         String careerName = "gatherer";
 
@@ -455,7 +455,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         PigtificateProfession.Career career = NetherExPigtificates.FORAGER.getCareer(NetherEx.getResource(careerName));
         String name = NetherEx.getResource("pigtificate_" + careerName).toString();
 
-        return new CustomPigtificateEntry(name, career.getId(), allTrades) {
+        return new CustomVillagerEntry(name, career.getId(), allTrades) {
             @Override
             public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
                 EntityPigtificate entity = new EntityPigtificate(world, NetherExPigtificates.FORAGER);
@@ -465,7 +465,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         };
     }
 
-    private CustomPigtificateEntry getPigtificateHunter() {
+    private CustomVillagerEntry getPigtificateHunter() {
         List<List<EntityVillager.ITradeList>> allTrades;
         String careerName = "hunter";
 
@@ -497,7 +497,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         PigtificateProfession.Career career = NetherExPigtificates.FORAGER.getCareer(NetherEx.getResource(careerName));
         String name = NetherEx.getResource("pigtificate_" + careerName).toString();
 
-        return new CustomPigtificateEntry(name, career.getId(), allTrades) {
+        return new CustomVillagerEntry(name, career.getId(), allTrades) {
             @Override
             public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
                 EntityPigtificate entity = new EntityPigtificate(world, NetherExPigtificates.FORAGER);
@@ -507,7 +507,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         };
     }
 
-    private CustomPigtificateEntry getPigtificateNincompoop() {
+    private CustomVillagerEntry getPigtificateNincompoop() {
         List<List<EntityVillager.ITradeList>> allTrades;
         String careerName = "nincompoop";
 
@@ -520,7 +520,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         PigtificateProfession.Career career = NetherExPigtificates.DIMWIT.getCareer(NetherEx.getResource(careerName));
         String name = NetherEx.getResource("pigtificate_" + careerName).toString();
 
-        return new CustomPigtificateEntry(name, career.getId(), allTrades) {
+        return new CustomVillagerEntry(name, career.getId(), allTrades) {
             @Override
             public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
                 EntityPigtificate entity = new EntityPigtificate(world, NetherExPigtificates.DIMWIT);
@@ -530,7 +530,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         };
     }
 
-    private CustomPigtificateEntry getPigtificateScavenger() {
+    private CustomVillagerEntry getPigtificateScavenger() {
         List<List<EntityVillager.ITradeList>> allTrades;
         String careerName = "scavenger";
 
@@ -565,7 +565,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         PigtificateProfession.Career career = NetherExPigtificates.FORAGER.getCareer(NetherEx.getResource(careerName));
         String name = NetherEx.getResource("pigtificate_" + careerName).toString();
 
-        return new CustomPigtificateEntry(name, career.getId(), allTrades) {
+        return new CustomVillagerEntry(name, career.getId(), allTrades) {
             @Override
             public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
                 EntityPigtificate entity = new EntityPigtificate(world, NetherExPigtificates.FORAGER);
@@ -575,7 +575,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         };
     }
 
-    private CustomPigtificateEntry getPigtificateToolsmith() {
+    private CustomVillagerEntry getPigtificateToolsmith() {
         List<List<EntityVillager.ITradeList>> allTrades;
         String careerName = "toolsmith";
 
@@ -625,7 +625,7 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
         PigtificateProfession.Career career = NetherExPigtificates.SMITH.getCareer(NetherEx.getResource(careerName));
         String name = NetherEx.getResource("pigtificate_" + careerName).toString();
 
-        return new CustomPigtificateEntry(name, career.getId(), allTrades) {
+        return new CustomVillagerEntry(name, career.getId(), allTrades) {
             @Override
             public EntityLivingBase getEntity(@Nonnull Minecraft minecraft) throws IllegalAccessException, InvocationTargetException, InstantiationException {
                 EntityPigtificate entity = new EntityPigtificate(world, NetherExPigtificates.SMITH);

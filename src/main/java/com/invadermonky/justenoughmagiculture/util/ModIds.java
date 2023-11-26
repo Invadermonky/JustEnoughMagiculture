@@ -3,6 +3,7 @@ package com.invadermonky.justenoughmagiculture.util;
 import cofh.thermalfoundation.ThermalFoundation;
 import com.animania.Animania;
 import com.bewitchment.Bewitchment;
+import com.github.alexthe666.rats.RatsMod;
 import com.github.voxelfriend.rusticthaumaturgy.core.RusticThaumaturgy;
 import com.sirsquidly.oe.Main;
 import com.tage.crimson_warfare.CrimsonWarfare;
@@ -13,6 +14,7 @@ import gaia.GaiaReference;
 import jeresources.reference.Reference;
 import logictechcorp.libraryex.LibraryEx;
 import logictechcorp.netherex.NetherEx;
+import lykrast.harvestersnight.common.HarvestersNight;
 import mezz.jei.config.Constants;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.LoaderException;
@@ -44,12 +46,14 @@ public enum ModIds {
     GRIMOIREOFGAIA(ConstantIds.GRIMOIREOFGAIA, ConstantNames.GRIMOIREOFGAIA),
     INDUSTRIALFOREGOING(ConstantIds.INDUSTRIALFOREGOING, ConstantNames.INDUSTRIALFOREGOING),
     HARVESTCRAFT(ConstantIds.HARVESTCRAFT, ConstantNames.HARVESTCRAFT),
+    HARVESTERSNIGHT(ConstantIds.HARVESTERSNIGHT, ConstantNames.HARVESTERSNIGHT),
     JUSTENOUGHITEMS(ConstantIds.JUSTENOUGHITEMS, ConstantNames.JUSTENOUGHITEMS),
     JUSTENOUGHRESOURCES(ConstantIds.JUSTENOUGHRESOURCES, ConstantNames.JUSTENOUGHRESOURCES),
     NETHEREX(ConstantIds.NETHEREX, ConstantNames.NETHEREX),
     OCEANICEXPANSE(ConstantIds.OCEANICEXPANSE, ConstantNames.OCEANICEXPANSE),
     QUARK(ConstantIds.QUARK, ConstantNames.QUARK),
     PIZZACRAFT(ConstantIds.PIZZACRAFT, ConstantNames.PIZZACRAFT),
+    RATS(ConstantIds.RATS, ConstantNames.RATS),
     ROGUELIKEDUNGEONS(ConstantIds.ROGUELIKEDUNGEONS, ConstantNames.ROGUELIKEDUNGEONS),
     RUSTIC(ConstantIds.RUSTIC, ConstantNames.RUSTIC),
     RUSTICTHAUMATURGY(ConstantIds.RUSTICTHAUMATURGY, ConstantNames.RUSTICTHAUMATURGY),
@@ -114,6 +118,7 @@ public enum ModIds {
         public static final String FUTUREMC = FutureMC.ID;
         public static final String GRIMOIREOFGAIA = GaiaReference.MOD_ID;
         public static final String HARVESTCRAFT = com.pam.harvestcraft.Reference.MODID;
+        public static final String HARVESTERSNIGHT = HarvestersNight.MODID;
         public static final String INDUSTRIALFOREGOING = com.buuz135.industrial.utils.Reference.MOD_ID;
         public static final String JUSTENOUGHITEMS = Constants.MOD_ID;
         public static final String JUSTENOUGHRESOURCES = Reference.ID;
@@ -122,6 +127,7 @@ public enum ModIds {
         public static final String OCEANICEXPANSE = Main.MOD_ID;
         public static final String PIZZACRAFT = PizzaCraft.MODID;
         public static final String QUARK = LibMisc.MOD_ID;
+        public static final String RATS = RatsMod.MODID;
         public static final String ROGUELIKEDUNGEONS = "roguelike";
         public static final String RUSTIC = Rustic.MODID;
         public static final String RUSTICTHAUMATURGY = RusticThaumaturgy.MODID;
@@ -145,6 +151,7 @@ public enum ModIds {
         public static final String FAMILIARFAUNA = FamiliarFauna.MOD_NAME;
         public static final String FUTUREMC = FutureMC.NAME;
         public static final String GRIMOIREOFGAIA = GaiaReference.MOD_NAME;
+        public static final String HARVESTERSNIGHT = HarvestersNight.NAME;
         public static final String HARVESTCRAFT = com.pam.harvestcraft.Reference.NAME;
         public static final String INDUSTRIALFOREGOING = com.buuz135.industrial.utils.Reference.NAME;
         public static final String JUSTENOUGHITEMS = Constants.NAME;
@@ -153,6 +160,7 @@ public enum ModIds {
         public static final String OCEANICEXPANSE = Main.NAME;
         public static final String PIZZACRAFT = PizzaCraft.NAME;
         public static final String QUARK = LibMisc.MOD_NAME;
+        public static final String RATS = RatsMod.NAME;
         public static final String ROGUELIKEDUNGEONS = "Roguelike Dungeons";
         public static final String RUSTIC = Rustic.NAME;
         public static final String RUSTICTHAUMATURGY = RusticThaumaturgy.NAME;

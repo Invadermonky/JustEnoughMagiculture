@@ -4,7 +4,6 @@ import com.invadermonky.justenoughmagiculture.JustEnoughMagiculture;
 import com.invadermonky.justenoughmagiculture.util.ConfigHelper.MobJER;
 import com.invadermonky.justenoughmagiculture.util.ModIds.ConstantNames;
 import net.minecraftforge.common.config.Config.Comment;
-import net.minecraftforge.common.config.Config.LangKey;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigGrimoireOfGaia {
