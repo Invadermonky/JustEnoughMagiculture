@@ -50,6 +50,9 @@ public class JEMConfig {
     public static final JEMConfigBearWithMe BEAR_WITH_ME = new JEMConfigBearWithMe();
 
     @Comment("Bewitchment JER integration configuration.")
+    public static final JEMConfigBeastSlayer BEAST_SLAYER = new JEMConfigBeastSlayer();
+
+    @Comment("Bewitchment JER integration configuration.")
     public static final JEMConfigBewitchment BEWITCHMENT = new JEMConfigBewitchment();
 
     @Comment("Botania JER integration configuration.")
@@ -87,6 +90,9 @@ public class JEMConfig {
 
     @Comment("Minecraft JER integration configuration.")
     public static final JEMConfigMinecraft MINECRAFT = new JEMConfigMinecraft();
+
+    @Comment("NetherEx JER integration configuration.")
+    public static final JEMConfigMowziesMobs MOWZIES_MOBS = new JEMConfigMowziesMobs();
 
     @Comment("NetherEx JER integration configuration.")
     public static final JEMConfigNetherEx NETHEREX = new JEMConfigNetherEx();

@@ -1,12 +1,12 @@
 package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
-import com.invadermonky.justenoughmagiculture.JustEnoughMagiculture;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigCharm;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.integrations.jer.conditionals.JEMLightLevel;
 import com.invadermonky.justenoughmagiculture.util.Reference;
+import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import jeresources.api.conditionals.Conditional;
 import jeresources.api.drop.LootDrop;
 import jeresources.entry.MobEntry;
@@ -135,7 +135,7 @@ public class JERCharm extends JERBase implements IJERIntegration {
 
         public JERDungeonStrings(String dungeon, boolean isVillage) {
             this.category = isVillage ? String.format("%s:%s/%s", CHARM.MOD_ID, "village", dungeon) : String.format("%s:%s/%s", CHARM.MOD_ID, "treasure", dungeon);
-            this.unlocName = String.format("dungeon.%s:%s.%s", JustEnoughMagiculture.MOD_ALIAS, CHARM.MOD_ID, dungeon);
+            this.unlocName = StringHelper.getDungeonTranslationKey(CHARM.MOD_ID, dungeon);
             this.lootTable = new ResourceLocation(category);
         }
     }

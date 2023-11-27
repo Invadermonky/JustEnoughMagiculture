@@ -3,18 +3,19 @@ package com.invadermonky.justenoughmagiculture.util;
 import cofh.thermalfoundation.ThermalFoundation;
 import com.animania.Animania;
 import com.bewitchment.Bewitchment;
+import com.bobmowzie.mowziesmobs.MowziesMobs;
 import com.github.alexthe666.rats.RatsMod;
 import com.github.voxelfriend.rusticthaumaturgy.core.RusticThaumaturgy;
 import com.sirsquidly.oe.Main;
 import com.tage.crimson_warfare.CrimsonWarfare;
 import com.tiviacz.pizzacraft.PizzaCraft;
+import com.unoriginal.ancientbeasts.AncientBeasts;
 import crazypants.enderio.base.EnderIO;
 import electroblob.tfspellpack.TFSpellPack;
 import electroblob.wizardry.Wizardry;
 import familiarfauna.core.FamiliarFauna;
 import gaia.GaiaReference;
 import jeresources.reference.Reference;
-import logictechcorp.libraryex.LibraryEx;
 import logictechcorp.netherex.NetherEx;
 import lykrast.harvestersnight.common.HarvestersNight;
 import mezz.jei.config.Constants;
@@ -36,6 +37,7 @@ import javax.annotation.Nullable;
 public enum ModIds {
     ANIMANIA(ConstantIds.ANIMANIA, ConstantNames.ANIMANIA),
     BEARWITHME(ConstantIds.BEARWITHME, ConstantNames.BEARWITHME),
+    BEASTSLAYER(ConstantIds.BEASTSLAYER, ConstantNames.BEASTSLAYER),
     BEWITCHMENT(ConstantIds.BEWITCHMENT, ConstantNames.BEWITCHMENT),
     BOTANIA(ConstantIds.BOTANIA, ConstantNames.BOTANIA),
     CHARM(ConstantIds.CHARM , ConstantNames.CHARM),
@@ -49,6 +51,7 @@ public enum ModIds {
     INDUSTRIALFOREGOING(ConstantIds.INDUSTRIALFOREGOING, ConstantNames.INDUSTRIALFOREGOING),
     HARVESTCRAFT(ConstantIds.HARVESTCRAFT, ConstantNames.HARVESTCRAFT),
     HARVESTERSNIGHT(ConstantIds.HARVESTERSNIGHT, ConstantNames.HARVESTERSNIGHT),
+    MOWZIESMOBS(ConstantIds.MOWZIESMOBS, ConstantNames.MOWZIESMOBS),
     NETHEREX(ConstantIds.NETHEREX, ConstantNames.NETHEREX),
     OCEANICEXPANSE(ConstantIds.OCEANICEXPANSE, ConstantNames.OCEANICEXPANSE),
     QUARK(ConstantIds.QUARK, ConstantNames.QUARK),
@@ -109,6 +112,7 @@ public enum ModIds {
         public static final String ANIMANIA_EXTRA = "extra";
         public static final String ANIMANIA_FARM = "farm";
         public static final String BEARWITHME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_ID;
+        public static final String BEASTSLAYER = AncientBeasts.MODID;
         public static final String BEWITCHMENT = Bewitchment.MODID;
         public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_ID;
         public static final String CHARM = Charm.MOD_ID;
@@ -124,6 +128,7 @@ public enum ModIds {
         public static final String INDUSTRIALFOREGOING = com.buuz135.industrial.utils.Reference.MOD_ID;
         public static final String JUSTENOUGHITEMS = Constants.MOD_ID;
         public static final String JUSTENOUGHRESOURCES = Reference.ID;
+        public static final String MOWZIESMOBS = MowziesMobs.MODID;
         public static final String NETHEREX = NetherEx.MOD_ID;
         public static final String OCEANICEXPANSE = Main.MOD_ID;
         public static final String PIZZACRAFT = PizzaCraft.MODID;
@@ -144,6 +149,7 @@ public enum ModIds {
         public static final String ANIMANIA_EXTRA = ANIMANIA + " - Extra";
         public static final String ANIMANIA_FARM = ANIMANIA + " - Farm";
         public static final String BEARWITHME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_NAME;
+        public static final String BEASTSLAYER = AncientBeasts.NAME;
         public static final String BEWITCHMENT = Bewitchment.NAME;
         public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_NAME;
         public static final String CHARM = Charm.MOD_NAME;
@@ -157,8 +163,7 @@ public enum ModIds {
         public static final String HARVESTERSNIGHT = HarvestersNight.NAME;
         public static final String HARVESTCRAFT = com.pam.harvestcraft.Reference.NAME;
         public static final String INDUSTRIALFOREGOING = com.buuz135.industrial.utils.Reference.NAME;
-        public static final String JUSTENOUGHITEMS = Constants.NAME;
-        public static final String JUSTENOUGHRESOURCES = Reference.NAME;
+        public static final String MOWZIESMOBS = MowziesMobs.NAME;
         public static final String NETHEREX = NetherEx.NAME;
         public static final String OCEANICEXPANSE = Main.NAME;
         public static final String PIZZACRAFT = PizzaCraft.NAME;

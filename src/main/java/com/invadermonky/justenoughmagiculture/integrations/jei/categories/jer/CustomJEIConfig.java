@@ -1,6 +1,5 @@
 package com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer;
 
-import com.google.common.collect.Lists;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.init.InitIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.plant.CustomPlantWrapper;

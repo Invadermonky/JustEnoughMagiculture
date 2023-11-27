@@ -5,7 +5,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.invadermonky.justenoughmagiculture.JustEnoughMagiculture;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigNetherEx;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.BasicTrade;
@@ -13,10 +12,7 @@ import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villag
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.registry.CustomVillagerRegistry;
-import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
-import com.invadermonky.justenoughmagiculture.util.ItemHelper;
-import com.invadermonky.justenoughmagiculture.util.LogHelper;
-import com.invadermonky.justenoughmagiculture.util.ModIds;
+import com.invadermonky.justenoughmagiculture.util.*;
 import jeresources.api.conditionals.LightLevel;
 import logictechcorp.libraryex.utility.FileHelper;
 import logictechcorp.netherex.NetherEx;
@@ -66,12 +62,12 @@ public class JERNetherEx extends JERBase implements IJERIntegration {
     public void registerModDungeons() {
         registerDungeonLoot(
                 ModIds.NETHEREX.MOD_ID + ":chest/ghast_queen_shrine",
-                "dungeon." + JustEnoughMagiculture.MOD_ALIAS + ":" + ModIds.NETHEREX.MOD_ID + ".ghast_queen_shrine",
+                StringHelper.getDungeonTranslationKey(ModIds.NETHEREX.MOD_ID,"ghast_queen_shrine"),
                 new ResourceLocation(ModIds.NETHEREX.MOD_ID, "chest/temple_rare"));
 
         registerDungeonLoot(
                 ModIds.NETHEREX.MOD_ID + ":chest/base_village",
-                "dungeon." + JustEnoughMagiculture.MOD_ALIAS + ":" + ModIds.NETHEREX.MOD_ID + ".base_village",
+                StringHelper.getDungeonTranslationKey(ModIds.NETHEREX.MOD_ID, "base_village"),
                 new ResourceLocation(ModIds.NETHEREX.MOD_ID, "chest/base_village"));
     }
 

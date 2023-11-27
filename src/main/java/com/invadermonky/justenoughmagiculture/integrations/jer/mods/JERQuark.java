@@ -1,7 +1,6 @@
 package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
 import com.google.common.collect.ImmutableSet;
-import com.invadermonky.justenoughmagiculture.JustEnoughMagiculture;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigQuark;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.BasicTrade;
@@ -11,6 +10,7 @@ import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.registry.CustomVillagerRegistry;
 import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
 import com.invadermonky.justenoughmagiculture.util.ModIds;
+import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import jeresources.api.conditionals.Conditional;
 import jeresources.api.conditionals.LightLevel;
 import jeresources.api.drop.LootDrop;
@@ -236,7 +236,7 @@ public class JERQuark extends JERBase implements IJERIntegration {
 
         public JERDungeonStrings(String name) {
             this.category = String.format("%s:chests/%s", ModIds.QUARK.MOD_ID, name);
-            this.unlocName = String.format("dungeon.%s:%s.%s", JustEnoughMagiculture.MOD_ALIAS, ModIds.QUARK.MOD_ID, name);
+            this.unlocName = StringHelper.getDungeonTranslationKey(ModIds.QUARK.MOD_ID, name);
             this.lootTable = new ResourceLocation(this.category);
         }
     }

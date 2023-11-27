@@ -7,6 +7,7 @@ import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.integrations.jer.conditionals.JEMLightLevel;
 import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
+import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import jeresources.api.conditionals.LightLevel;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.EntityLiving;
@@ -450,7 +451,7 @@ public class JERTwilightForest extends JERBase implements IJERIntegration {
 
         public JERDungeonStrings(String dungeon) {
             this.category = String.format("%s:structures/%s", TWILIGHTFOREST.MOD_ID, dungeon);
-            this.unlocName = String.format("dungeon.%s:%s.%s", JustEnoughMagiculture.MOD_ALIAS, TWILIGHTFOREST.MOD_ID, dungeon);
+            this.unlocName = StringHelper.getDungeonTranslationKey(TWILIGHTFOREST.MOD_ID, dungeon);
             this.lootTable = new ResourceLocation(String.format("%s/%s", category, dungeon));
         }
     }

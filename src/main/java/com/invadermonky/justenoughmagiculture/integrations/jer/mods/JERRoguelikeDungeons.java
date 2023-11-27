@@ -3,6 +3,8 @@ package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.util.LogHelper;
+import com.invadermonky.justenoughmagiculture.util.ModIds;
+import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import greymerk.roguelike.treasure.loot.ILoot;
 import greymerk.roguelike.treasure.loot.Loot;
 import greymerk.roguelike.treasure.loot.LootSettings;
@@ -124,7 +126,7 @@ public class JERRoguelikeDungeons extends JERBase implements IJERIntegration {
             floorLoot.forEach((floor, lootPools) -> {
                 registerDungeonLoot(
                         "roguelike:floor_" + floor,
-                        "dungeon.jem:roguelike.floor_" + floor,
+                        StringHelper.getDungeonTranslationKey(ModIds.ROGUELIKEDUNGEONS.MOD_ID, "floor_" + floor),
                         new LootTable(lootPools.toArray(new LootPool[0]))
                 );
             });

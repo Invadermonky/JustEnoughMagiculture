@@ -1,12 +1,12 @@
 package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
-import com.invadermonky.justenoughmagiculture.JustEnoughMagiculture;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigEBWizardry;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.util.LogHelper;
 import com.invadermonky.justenoughmagiculture.util.ModIds;
+import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import electroblob.wizardry.constants.Element;
 import electroblob.wizardry.entity.living.EntityEvilWizard;
 import electroblob.wizardry.entity.living.EntityRemnant;
@@ -167,7 +167,7 @@ public class JEREBWizardry extends JERBase implements IJERIntegration {
 
         public JERDungeonStrings(String name) {
             this.category = ModIds.EBWIZARDRY.MOD_ID + ":" + name;
-            this.unlocName = "dungeon." + JustEnoughMagiculture.MOD_ALIAS + ":" + ModIds.EBWIZARDRY.MOD_ID + "." + name;
+            this.unlocName = StringHelper.getDungeonTranslationKey(ModIds.EBWIZARDRY.MOD_ID, name);
             this.lootTable = new ResourceLocation(ModIds.EBWIZARDRY.MOD_ID, "chests/" + name);
         }
     }

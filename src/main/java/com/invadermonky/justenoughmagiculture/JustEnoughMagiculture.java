@@ -28,6 +28,7 @@ public class JustEnoughMagiculture {
             ";required-after:" + ConstantIds.JUSTENOUGHRESOURCES + "@[0.9.2.60,)" +
                     ";after:" + ConstantIds.ANIMANIA +
                     ";after:" + ConstantIds.BEARWITHME +
+                    ";after:" + ConstantIds.BEASTSLAYER +
                     ";after:" + ConstantIds.BEWITCHMENT +
                     ";after:" + ConstantIds.BOTANIA +
                     ";after:" + ConstantIds.CHARM +
@@ -40,6 +41,7 @@ public class JustEnoughMagiculture {
                     ";after:" + ConstantIds.HARVESTCRAFT +
                     ";after:" + ConstantIds.HARVESTERSNIGHT +
                     ";after:" + ConstantIds.INDUSTRIALFOREGOING +
+                    ";after:" + ConstantIds.MOWZIESMOBS +
                     ";after:" + ConstantIds.NETHEREX +
                     ";after:" + ConstantIds.OCEANICEXPANSE +
                     ";after:" + ConstantIds.PIZZACRAFT +

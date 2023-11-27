@@ -8,6 +8,7 @@ import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.registry.LootBagRegistry;
 import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
 import com.invadermonky.justenoughmagiculture.util.ModIds;
+import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import jeresources.api.conditionals.Conditional;
 import jeresources.api.conditionals.LightLevel;
 import jeresources.api.drop.LootDrop;
@@ -76,7 +77,7 @@ public class JERThaumcraft extends JERBase implements IJERIntegration {
 
     @Override
     public void registerModDungeons() {
-        registerDungeonLoot("thaumcraft:mound", "dungeon.jem:thaumcraft.mound", LootTableList.CHESTS_SIMPLE_DUNGEON);
+        registerDungeonLoot("thaumcraft:mound", StringHelper.getDungeonTranslationKey(ModIds.THAUMCRAFT.MOD_ID, "mound"), LootTableList.CHESTS_SIMPLE_DUNGEON);
     }
 
     @Override

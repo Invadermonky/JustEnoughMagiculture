@@ -8,84 +8,73 @@ jem.axeKill.text=Axe Kill Bonus
 jem.shovelKill.text=Shovel Kill Bonus
 
 # Dungeon JER Strings
+#   Beast Slayer
+dungeon.ancientbeasts:circus.name=Circus Tent
 #   Charm
-dungeon.jem:charm.abandoned_crate=Abandoned Crate
-dungeon.jem:charm.common_books=Village Library
-dungeon.jem:charm.common_potions=Witch Hut
-dungeon.jem:charm.butcher=Village Butcher
-dungeon.jem:charm.carpenter=Village Carpenter
-dungeon.jem:charm.farmer=Village Farmer
-dungeon.jem:charm.fisherman=Village Fisherman
-dungeon.jem:charm.librarian=Village Librarian
-dungeon.jem:charm.priest=Village Priest
-dungeon.jem:charm.shepherd=Village Shepherd
-dungeon.jem:charm.smith=Village Smith
+dungeon.charm:abandoned_crate.name=Abandoned Crate
+dungeon.charm:common_books.name=Village Library
+dungeon.charm:common_potions.name=Witch Hut
+dungeon.charm:butcher.name=Village Butcher
+dungeon.charm:carpenter.name=Village Carpenter
+dungeon.charm:farmer.name=Village Farmer
+dungeon.charm:fisherman.name=Village Fisherman
+dungeon.charm:librarian.name=Village Librarian
+dungeon.charm:priest.name=Village Priest
+dungeon.charm:shepherd.name=Village Shepherd
+dungeon.charm:smith.name=Village Smith
 #   EB Wizardry
-dungeon.jem:ebwizardry.library_ruins_bookshelf=Library Ruins
-dungeon.jem:ebwizardry.obelisk=Obelisk
-dungeon.jem:ebwizardry.shrine=Wizard Shrine
-dungeon.jem:ebwizardry.wizard_tower=Wizard Tower
+dungeon.ebwizardry:library_ruins_bookshelf.name=Library Ruins
+dungeon.ebwizardry:obelisk.name=Obelisk
+dungeon.ebwizardry:shrine.name=Wizard Shrine
+dungeon.ebwizardry:wizard_tower.name=Wizard Tower
 #   NetherEx
-dungeon.jem:netherex.base_village=Pigtificate Village
-dungeon.jem:netherex.ghast_queen_shrine=Ghast Queen Shrine
-#   Quark
-dungeon.jem:quark.archaeologist=Archaeologist's Chest
-dungeon.jem:quark.buried_treasure=Buried Treasure
-dungeon.jem:quark.pirate_chest=Pirate Ship
+dungeon.netherex:base_village.name=Pigtificate Village
+dungeon.netherex:ghast_queen_shrine.name=Ghast Queen Shrine
 #   Oceanic Expanse
-dungeon.jem:oe.crab_dig=Crab Digging
-dungeon.jem:oe.shell_sand=Shelly Sand
-dungeon.jem:oe.shipwreck_map=Shipwreck Map
-dungeon.jem:oe.shipwreck_supply=Shipwreck Supply
-dungeon.jem:oe.shipwreck_treasure=Shipwreck Treasure
+dungeon.oe:crab_dig.name=Crab Digging
+dungeon.oe:shell_sand.name=Shelly Sand
+dungeon.oe:shipwreck_map.name=Shipwreck Map
+dungeon.oe:shipwreck_supply.name=Shipwreck Supply
+dungeon.oe:shipwreck_treasure.name=Shipwreck Treasure
+#   Quark
+dungeon.quark:archaeologist.name=Archaeologist's Chest
+dungeon.quark:buried_treasure.name=Buried Treasure
+dungeon.quark:pirate_chest.name=Pirate Ship
 #   Rats: RatN
-dungeon.jem:rats.pet_shop=Pet Shop
-dungeon.jem:rats.pet_shop_upstairs=Pet Shop Upstairs
-dungeon.jem:rats.plague_doctor_house=Plague Doctor House
+dungeon.rats:pet_shop.name=Pet Shop
+dungeon.rats:pet_shop_upstairs.name=Pet Shop Upstairs
+dungeon.rats:plague_doctor_house.name=Plague Doctor House
 #   Roguelike Dungeons
-dungeon.jem:roguelike.floor_0=Dungeon Floor 1
-dungeon.jem:roguelike.floor_1=Dungeon Floor 2
-dungeon.jem:roguelike.floor_2=Dungeon Floor 3
-dungeon.jem:roguelike.floor_3=Dungeon Floor 4
-dungeon.jem:roguelike.floor_4=Dungeon Floor 5
-dungeon.jem:roguelike.floor_5=Dungeon Floor 6
+dungeon.roguelike:floor_0.name=Dungeon Floor 1
+dungeon.roguelike:floor_1.name=Dungeon Floor 2
+dungeon.roguelike:floor_2.name=Dungeon Floor 3
+dungeon.roguelike:floor_3.name=Dungeon Floor 4
+dungeon.roguelike:floor_4.name=Dungeon Floor 5
+dungeon.roguelike:floor_5.name=Dungeon Floor 6
 #   Thaumcraft
-dungeon.jem:thaumcraft.crate_common=Common Crate
-dungeon.jem:thaumcraft.crate_uncommon=Uncommon Crate
-dungeon.jem:thaumcraft.crate_rare=Rare Crate
-dungeon.jem:thaumcraft.urn_common=Common Urn
-dungeon.jem:thaumcraft.urn_uncommon=Uncommon Urn
-dungeon.jem:thaumcraft.urn_rare=Rare Urn
-dungeon.jem:thaumcraft.mound=Burial Mound
-#   Thaumic Augmentation
-dungeon.jem:thaumicaugmentation.urn_common=Common Eldritch Urn
-dungeon.jem:thaumicaugmentation.urn_uncommon=Unommon Eldritch Urn
-dungeon.jem:thaumicaugmentation.urn_rare=Rare Eldritch Urn
-dungeon.jem:thaumicaugmentation.pedestal_common=Common Eldritch Pedestal
-dungeon.jem:thaumicaugmentation.pedestal_uncommon=Unommon Eldritch Pedestal
-dungeon.jem:thaumicaugmentation.pedestal_rare=Rare Eldritch Pedestal
+dungeon.thaumcraft:mound.name=Burial Mound
 #   Twilight Forest
-dungeon.jem:twilightforest.aurora_cache=Aurora Cache
-dungeon.jem:twilightforest.aurora_room=Aurora Room
-dungeon.jem:twilightforest.basement=Hut Basement
-dungeon.jem:twilightforest.darktower_cache=Darktower Cache
-dungeon.jem:twilightforest.darktower_key=Darktower Key
-dungeon.jem:twilightforest.graveyard=Spooky Graveyard
-dungeon.jem:twilightforest.hedge_maze=Hedge Maze
-dungeon.jem:twilightforest.hill_1=Hollow Hill
-dungeon.jem:twilightforest.hill_2=Hollow Hill
-dungeon.jem:twilightforest.hill_3=Hollow Hill
-dungeon.jem:twilightforest.labyrinth_dead_end=Labyrinth Dead End
-dungeon.jem:twilightforest.labyrinth_room=Labyrinth Room
-dungeon.jem:twilightforest.labyrinth_vault=Labyrinth Vault
-dungeon.jem:twilightforest.quest_ram_rewards=Questing Ram Rewards
-dungeon.jem:twilightforest.stronghold_cache=Goblin Cache
-dungeon.jem:twilightforest.stronghold_room=Goblin Stronghold
-dungeon.jem:twilightforest.tower_library=Tower Library
-dungeon.jem:twilightforest.tower_room=Tower Room
-dungeon.jem:twilightforest.tree_cache=Tree Cache
-dungeon.jem:twilightforest.troll_garden=Troll Garden
-dungeon.jem:twilightforest.troll_vault=Troll Vault
+dungeon.twilightforest:aurora_cache.name=Aurora Cache
+dungeon.twilightforest:aurora_room.name=Aurora Room
+dungeon.twilightforest:basement.name=Hut Basement
+dungeon.twilightforest:darktower_cache.name=Darktower Cache
+dungeon.twilightforest:darktower_key.name=Darktower Key
+dungeon.twilightforest:graveyard.name=Spooky Graveyard
+dungeon.twilightforest:hedge_maze.name=Hedge Maze
+dungeon.twilightforest:hill_1.name=Hollow Hill
+dungeon.twilightforest:hill_2.name=Hollow Hill
+dungeon.twilightforest:hill_3.name=Hollow Hill
+dungeon.twilightforest:labyrinth_dead_end.name=Labyrinth Dead End
+dungeon.twilightforest:labyrinth_room.name=Labyrinth Room
+dungeon.twilightforest:labyrinth_vault.name=Labyrinth Vault
+dungeon.twilightforest:quest_ram_rewards.name=Questing Ram Rewards
+dungeon.twilightforest:stronghold_cache.name=Goblin Cache
+dungeon.twilightforest:stronghold_room.name=Goblin Stronghold
+dungeon.twilightforest:tower_library.name=Tower Library
+dungeon.twilightforest:tower_room.name=Tower Room
+dungeon.twilightforest:tree_cache.name=Tree Cache
+dungeon.twilightforest:troll_garden.name=Troll Garden
+dungeon.twilightforest:troll_vault.name=Troll Vault
 
 # Entity JER Strings
 entity.apocryphal_teacher.name=Apocryphal Teacher

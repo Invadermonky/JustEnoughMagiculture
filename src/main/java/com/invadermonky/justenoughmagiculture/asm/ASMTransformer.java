@@ -1,19 +1,19 @@
 package com.invadermonky.justenoughmagiculture.asm;
 
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer.CustomJEIConfig;
-import com.invadermonky.justenoughmagiculture.util.LogHelper;
+import com.invadermonky.justenoughmagiculture.asm.mods.ASMJER;
+import com.invadermonky.justenoughmagiculture.asm.mods.ASMRats;
 import net.minecraft.launchwrapper.IClassTransformer;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.Type;
-import org.objectweb.asm.tree.*;
+import org.objectweb.asm.tree.ClassNode;
 
 import java.util.Arrays;
 
-import static org.objectweb.asm.Opcodes.*;
-
 public class ASMTransformer implements IClassTransformer {
-    private static final String[] classesBeingTransformed = {"jeresources.jei.JEIConfig"};
+    private static final String[] classesBeingTransformed = {
+            "com.github.alexthe666.rats.client.render.entity",
+            "jeresources.jei.JEIConfig"
+    };
 
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
@@ -32,7 +32,10 @@ public class ASMTransformer implements IClassTransformer {
 
             switch(index) {
                 case 0:
-                    transformJEIConfig(classNode, isObfuscated);
+                    ASMRats.transformLayerRatEyes(classNode, isObfuscated);
+                    break;
+                case 1:
+                    ASMJER.transformJEIConfig(classNode, isObfuscated);
                     break;
             }
 
@@ -43,32 +46,5 @@ public class ASMTransformer implements IClassTransformer {
             e.printStackTrace();
         }
         return basicClass;
-    }
-
-    private static void transformJEIConfig(ClassNode classNode, boolean isObfuscated) throws Exception {
-        final String JEICONFIG = "register";
-        final String JEICONFIG_DESC = "(Lmezz/jei/api/IModRegistry;)V";
-
-        for(MethodNode method : classNode.methods) {
-            if(method.name.equals(JEICONFIG) && method.desc.equals(JEICONFIG_DESC)) {
-                AbstractInsnNode returnNode = null;
-                for(AbstractInsnNode instruction : method.instructions.toArray()) {
-                    if(instruction.getOpcode() == RETURN) {
-                        //Continue iteration to make sure it's the last RETURN.
-                        returnNode = instruction;
-                    }
-                }
-                if(returnNode != null) {
-                    LogHelper.info("Inserting injectRegister method.");
-                    InsnList toInsert = new InsnList();
-                    toInsert.add(new VarInsnNode(ALOAD, 1));
-                    toInsert.add(new MethodInsnNode(INVOKESTATIC, Type.getInternalName(CustomJEIConfig.class), "injectRegister", JEICONFIG_DESC, false));
-
-                    method.instructions.insertBefore(returnNode, toInsert);
-                } else {
-                    throw new Exception("Everything is borked.");
-                }
-            }
-        }
     }
 }

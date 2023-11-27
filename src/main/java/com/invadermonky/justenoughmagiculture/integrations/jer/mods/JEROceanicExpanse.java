@@ -1,12 +1,12 @@
 package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
-import com.invadermonky.justenoughmagiculture.JustEnoughMagiculture;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigOceanicExpanse;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
 import com.invadermonky.justenoughmagiculture.util.ModIds;
+import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import com.sirsquidly.oe.entity.*;
 import com.sirsquidly.oe.util.handlers.ConfigHandler;
 import com.sirsquidly.oe.util.handlers.LootTableHandler;
@@ -26,30 +26,6 @@ public class JEROceanicExpanse extends JERBase implements IJERIntegration {
 
     @Override
     public void registerModDungeons() {
-        /* Combining all shipwreck treasures into one category. I might come back to this.
-        LootTable shipwreckTable = new LootTable(new LootPool[] {
-                new LootPool(
-                        new LootEntry[] {new LootEntryTable(LootTableHandler.SHIPWRECK_MAP, 1, 0, new LootCondition[0], LootTableHandler.SHIPWRECK_MAP.toString())},
-                        new LootCondition[0],
-                        new RandomValueRange(3.0f, 6.0f),
-                        new RandomValueRange(0, 0),
-                        LootTableHandler.SHIPWRECK_MAP.toString()),
-                new LootPool(
-                        new LootEntry[] {new LootEntryTable(LootTableHandler.SHIPWRECK_SUPPLY, 1, 0, new LootCondition[0], LootTableHandler.SHIPWRECK_SUPPLY.toString())},
-                        new LootCondition[0],
-                        new RandomValueRange(1.0f, 1.0f),
-                        new RandomValueRange(0, 0),
-                        LootTableHandler.SHIPWRECK_SUPPLY.toString()),
-                new LootPool(
-                        new LootEntry[] {new LootEntryTable(LootTableHandler.SHIPWRECK_TREASURE, 1, 0, new LootCondition[0], LootTableHandler.SHIPWRECK_TREASURE.toString())},
-                        new LootCondition[0],
-                        new RandomValueRange(1.0f, 1.0f),
-                        new RandomValueRange(0, 0),
-                        LootTableHandler.SHIPWRECK_TREASURE.toString())
-        });
-        registerDungeonLoot("oe:chests/shipwreck", "dungeon.jem:oe.shipwreck", shipwreckTable);
-        */
-
         if(ConfigHandler.worldGen.shipwreck.enableShipwrecks) {
             registerOEDungeon("shipwreck_map", "chests");
             registerOEDungeon("shipwreck_supply", "chests");
@@ -128,7 +104,7 @@ public class JEROceanicExpanse extends JERBase implements IJERIntegration {
 
         public JERDungeonStrings(String name, String type) {
             this.category = String.format("%s:%s/%s", ModIds.OCEANICEXPANSE.MOD_ID, type, name);
-            this.unlocName = String.format("dungeon.%s:%s.%s", JustEnoughMagiculture.MOD_ALIAS, ModIds.OCEANICEXPANSE.MOD_ID, name);
+            this.unlocName = StringHelper.getDungeonTranslationKey(ModIds.OCEANICEXPANSE.MOD_ID, name);
             this.lootTable = new ResourceLocation(category);
         }
     }

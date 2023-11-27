@@ -46,6 +46,7 @@ public class InitIntegration {
             if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_FARM)) new JERAnimaniaFarm(ANIMANIA_FARM.enableJERMobs);
         }
         if(ModIds.BEARWITHME.isLoaded) new JERBearWithMe(BEAR_WITH_ME.enableJERMobs);
+        if(ModIds.BEASTSLAYER.isLoaded) new JERBeastSlayer(BEAST_SLAYER.enableJERDungeons, BEAST_SLAYER.enableJERMobs);
         if(ModIds.BEWITCHMENT.isLoaded) new JERBewitchment(BEWITCHMENT.enableJERMobs, BEWITCHMENT.enableJERPlants, BEWITCHMENT.enableJERVillagers);
         if(ModIds.BOTANIA.isLoaded) new JERBotania(BOTANIA.enableJERMobs);
         if(ModIds.CHARM.isLoaded) new JERCharm(CHARM.enableJERDungeons, CHARM.enableJERMobs);
@@ -57,6 +58,7 @@ public class InitIntegration {
         if(ModIds.HARVESTCRAFT.isLoaded) new JERHarvestcraft(HARVESTCRAFT.enableJERPlants);
         if(ModIds.HARVESTERSNIGHT.isLoaded) new JERHarvestersNight(HARVESTERSNIGHT.enableJERMobs);
         if(ModIds.INDUSTRIALFOREGOING.isLoaded) new JERIndustrialForegoing(INDUSTRIAL_FOREGOING.enableJERMobs);
+        if(ModIds.MOWZIESMOBS.isLoaded) new JERMowziesMobs(MOWZIES_MOBS.enableJERMobs, MOWZIES_MOBS.enableJERVillagers);
         if(ModIds.NETHEREX.isLoaded) new JERNetherEx(NETHEREX.enableJERDungeons, NETHEREX.enableJERMobs, NETHEREX.enableJERVillagers);
         if(ModIds.OCEANICEXPANSE.isLoaded) new JEROceanicExpanse(OCEANIC_EXPANSE.enableJERDungeons, OCEANIC_EXPANSE.enableJERMobs);
         if(ModIds.PIZZACRAFT.isLoaded) new JERPizzacraft(PIZZACRAFT.enableJERPlants);

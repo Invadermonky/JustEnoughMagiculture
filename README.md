@@ -27,6 +27,25 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 - Grizzly Bear
 - Panda Bear
 
+## Beast Slayer (Ancient Beasts)
+### Dungeons
+- Circus Tent
+
+### Mobs
+- Bonepile 
+- Bouldering Zombie 
+- Damcell 
+- Frostwalker 
+- Ghost 
+- Giant 
+- Nekros 
+- Netherhound 
+- Owlstack 
+- Rifted Enderman 
+- Sand Monster 
+- Vessel 
+- Zealot 
+
 ## Bewitchment
 ### Mobs
 - Bafometyr
@@ -83,6 +102,21 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 - Greater Crimson Portal
 - Eldritch Golem
 - Eldritch Warden
+
+## Electroblob's Wizardry
+### Dungeons
+- Library Ruins
+- Obelisk
+- Wizard Shrine
+- Wizard Tower
+
+### Mobs
+- Evil Wizard
+- Revenant (All Variants)
+
+## Electroblob's Wizardry: Twilight Forest Spell Pack
+### Mobs
+- Druid Mage
 
 ## Ender IO
 ### Injected loot drops
@@ -188,6 +222,10 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 - All Fruit Trees
 - All Harvestable Logs
 
+## Harvester's Night
+### Mobs
+- The Harvester
+
 ## Industrial Foregoing
 ### Mobs
 - Pink Slime
@@ -200,6 +238,21 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 ### Plants
 - Beetroot
 - Nether Wart
+
+## Mowzowie's Mobs
+### Mobs
+- Barako, the Sun King
+- Barakoana (all Variants)
+- Ferrous Wroughtnaut
+- Foliaath
+- Frostmaw
+- Grottol
+- Lantern
+- Naga
+
+### Villagers
+- Barako, the Sun King
+- Barakoana
 
 ## NetherEx
 ### Dungeons
