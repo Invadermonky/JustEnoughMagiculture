@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class ASMTransformer implements IClassTransformer {
     private static final String[] classesBeingTransformed = {
-            "com.github.alexthe666.rats.client.render.entity",
+            "com.github.alexthe666.rats.client.render.entity.RenderRat",
             "jeresources.jei.JEIConfig"
     };
 
