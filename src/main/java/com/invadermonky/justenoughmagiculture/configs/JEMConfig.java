@@ -125,6 +125,9 @@ public class JEMConfig {
     @Comment(ConstantNames.THAUMCRAFT + " JER integration configuration.")
     public static final JEMConfigThaumcraft THAUMCRAFT = new JEMConfigThaumcraft();
 
+    @Comment(ConstantNames.SPECIALMOBS + " JER integration configuration.")
+    public static final JEMConfigSpecialMobs SPECIAL_MOBS = new JEMConfigSpecialMobs();
+
     @Comment(ConstantNames.THAUMICAUGMENTATION + " JER integration configuration.")
     public static final JEMConfigThaumicAugmentation THAUMIC_AUGMENTATION = new JEMConfigThaumicAugmentation();
 

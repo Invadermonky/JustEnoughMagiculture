@@ -15,6 +15,7 @@ import crazypants.enderio.base.EnderIO;
 import electroblob.tfspellpack.TFSpellPack;
 import electroblob.wizardry.Wizardry;
 import familiarfauna.core.FamiliarFauna;
+import fathertoast.specialmobs.SpecialMobsMod;
 import gaia.GaiaReference;
 import jeresources.reference.Reference;
 import logictechcorp.netherex.NetherEx;
@@ -62,6 +63,7 @@ public enum ModIds {
     ROGUELIKEDUNGEONS(ConstantIds.ROGUELIKEDUNGEONS, ConstantNames.ROGUELIKEDUNGEONS),
     RUSTIC(ConstantIds.RUSTIC, ConstantNames.RUSTIC),
     RUSTICTHAUMATURGY(ConstantIds.RUSTICTHAUMATURGY, ConstantNames.RUSTICTHAUMATURGY),
+    SPECIALMOBS(ConstantIds.SPECIALMOBS, ConstantNames.SPECIALMOBS),
     THAUMCRAFT(ConstantIds.THAUMCRAFT, ConstantNames.THAUMCRAFT),
     THAUMICAUGMENTATION(ConstantIds.THAUMICAUGMENTATION, ConstantNames.THAUMICAUGMENTATION),
     THERMALFOUNDATION(ConstantIds.THERMALFOUNDATION, ConstantNames.THERMALFOUNDATION),
@@ -141,6 +143,7 @@ public enum ModIds {
         public static final String RUSTIC = Rustic.MODID;
         public static final String RUSTICTHAUMATURGY = RusticThaumaturgy.MODID;
         public static final String THAUMCRAFT = Thaumcraft.MODID;
+        public static final String SPECIALMOBS = SpecialMobsMod.MOD_ID;
         public static final String THAUMICAUGMENTATION = ThaumicAugmentationAPI.MODID;
         public static final String THERMALFOUNDATION = ThermalFoundation.MOD_ID;
         public static final String TWILIGHTFOREST = TwilightForestMod.ID;
@@ -176,6 +179,7 @@ public enum ModIds {
         public static final String ROGUELIKEDUNGEONS = "Roguelike Dungeons";
         public static final String RUSTIC = Rustic.NAME;
         public static final String RUSTICTHAUMATURGY = RusticThaumaturgy.NAME;
+        public static final String SPECIALMOBS = SpecialMobsMod.NAME;
         public static final String THAUMCRAFT = Thaumcraft.MODNAME;
         public static final String THAUMICAUGMENTATION = ThaumicAugmentationAPI.NAME;
         public static final String THERMALFOUNDATION = ThermalFoundation.MOD_NAME;

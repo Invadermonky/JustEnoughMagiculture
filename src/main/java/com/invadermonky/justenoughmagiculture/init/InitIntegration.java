@@ -68,6 +68,7 @@ public class InitIntegration {
         /* TODO: This is a massive amount of work and I'm not sure I want to go through with it. */ if(ModIds.ROGUELIKEDUNGEONS.isLoaded) new JERRoguelikeDungeons(ROGUELIKE_DUNGEONS.enableJERDungeons);
         if(ModIds.RUSTIC.isLoaded) new JERRustic(RUSTIC.enableJERPlants);
         if(ModIds.RUSTICTHAUMATURGY.isLoaded) new JERRusticThaumaturgy(RUSTIC_THAUMATURGY.enableJERPlants);
+        if(ModIds.SPECIALMOBS.isLoaded) new JERSpecialMobs(SPECIAL_MOBS.enableJERMobs);
         if(ModIds.THAUMCRAFT.isLoaded) new JERThaumcraft(THAUMCRAFT.enableJERDungeons, THAUMCRAFT.enableJERMobs);
         if(ModIds.THAUMICAUGMENTATION.isLoaded) new JERThaumicAugmentation(THAUMIC_AUGMENTATION.enableJERMobs);
         if(ModIds.THERMALFOUNDATION.isLoaded) new JERThermalFoundation(THERMAL_FOUNDATION.enableJERMobs);

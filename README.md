@@ -447,6 +447,10 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 - Shimmerpetal
 - Viscap
 
+## Special Mobs
+### Mobs
+- All of 'em. I'm too lazy to write out all 97 mobs.
+
 ## Thaumcraft
 ### Dungeons
 - Burial Mound

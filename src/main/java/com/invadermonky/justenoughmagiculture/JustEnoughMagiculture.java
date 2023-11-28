@@ -51,6 +51,7 @@ public class JustEnoughMagiculture {
                     ";after:" + ConstantIds.ROGUELIKEDUNGEONS +
                     ";after:" + ConstantIds.RUSTIC +
                     ";after:" + ConstantIds.RUSTICTHAUMATURGY +
+                    ";after:" + ConstantIds.SPECIALMOBS +
                     ";after:" + ConstantIds.THAUMCRAFT +
                     ";after:" + ConstantIds.THAUMICAUGMENTATION +
                     ";after:" + ConstantIds.THERMALFOUNDATION +

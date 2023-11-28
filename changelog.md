@@ -13,6 +13,7 @@
 - Added Harvester's Night JER Integration
 - Added Mowzie's Mobs JER Integration
 - Added Rats JER Integration
+- Added Special Mobs JER Integration
 
 ### 1.12.2-1.0.0
 
