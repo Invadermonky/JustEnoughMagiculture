@@ -1,7 +1,10 @@
-# Just Enough Magiculture Changelog
+# Just Enough Magiculture
 
-## 1.12.2-1.1.0
+## Changelog
 
+### 1.12.2-1.1.0
+
+- Added Atum 2 JER Integration
 - Added Beast Slayer JER Integration
 - Added Bewitchment Demon/Demoness Trades
 - Added Electroblob's Wizardry JER Integration
@@ -11,6 +14,6 @@
 - Added Mowzie's Mobs JER Integration
 - Added Rats JER Integration
 
-## 1.12.2-1.0.0
+### 1.12.2-1.0.0
 
 - Initial Release

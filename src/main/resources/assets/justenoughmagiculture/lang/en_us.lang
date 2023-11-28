@@ -8,6 +8,16 @@ jem.axeKill.text=Axe Kill Bonus
 jem.shovelKill.text=Shovel Kill Bonus
 
 # Dungeon JER Strings
+#   Atum 2
+dungeon.atum:crate.name=Deadwood Crate
+dungeon.atum:crate_bonus.name=Rare Deadwood Crate
+dungeon.atum:girafi_tomb.name=Girafi Tomb
+dungeon.atum:lighthouse.name=Desert Lighthouse
+dungeon.atum:pharaoh.name=Sarcophagus
+dungeon.atum:pyramid_chest.name=Pyramid Chest
+dungeon.atum:relic_ore.name=Relic Ore
+dungeon.atum:sarcophagus_artifact.name=Sarcophagus Artifact
+dungeon.atum:tomb.name=Tomb Chest
 #   Beast Slayer
 dungeon.ancientbeasts:circus.name=Circus Tent
 #   Charm
@@ -87,3 +97,8 @@ entity.rats:plague_doctor.name=Plague Doctor
 
 # JEI
 jei.justenoughmagiculture:loot_bag.title=Loot Bags
+
+# JEI Desc
+jei.jem:atum_dirty_loot.info=Throw into water to wash. There is a small chance the item will be destroyed in the process.
+jei.jem:atum_clean_loot.info=Interact with a Sunspeaker to exchange for gold coins.
+jei.jem:atum_gold_coin.info=Used for trading. Obtained by exchanging washed loot with a Sunspeaker.

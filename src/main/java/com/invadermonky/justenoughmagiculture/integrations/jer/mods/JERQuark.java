@@ -60,6 +60,7 @@ public class JERQuark extends JERBase implements IJERIntegration {
         if(enableJERDungeons) registerModDungeons();
         if(enableJERMobs) registerModEntities();
         if(enableJERVillagers) registerModVillagers();
+        getInstance();
     }
 
     public static JERQuark getInstance() {

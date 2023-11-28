@@ -27,6 +27,7 @@ public class JustEnoughMagiculture {
             "required-after:" + ConstantIds.JUSTENOUGHITEMS + "@[4.7.0,)" +
             ";required-after:" + ConstantIds.JUSTENOUGHRESOURCES + "@[0.9.2.60,)" +
                     ";after:" + ConstantIds.ANIMANIA +
+                    ";after:" + ConstantIds.ATUM +
                     ";after:" + ConstantIds.BEARWITHME +
                     ";after:" + ConstantIds.BEASTSLAYER +
                     ";after:" + ConstantIds.BEWITCHMENT +

@@ -45,6 +45,7 @@ public class InitIntegration {
             if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_EXTRA)) new JERAnimaniaExtra(ANIMANIA_EXTRA.enableJERMobs);
             if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_FARM)) new JERAnimaniaFarm(ANIMANIA_FARM.enableJERMobs);
         }
+        if(ModIds.ATUM.isLoaded) new JERAtum(ATUM.enableJERDungeons, ATUM.enableJERMobs, ATUM.enableJERPlants, ATUM.enableJERVillagers);
         if(ModIds.BEARWITHME.isLoaded) new JERBearWithMe(BEAR_WITH_ME.enableJERMobs);
         if(ModIds.BEASTSLAYER.isLoaded) new JERBeastSlayer(BEAST_SLAYER.enableJERDungeons, BEAST_SLAYER.enableJERMobs);
         if(ModIds.BEWITCHMENT.isLoaded) new JERBewitchment(BEWITCHMENT.enableJERMobs, BEWITCHMENT.enableJERPlants, BEWITCHMENT.enableJERVillagers);

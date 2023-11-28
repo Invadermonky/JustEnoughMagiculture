@@ -6,7 +6,9 @@ import com.invadermonky.justenoughmagiculture.init.InitIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.lootbag.LootBagCategory;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.lootbag.LootBagEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.lootbag.LootBagWrapper;
+import com.invadermonky.justenoughmagiculture.integrations.jer.mods.JERAtum;
 import com.invadermonky.justenoughmagiculture.registry.LootBagRegistry;
+import com.invadermonky.justenoughmagiculture.util.ModIds;
 import mezz.jei.api.*;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 
@@ -24,6 +26,8 @@ public class JEICategories implements IModPlugin {
             registry.handleRecipes(LootBagEntry.class, LootBagWrapper::new, LOOT_BAG);
             registry.addRecipes(LootBagRegistry.getInstance().getAllLootBags(), LOOT_BAG);
         }
+
+        registerInfoPages(registry);
     }
 
     @Override
@@ -39,5 +43,11 @@ public class JEICategories implements IModPlugin {
 
     public static IJeiHelpers getJeiHelpers() {
         return JEICategories.jeiHelpers;
+    }
+
+    private void registerInfoPages(IModRegistry registry) {
+        if(ModIds.ATUM.isLoaded && JEMConfig.ATUM.enableJEIInfoPages) {
+            JERAtum.getInstance().registerJEIInfoPages(registry);
+        }
     }
 }

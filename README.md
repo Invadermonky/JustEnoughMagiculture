@@ -21,6 +21,52 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 - Pigs
 - Sheep
 
+## Atum 2
+### Dungeons
+- Deadwood Crate
+- Rare Deadwood Crate
+- Girafi Tomb
+- Desert Lighthouse
+- Sarcophagus
+- Pyramid Chest
+- Relic Ore
+- Sarcophagus Artifact
+- Tomb Chest
+
+### Mobs
+- Assassin
+- Barbarian
+- Bonestorm
+- Brigand
+- Camel
+- Desert Rabbit 
+- Desert Wolf 
+- Desert Wolf Alpha 
+- Forsaken
+- Mummy
+- Nomad
+- Scarab 
+- Stoneguard 
+- Stonewarden 
+- Sunspeaker
+- Tarantula
+- Wraith 
+
+### Plants
+- AnputsFingers 
+- Date 
+- Emmer 
+- Flax 
+- OasisGrass
+
+### Villagers
+- Sunspeaker
+
+### JEI Info Pages
+- Dirty Loot
+- Washed Loot
+- Gold Coins
+
 ## Bear With Me
 ### Mobs
 - Black Bear
@@ -344,6 +390,28 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 
 ### Villagers
 - Archaeologist
+
+## Rats
+### Dungeons
+- Pet Shop
+- Pet Shop Upstairs
+- Plague Doctor House
+
+### Mobs
+- Black Death
+- Feral Ratlantean
+- Illager Piper
+- Ratlantean Automation
+- Neo Ratlantean
+- Pirat
+- Plague Beast
+- Plague Doctor
+- Rat
+- Ratlantean Spirit
+
+### Villagers
+- Pet Shop Owner
+- Plague Doctor
 
 ## Roguelike Dungeons
 ### Dungeons (Experimental Incomplete)

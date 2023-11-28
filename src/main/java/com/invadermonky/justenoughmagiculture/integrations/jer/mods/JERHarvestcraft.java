@@ -31,6 +31,7 @@ public class JERHarvestcraft extends JERBase implements IJERIntegration {
 
     public JERHarvestcraft(boolean enableJERPlants) {
         if(enableJERPlants) registerModPlants();
+        getInstance();
     }
 
     public static JERHarvestcraft getInstance() {

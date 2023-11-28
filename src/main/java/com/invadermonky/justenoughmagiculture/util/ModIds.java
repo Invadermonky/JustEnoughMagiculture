@@ -8,6 +8,7 @@ import com.github.alexthe666.rats.RatsMod;
 import com.github.voxelfriend.rusticthaumaturgy.core.RusticThaumaturgy;
 import com.sirsquidly.oe.Main;
 import com.tage.crimson_warfare.CrimsonWarfare;
+import com.teammetallurgy.atum.Atum;
 import com.tiviacz.pizzacraft.PizzaCraft;
 import com.unoriginal.ancientbeasts.AncientBeasts;
 import crazypants.enderio.base.EnderIO;
@@ -36,6 +37,7 @@ import javax.annotation.Nullable;
 
 public enum ModIds {
     ANIMANIA(ConstantIds.ANIMANIA, ConstantNames.ANIMANIA),
+    ATUM(ConstantIds.ATUM, ConstantNames.ATUM),
     BEARWITHME(ConstantIds.BEARWITHME, ConstantNames.BEARWITHME),
     BEASTSLAYER(ConstantIds.BEASTSLAYER, ConstantNames.BEASTSLAYER),
     BEWITCHMENT(ConstantIds.BEWITCHMENT, ConstantNames.BEWITCHMENT),
@@ -111,6 +113,7 @@ public enum ModIds {
         public static final String ANIMANIA = Animania.MODID;
         public static final String ANIMANIA_EXTRA = "extra";
         public static final String ANIMANIA_FARM = "farm";
+        public static final String ATUM = com.teammetallurgy.atum.utils.Constants.MOD_ID;
         public static final String BEARWITHME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_ID;
         public static final String BEASTSLAYER = AncientBeasts.MODID;
         public static final String BEWITCHMENT = Bewitchment.MODID;
@@ -148,6 +151,7 @@ public enum ModIds {
         public static final String ANIMANIA = Animania.NAME;
         public static final String ANIMANIA_EXTRA = ANIMANIA + " - Extra";
         public static final String ANIMANIA_FARM = ANIMANIA + " - Farm";
+        public static final String ATUM = com.teammetallurgy.atum.utils.Constants.MOD_NAME;
         public static final String BEARWITHME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_NAME;
         public static final String BEASTSLAYER = AncientBeasts.NAME;
         public static final String BEWITCHMENT = Bewitchment.NAME;

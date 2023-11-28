@@ -39,12 +39,13 @@ public class JERCharm extends JERBase implements IJERIntegration {
     private static final JEMConfigCharm.JER jerConfig = JEMConfig.CHARM.JUST_ENOUGH_RESOURCES;
     private static JERCharm instance;
 
+    private JERCharm() {}
+
     public JERCharm(boolean enableJERDungeons, boolean enableJERMobs) {
         if(enableJERDungeons) registerModDungeons();
         if(enableJERMobs) registerModEntities();
+        getInstance();
     }
-
-    private JERCharm() {}
 
     public static JERCharm getInstance() {
         return instance == null ? instance = new JERCharm() : instance;

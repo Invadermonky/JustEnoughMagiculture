@@ -2,6 +2,7 @@ package com.invadermonky.justenoughmagiculture.configs;
 
 import com.invadermonky.justenoughmagiculture.JustEnoughMagiculture;
 import com.invadermonky.justenoughmagiculture.configs.mods.*;
+import com.invadermonky.justenoughmagiculture.util.ModIds.ConstantNames;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.LangKey;
@@ -40,97 +41,100 @@ public class JEMConfig {
     }
 
 
-    @Comment("Bear With Me JER integration configuration.")
+    @Comment(ConstantNames.ANIMANIA_EXTRA + " JER integration configuration.")
     public static final JEMConfigAnimaniaExtra ANIMANIA_EXTRA = new JEMConfigAnimaniaExtra();
 
-    @Comment("Bear With Me JER integration configuration.")
+    @Comment(ConstantNames.ANIMANIA_FARM + " JER integration configuration.")
     public static final JEMConfigAnimaniaFarm ANIMANIA_FARM = new JEMConfigAnimaniaFarm();
 
-    @Comment("Bear With Me JER integration configuration.")
+    @Comment(ConstantNames.ATUM + " JER integration configuration.")
+    public static final JEMConfigAtum ATUM = new JEMConfigAtum();
+
+    @Comment(ConstantNames.BEARWITHME + " JER integration configuration.")
     public static final JEMConfigBearWithMe BEAR_WITH_ME = new JEMConfigBearWithMe();
 
-    @Comment("Bewitchment JER integration configuration.")
+    @Comment(ConstantNames.BEASTSLAYER + " JER integration configuration.")
     public static final JEMConfigBeastSlayer BEAST_SLAYER = new JEMConfigBeastSlayer();
 
-    @Comment("Bewitchment JER integration configuration.")
+    @Comment(ConstantNames.BEWITCHMENT + " JER integration configuration.")
     public static final JEMConfigBewitchment BEWITCHMENT = new JEMConfigBewitchment();
 
-    @Comment("Botania JER integration configuration.")
+    @Comment(ConstantNames.BOTANIA + " JER integration configuration.")
     public static final JEMConfigBotania BOTANIA = new JEMConfigBotania();
 
-    @Comment("Charm JER integration configuration.")
+    @Comment(ConstantNames.CHARM + " JER integration configuration.")
     public static final JEMConfigCharm CHARM = new JEMConfigCharm();
 
-    @Comment("Charm JER integration configuration.")
+    @Comment(ConstantNames.EBWIZARDRY + " JER integration configuration.")
     public static final JEMConfigEBWizardry EB_WIZARDRY = new JEMConfigEBWizardry();
 
-    @Comment("Charm JER integration configuration.")
+    @Comment(ConstantNames.EBWIZARDRYTF + " JER integration configuration.")
     public static final JEMConfigEBWizardryTF EB_WIZARDRY_TF = new JEMConfigEBWizardryTF();
 
-    @Comment("Ender IO JER integration configuration.")
+    @Comment(ConstantNames.ENDERIO + " JER integration configuration.")
     public static final JEMConfigEnderIO ENDER_IO = new JEMConfigEnderIO();
 
-    @Comment("Familiar Fauna JER integration configuration.")
+    @Comment(ConstantNames.FAMILIARFAUNA + " JER integration configuration.")
     public static final JEMConfigFamiliarFauna FAMILIAR_FAUNA = new JEMConfigFamiliarFauna();
 
-    @Comment("Future MC JER integration configuration.")
+    @Comment(ConstantNames.FUTUREMC + " JER integration configuration.")
     public static final JEMConfigFutureMC FUTURE_MC = new JEMConfigFutureMC();
 
-    @Comment("Grimoire of Gaia JER integration configuration.")
+    @Comment(ConstantNames.GRIMOIREOFGAIA + " JER integration configuration.")
     public static final JEMConfigGrimoireOfGaia GRIMOIRE_OF_GAIA = new JEMConfigGrimoireOfGaia();
 
-    @Comment("Industrial Foregoing JER integration configuration.")
+    @Comment(ConstantNames.HARVESTCRAFT + " JER integration configuration.")
     public static final JEMConfigHarvestcraft HARVESTCRAFT = new JEMConfigHarvestcraft();
 
-    @Comment("Industrial Foregoing JER integration configuration.")
+    @Comment(ConstantNames.HARVESTERSNIGHT + " JER integration configuration.")
     public static final JEMConfigHarvestersNight HARVESTERSNIGHT = new JEMConfigHarvestersNight();
 
-    @Comment("Industrial Foregoing JER integration configuration.")
+    @Comment(ConstantNames.INDUSTRIALFOREGOING + " JER integration configuration.")
     public static final JEMConfigIndustrialForegoing INDUSTRIAL_FOREGOING = new JEMConfigIndustrialForegoing();
 
     @Comment("Minecraft JER integration configuration.")
     public static final JEMConfigMinecraft MINECRAFT = new JEMConfigMinecraft();
 
-    @Comment("NetherEx JER integration configuration.")
+    @Comment(ConstantNames.MOWZIESMOBS + " JER integration configuration.")
     public static final JEMConfigMowziesMobs MOWZIES_MOBS = new JEMConfigMowziesMobs();
 
-    @Comment("NetherEx JER integration configuration.")
+    @Comment(ConstantNames.NETHEREX + " JER integration configuration.")
     public static final JEMConfigNetherEx NETHEREX = new JEMConfigNetherEx();
 
-    @Comment("Oceanic Expanse JER integration configuration.")
+    @Comment(ConstantNames.OCEANICEXPANSE + " JER integration configuration.")
     public static final JEMConfigOceanicExpanse OCEANIC_EXPANSE = new JEMConfigOceanicExpanse();
 
-    @Comment("Pizzacraft JER integration configuration.")
+    @Comment(ConstantNames.PIZZACRAFT + " JER integration configuration.")
     public static final JEMConfigPizzacraft PIZZACRAFT = new JEMConfigPizzacraft();
 
-    @Comment("Quark JER integration configuration.")
+    @Comment(ConstantNames.QUARK + " JER integration configuration.")
     public static final JEMConfigQuark QUARK = new JEMConfigQuark();
 
-    @Comment("Rats: ROTN JER integration configuration.")
+    @Comment(ConstantNames.RATS + " JER integration configuration.")
     public static final JEMConfigRats RATS = new JEMConfigRats();
 
-    @Comment("Roguelike Dungeons JER integration configuration.")
+    @Comment(ConstantNames.ROGUELIKEDUNGEONS + " JER integration configuration.")
     public static final JEMConfigRoguelikeDungeons ROGUELIKE_DUNGEONS = new JEMConfigRoguelikeDungeons();
 
-    @Comment("Rustic JER integration configuration.")
+    @Comment(ConstantNames.RUSTIC + " JER integration configuration.")
     public static final JEMConfigRustic RUSTIC = new JEMConfigRustic();
 
-    @Comment("Rustic Thaumaturgy JER integration configuration.")
+    @Comment(ConstantNames.RUSTICTHAUMATURGY + " JER integration configuration.")
     public static final JEMConfigRusticThaumaturgy RUSTIC_THAUMATURGY = new JEMConfigRusticThaumaturgy();
 
-    @Comment("Thaumcraft JER integration configuration.")
+    @Comment(ConstantNames.THAUMCRAFT + " JER integration configuration.")
     public static final JEMConfigThaumcraft THAUMCRAFT = new JEMConfigThaumcraft();
 
-    @Comment("Thaumic Augmentation JER integration configuration.")
+    @Comment(ConstantNames.THAUMICAUGMENTATION + " JER integration configuration.")
     public static final JEMConfigThaumicAugmentation THAUMIC_AUGMENTATION = new JEMConfigThaumicAugmentation();
 
-    @Comment("Thermal Foundation JER integration configuration.")
+    @Comment(ConstantNames.THERMALFOUNDATION + " JER integration configuration.")
     public static final JEMConfigThermalFoundation THERMAL_FOUNDATION = new JEMConfigThermalFoundation();
 
-    @Comment("Twilight Forest JER integration configuration.")
+    @Comment(ConstantNames.TWILIGHTFOREST + " JER integration configuration.")
     public static final JEMConfigTwilightForest TWILIGHT_FOREST = new JEMConfigTwilightForest();
 
-    @Comment("Waddles JER integration configuration.")
+    @Comment(ConstantNames.WADDLES + " JER integration configuration.")
     public static final JEMConfigWaddles WADDLES = new JEMConfigWaddles();
 
 
