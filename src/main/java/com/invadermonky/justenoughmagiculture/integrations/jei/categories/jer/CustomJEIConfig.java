@@ -2,8 +2,8 @@ package com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer;
 
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.init.InitIntegration;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.plant.CustomPlantWrapper;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.CustomVillagerWrapper;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer.plant.CustomPlantWrapper;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer.villager.CustomVillagerWrapper;
 import com.invadermonky.justenoughmagiculture.registry.CustomPlantRegistry;
 import com.invadermonky.justenoughmagiculture.registry.CustomVillagerRegistry;
 import com.invadermonky.justenoughmagiculture.util.LogHelper;

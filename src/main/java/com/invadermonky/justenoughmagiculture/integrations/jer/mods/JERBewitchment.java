@@ -10,7 +10,7 @@ import com.bewitchment.common.item.ItemModSeeds;
 import com.bewitchment.registry.ModObjects;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigBewitchment;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.CustomVillagerEntry;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer.villager.CustomVillagerEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.registry.CustomVillagerRegistry;
@@ -162,7 +162,6 @@ public class JERBewitchment extends JERBase implements IJERIntegration {
 
     @Override
     public void registerModVillagers() {
-        //TODO: Demon trades
         try {
             EntityDemon demon = new EntityDemon(world);
             VillagerProfession profession = demon.getProfessionForge();

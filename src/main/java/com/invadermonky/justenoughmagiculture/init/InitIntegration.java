@@ -53,6 +53,7 @@ public class InitIntegration {
         if(ModIds.CHARM.isLoaded) new JERCharm(CHARM.enableJERDungeons, CHARM.enableJERMobs);
         if(ModIds.EBWIZARDRY.isLoaded) new JEREBWizardry(EB_WIZARDRY.enableJERDungeons, EB_WIZARDRY.enableJERMobs);
         if(ModIds.EBWIZARDRYTF.isLoaded) new JEREBWizardryTF(EB_WIZARDRY_TF.enableJERMobs);
+        if(ModIds.EREBUS.isLoaded) new JERErebus(EREBUS.enableJERDungeons, EREBUS.enableJERMobs, EREBUS.enableJERPlants);
         if(ModIds.FAMILIARFAUNA.isLoaded) new JERFamiliarFauna(FAMILIAR_FAUNA.enableJERMobs);
         if(ModIds.FUTUREMC.isLoaded) new JERFutureMC(FUTURE_MC.enableJERMobs, FUTURE_MC.enableJERPlants);
         if(ModIds.GRIMOIREOFGAIA.isLoaded) new JERGrimoireOfGaia(GRIMOIRE_OF_GAIA.enableJERMobs);
@@ -60,6 +61,7 @@ public class InitIntegration {
         if(ModIds.HARVESTERSNIGHT.isLoaded) new JERHarvestersNight(HARVESTERSNIGHT.enableJERMobs);
         if(ModIds.INDUSTRIALFOREGOING.isLoaded) new JERIndustrialForegoing(INDUSTRIAL_FOREGOING.enableJERMobs);
         if(ModIds.MOWZIESMOBS.isLoaded) new JERMowziesMobs(MOWZIES_MOBS.enableJERMobs, MOWZIES_MOBS.enableJERVillagers);
+        if(ModIds.MUTANTBEASTS.isLoaded) new JERMutantBeasts(MUTANT_BEASTS.enableJERMobs);
         if(ModIds.NETHEREX.isLoaded) new JERNetherEx(NETHEREX.enableJERDungeons, NETHEREX.enableJERMobs, NETHEREX.enableJERVillagers);
         if(ModIds.OCEANICEXPANSE.isLoaded) new JEROceanicExpanse(OCEANIC_EXPANSE.enableJERDungeons, OCEANIC_EXPANSE.enableJERMobs);
         if(ModIds.PIZZACRAFT.isLoaded) new JERPizzacraft(PIZZACRAFT.enableJERPlants);
@@ -102,6 +104,10 @@ public class InitIntegration {
             if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_FARM)) {
                 JERAnimaniaFarm.getInstance().registerRenderOverrides();
             }
+        }
+
+        if(ModIds.EREBUS.isLoaded && EREBUS.enableRenderFixes) {
+            JERErebus.getInstance().registerRenderOverrides();
         }
     }
 }

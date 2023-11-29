@@ -81,7 +81,7 @@ import com.animania.addons.farm.common.entity.sheep.SheepMerino.EntityRamMerino;
 import com.animania.addons.farm.common.entity.sheep.SheepSuffolk.EntityEweSuffolk;
 import com.animania.addons.farm.common.entity.sheep.SheepSuffolk.EntityRamSuffolk;
 import com.animania.addons.farm.config.FarmConfig;
-import com.invadermonky.justenoughmagiculture.client.render.entity.mods.animania.chickens.RenderHenBaseJER;
+import com.invadermonky.justenoughmagiculture.client.render.entity.mods.animania.chickens.JERRenderHenBase;
 import com.invadermonky.justenoughmagiculture.client.render.entity.mods.animania.pigs.*;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigAnimaniaFarm;
@@ -513,25 +513,25 @@ public class JERAnimaniaFarm extends JERBase implements IJERIntegration {
 
     public void registerRenderOverrides() {
         //Chickens
-        RenderingRegistry.registerEntityRenderingHandler(EntityHenLeghorn.class, RenderHenBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityHenOrpington.class, RenderHenBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityHenPlymouthRock.class, RenderHenBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityHenRhodeIslandRed.class, RenderHenBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityHenWyandotte.class, RenderHenBaseJER.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHenLeghorn.class, JERRenderHenBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHenOrpington.class, JERRenderHenBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHenPlymouthRock.class, JERRenderHenBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHenRhodeIslandRed.class, JERRenderHenBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHenWyandotte.class, JERRenderHenBase.FACTORY);
 
         //Pigs
-        RenderingRegistry.registerEntityRenderingHandler(EntityHogDuroc.class, RenderHogDurocJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntitySowDuroc.class, RenderSowDurocJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityHogHampshire.class, RenderHogHampshireJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntitySowHampshire.class, RenderSowHampshireJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityHogLargeBlack.class, RenderHogLargeBlackJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntitySowLargeBlack.class, RenderSowLargeBlackJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntitySowLargeWhite.class, RenderSowLargeWhiteJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityHogLargeWhite.class, RenderHogLargeWhiteJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityHogOldSpot.class, RenderHogOldSpotJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntitySowOldSpot.class, RenderSowOldSpotJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityHogYorkshire.class, RenderHogYorkshireJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntitySowYorkshire.class, RenderSowYorkshireJER.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHogDuroc.class, JERRenderHogDuroc.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntitySowDuroc.class, JERRenderSowDuroc.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHogHampshire.class, JERRenderHogHampshire.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntitySowHampshire.class, JERRenderSowHampshire.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHogLargeBlack.class, JERRenderHogLargeBlack.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntitySowLargeBlack.class, JERRenderSowLargeBlack.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntitySowLargeWhite.class, JERRenderSowLargeWhite.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHogLargeWhite.class, JERRenderHogLargeWhite.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHogOldSpot.class, JERRenderHogOldSpot.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntitySowOldSpot.class, JERRenderSowOldSpot.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHogYorkshire.class, JERRenderHogYorkshire.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntitySowYorkshire.class, JERRenderSowYorkshire.FACTORY);
     }
 
     protected ResourceLocation getChickenLootTable(EntityAnimaniaChicken entity) {

@@ -1612,9 +1612,9 @@ public class JERGrimoireOfGaia extends JERBase implements IJERIntegration {
         if(!GaiaConfig.OPTIONS.disableDrops) {
             List<LootDrop> loot = LootTableHelper.toDrops(manager.getLootTableFromLocation(lootTable));
 
-            loot.add(getCommonDrop(Items.FISH, 0, 2, getDropChance(2, 3),true));
-            loot.add(getCommonDrop(Items.COOKED_FISH, 0, 2, getDropChance(2, 3), true, Conditional.burning));
-
+            LootDrop fishDrop = getCommonDrop(Items.FISH, 0, 2, getDropChance(2, 3),true);
+            fishDrop.smeltedItem = new ItemStack(Items.COOKED_FISH);
+            loot.add(fishDrop);
             loot.addAll(getNuggetDrops(Items.GOLD_NUGGET));
             loot.add(getUncommonDrop(GaiaItems.BOX_GOLD));
             loot.add(getUncommonDrop(GaiaItems.BAG_BOOK));
@@ -1662,8 +1662,9 @@ public class JERGrimoireOfGaia extends JERBase implements IJERIntegration {
         if(!GaiaConfig.OPTIONS.disableDrops) {
             List<LootDrop> loot = LootTableHelper.toDrops(manager.getLootTableFromLocation(lootTable));
 
-            loot.add(getCommonDrop(Items.FISH, 0, 1, getDropChance(1, 2),true));
-            loot.add(getCommonDrop(Items.COOKED_FISH, 0, 1, getDropChance(1, 2), true, Conditional.burning));
+            LootDrop fishDrop = getCommonDrop(Items.FISH, 0, 1, getDropChance(1, 2),true);
+            fishDrop.smeltedItem = new ItemStack(Items.COOKED_FISH);
+            loot.add(fishDrop);
             loot.addAll(getNuggetDrops(Items.IRON_NUGGET));
             loot.add(getUncommonDrop(GaiaItems.BOX_IRON));
             loot.add(getUncommonDrop(GaiaItems.BAG_ARROW));

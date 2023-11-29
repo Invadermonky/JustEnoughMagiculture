@@ -41,7 +41,7 @@ import com.animania.addons.extra.common.entity.rodents.rabbits.RabbitNewZealand.
 import com.animania.addons.extra.common.entity.rodents.rabbits.RabbitRex.EntityRabbitBuckRex;
 import com.animania.addons.extra.common.entity.rodents.rabbits.RabbitRex.EntityRabbitDoeRex;
 import com.animania.addons.extra.config.ExtraConfig;
-import com.invadermonky.justenoughmagiculture.client.render.entity.mods.animania.peafowl.RenderPeafowlBaseJER;
+import com.invadermonky.justenoughmagiculture.client.render.entity.mods.animania.peafowl.JERRenderPeafowlBase;
 import com.invadermonky.justenoughmagiculture.client.render.entity.mods.animania.rabbits.*;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigAnimaniaExtra;
@@ -314,30 +314,30 @@ public class JERAnimaniaExtra extends JERBase implements IJERIntegration {
     }
 
     public void registerRenderOverrides() {
-        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlBlue.class, RenderPeafowlBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlCharcoal.class, RenderPeafowlBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlOpal.class, RenderPeafowlBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlPeach.class, RenderPeafowlBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlPurple.class, RenderPeafowlBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlTaupe.class, RenderPeafowlBaseJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlWhite.class, RenderPeafowlBaseJER.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlBlue.class, JERRenderPeafowlBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlCharcoal.class, JERRenderPeafowlBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlOpal.class, JERRenderPeafowlBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlPeach.class, JERRenderPeafowlBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlPurple.class, JERRenderPeafowlBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlTaupe.class, JERRenderPeafowlBase.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityPeafowlWhite.class, JERRenderPeafowlBase.FACTORY);
 
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckChinchilla.class, RenderBuckChinchillaJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeChinchilla.class, RenderDoeChinchillaJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckCottontail.class, RenderBuckCottontailJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeCottontail.class, RenderDoeCottontailJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckDutch.class, RenderBuckDutchJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeDutch.class, RenderDoeDutchJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckHavana.class, RenderBuckHavanaJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeHavana.class, RenderDoeHavanaJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckJack.class, RenderBuckJackJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeJack.class, RenderDoeJackJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckNewZealand.class, RenderBuckNewZealandJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeNewZealand.class, RenderDoeNewZealandJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckRex.class, RenderBuckRexJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeRex.class, RenderDoeRexJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckLop.class, RenderBuckLopJER.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeLop.class, RenderDoeLopJER.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckChinchilla.class, JERRenderBuckChinchilla.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeChinchilla.class, JERRenderDoeChinchilla.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckCottontail.class, JERRenderBuckCottontail.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeCottontail.class, JERRenderDoeCottontail.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckDutch.class, JERRenderBuckDutch.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeDutch.class, JERRenderDoeDutch.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckHavana.class, JERRenderBuckHavana.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeHavana.class, JERRenderDoeHavana.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckJack.class, JERRenderBuckJack.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeJack.class, JERRenderDoeJack.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckNewZealand.class, JERRenderBuckNewZealand.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeNewZealand.class, JERRenderDoeNewZealand.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckRex.class, JERRenderBuckRex.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeRex.class, JERRenderDoeRex.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitBuckLop.class, JERRenderBuckLop.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityRabbitDoeLop.class, JERRenderDoeLop.FACTORY);
     }
 
     private ResourceLocation getAmphibianLootTable(EntityAmphibian entity) {

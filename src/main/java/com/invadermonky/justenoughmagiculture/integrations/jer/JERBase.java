@@ -21,6 +21,8 @@ import net.minecraft.world.storage.loot.LootTable;
 import net.minecraft.world.storage.loot.LootTableManager;
 import net.minecraftforge.common.IPlantable;
 
+import java.util.List;
+
 public abstract class JERBase {
     protected World world;
     protected LootTableManager manager;
@@ -44,12 +46,12 @@ public abstract class JERBase {
         InitIntegration.dungeonRegistry.registerChest(category, drops);
     }
 
-    protected void registerMob(EntityLiving entity, LightLevel level, int minExp, int maxExp, String[] biomes, LootDrop... lootDrops) {
+    protected void registerMob(EntityLivingBase entity, LightLevel level, int minExp, int maxExp, String[] biomes, LootDrop... lootDrops) {
         InitIntegration.mobRegistry.register(entity, level, minExp, maxExp, biomes, lootDrops);
     }
 
-    protected void registerMob(EntityLiving entity, LightLevel level, String[] biomes, LootDrop... lootDrops) {
-        int exp = entity.experienceValue;
+    protected void registerMob(EntityLivingBase entity, LightLevel level, String[] biomes, LootDrop... lootDrops) {
+        int exp = entity instanceof EntityLiving ? ((EntityLiving) entity).experienceValue : 0;
         if(exp > 0)
             registerMob(entity, level, exp, exp, biomes, lootDrops);
         else if(entity instanceof EntityAnimal)
@@ -58,19 +60,23 @@ public abstract class JERBase {
             registerMob(entity, level, 0, 0, biomes, lootDrops);
     }
 
-    protected void registerMob(EntityLiving entity, LightLevel level, String[] biomes, ResourceLocation lootDrops) {
+    protected void registerMob(EntityLivingBase entity, LightLevel level, String[] biomes, List<LootDrop> lootdrops) {
+        registerMob(entity, level, biomes, lootdrops.toArray(new LootDrop[0]));
+    }
+
+    protected void registerMob(EntityLivingBase entity, LightLevel level, String[] biomes, ResourceLocation lootDrops) {
         registerMob(entity, level, biomes, LootTableHelper.toDrops(world, lootDrops).toArray(new LootDrop[0]));
     }
 
-    protected void registerMob(EntityLiving entity, LightLevel level, ResourceLocation lootDrops) {
+    protected void registerMob(EntityLivingBase entity, LightLevel level, ResourceLocation lootDrops) {
         registerMob(entity, level, new String[] {"jer.any"}, LootTableHelper.toDrops(world, lootDrops).toArray(new LootDrop[0]));
     }
 
-    protected void registerMob(EntityLiving entity, LightLevel level, LootDrop... lootDrops) {
+    protected void registerMob(EntityLivingBase entity, LightLevel level, LootDrop... lootDrops) {
         registerMob(entity, level, new String[] {"jer.any"}, lootDrops);
     }
 
-    protected void registerMob(EntityLiving entity, LightLevel level, int minExp, int maxExp, String[] biomes, ResourceLocation lootDrops) {
+    protected void registerMob(EntityLivingBase entity, LightLevel level, int minExp, int maxExp, String[] biomes, ResourceLocation lootDrops) {
         registerMob(entity, level, minExp, maxExp, biomes, LootTableHelper.toDrops(world, lootDrops).toArray(new LootDrop[0]));
     }
 

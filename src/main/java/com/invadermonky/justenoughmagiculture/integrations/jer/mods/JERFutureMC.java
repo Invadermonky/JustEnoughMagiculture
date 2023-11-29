@@ -2,7 +2,7 @@ package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigFutureMC;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.plant.CustomPlantEntry;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer.plant.CustomPlantEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.util.BiomeHelper;

@@ -35,6 +35,7 @@ public class JustEnoughMagiculture {
                     ";after:" + ConstantIds.CHARM +
                     ";after:" + ConstantIds.EBWIZARDRY +
                     ";after:" + ConstantIds.EBWIZARDRYTF +
+                    ";after:" + ConstantIds.EREBUS +
                     ";after:" + ConstantIds.ENDERIO +
                     ";after:" + ConstantIds.FAMILIARFAUNA +
                     ";after:" + ConstantIds.FUTUREMC +
@@ -43,6 +44,7 @@ public class JustEnoughMagiculture {
                     ";after:" + ConstantIds.HARVESTERSNIGHT +
                     ";after:" + ConstantIds.INDUSTRIALFOREGOING +
                     ";after:" + ConstantIds.MOWZIESMOBS +
+                    ";after:" + ConstantIds.MUTANTBEASTS +
                     ";after:" + ConstantIds.NETHEREX +
                     ";after:" + ConstantIds.OCEANICEXPANSE +
                     ";after:" + ConstantIds.PIZZACRAFT +

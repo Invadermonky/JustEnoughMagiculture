@@ -1,5 +1,6 @@
 package com.invadermonky.justenoughmagiculture.util;
 
+import chumbanotz.mutantbeasts.MutantBeasts;
 import cofh.thermalfoundation.ThermalFoundation;
 import com.animania.Animania;
 import com.bewitchment.Bewitchment;
@@ -8,7 +9,6 @@ import com.github.alexthe666.rats.RatsMod;
 import com.github.voxelfriend.rusticthaumaturgy.core.RusticThaumaturgy;
 import com.sirsquidly.oe.Main;
 import com.tage.crimson_warfare.CrimsonWarfare;
-import com.teammetallurgy.atum.Atum;
 import com.tiviacz.pizzacraft.PizzaCraft;
 import com.unoriginal.ancientbeasts.AncientBeasts;
 import crazypants.enderio.base.EnderIO;
@@ -48,13 +48,16 @@ public enum ModIds {
     EBWIZARDRY(ConstantIds.EBWIZARDRY, ConstantNames.EBWIZARDRY),
     EBWIZARDRYTF(ConstantIds.EBWIZARDRYTF, ConstantNames.EBWIZARDRYTF),
     ENDERIO(ConstantIds.ENDERIO, ConstantNames.ENDERIO),
+    EREBUS(ConstantIds.EREBUS, ConstantNames.EREBUS),
     FAMILIARFAUNA(ConstantIds.FAMILIARFAUNA, ConstantNames.FAMILIARFAUNA),
     FUTUREMC(ConstantIds.FUTUREMC, ConstantNames.FUTUREMC),
     GRIMOIREOFGAIA(ConstantIds.GRIMOIREOFGAIA, ConstantNames.GRIMOIREOFGAIA),
     INDUSTRIALFOREGOING(ConstantIds.INDUSTRIALFOREGOING, ConstantNames.INDUSTRIALFOREGOING),
     HARVESTCRAFT(ConstantIds.HARVESTCRAFT, ConstantNames.HARVESTCRAFT),
     HARVESTERSNIGHT(ConstantIds.HARVESTERSNIGHT, ConstantNames.HARVESTERSNIGHT),
+    MORETWEAKER(ConstantIds.MORETWEAKER, ConstantNames.MORETWEAKER),
     MOWZIESMOBS(ConstantIds.MOWZIESMOBS, ConstantNames.MOWZIESMOBS),
+    MUTANTBEASTS(ConstantIds.MUTANTBEASTS, ConstantNames.MUTANTBEASTS),
     NETHEREX(ConstantIds.NETHEREX, ConstantNames.NETHEREX),
     OCEANICEXPANSE(ConstantIds.OCEANICEXPANSE, ConstantNames.OCEANICEXPANSE),
     QUARK(ConstantIds.QUARK, ConstantNames.QUARK),
@@ -123,6 +126,7 @@ public enum ModIds {
         public static final String CHARM = Charm.MOD_ID;
         public static final String CRIMSONWARFARE = CrimsonWarfare.MODID;
         public static final String ENDERIO = EnderIO.MODID;
+        public static final String EREBUS = erebus.lib.Reference.MOD_ID;
         public static final String EBWIZARDRY = Wizardry.MODID;
         public static final String EBWIZARDRYTF = TFSpellPack.MODID;
         public static final String FAMILIARFAUNA = FamiliarFauna.MOD_ID;
@@ -133,7 +137,9 @@ public enum ModIds {
         public static final String INDUSTRIALFOREGOING = com.buuz135.industrial.utils.Reference.MOD_ID;
         public static final String JUSTENOUGHITEMS = Constants.MOD_ID;
         public static final String JUSTENOUGHRESOURCES = Reference.ID;
+        public static final String MORETWEAKER = "moretweaker";
         public static final String MOWZIESMOBS = MowziesMobs.MODID;
+        public static final String MUTANTBEASTS = MutantBeasts.MOD_ID;
         public static final String NETHEREX = NetherEx.MOD_ID;
         public static final String OCEANICEXPANSE = Main.MOD_ID;
         public static final String PIZZACRAFT = PizzaCraft.MODID;
@@ -164,13 +170,16 @@ public enum ModIds {
         public static final String EBWIZARDRY = Wizardry.NAME;
         public static final String EBWIZARDRYTF = TFSpellPack.NAME;
         public static final String ENDERIO = EnderIO.MOD_NAME;
+        public static final String EREBUS = erebus.lib.Reference.MOD_NAME;
         public static final String FAMILIARFAUNA = FamiliarFauna.MOD_NAME;
         public static final String FUTUREMC = FutureMC.NAME;
         public static final String GRIMOIREOFGAIA = GaiaReference.MOD_NAME;
         public static final String HARVESTERSNIGHT = HarvestersNight.NAME;
         public static final String HARVESTCRAFT = com.pam.harvestcraft.Reference.NAME;
         public static final String INDUSTRIALFOREGOING = com.buuz135.industrial.utils.Reference.NAME;
+        public static final String MORETWEAKER = "MoreTweaker";
         public static final String MOWZIESMOBS = MowziesMobs.NAME;
+        public static final String MUTANTBEASTS = "Mutant Beasts";
         public static final String NETHEREX = NetherEx.NAME;
         public static final String OCEANICEXPANSE = Main.NAME;
         public static final String PIZZACRAFT = PizzaCraft.NAME;

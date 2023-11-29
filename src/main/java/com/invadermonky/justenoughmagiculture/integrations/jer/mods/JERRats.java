@@ -9,8 +9,8 @@ import com.github.alexthe666.rats.server.world.village.WorldGenPetShop;
 import com.github.alexthe666.rats.server.world.village.WorldGenPlagueDoctor;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigRats;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.CustomVanillaVillagerEntry;
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.CustomVillagerEntry;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer.villager.CustomVanillaVillagerEntry;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer.villager.CustomVillagerEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.registry.CustomVillagerRegistry;
@@ -86,7 +86,6 @@ public class JERRats extends JERBase implements IJERIntegration {
         }
 
         if(jerConfig.enablePirat) {
-            //TODO: Render issue caused by render LayerRatEyes calling getLightPosition() and returning a null (Line 38)
             EntityPirat pirat = new EntityPirat(world);
             pirat.setHeldItem(EnumHand.MAIN_HAND, new ItemStack(RatsItemRegistry.PIRAT_CUTLASS));
             pirat.setItemStackToSlot(EntityEquipmentSlot.HEAD, new ItemStack(RatsItemRegistry.PIRAT_HAT));
@@ -103,7 +102,6 @@ public class JERRats extends JERBase implements IJERIntegration {
         }
 
         if(jerConfig.enableRat) {
-            //TODO: Render issue caused by render LayerRatEyes calling getLightPosition() and returning a null (Line 38)
             EntityRat rat = new EntityRat(world);
             registerMob(rat, LightLevel.any, EntityRat.LOOT);
         }
@@ -115,7 +113,6 @@ public class JERRats extends JERBase implements IJERIntegration {
 
     @Override
     public void registerModVillagers() {
-        //TODO: Fix Plague Doctor render. this will require removing the original villager trade and updating with a CustomVillager
         if(JEMConfig.RATS.fixJERVillagers) {
             registerPetShopOwner();
             registerPlagueDoctorVillager();

@@ -1,6 +1,6 @@
 package com.invadermonky.justenoughmagiculture.registry;
 
-import com.invadermonky.justenoughmagiculture.integrations.jei.categories.villager.CustomVillagerEntry;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer.villager.CustomVillagerEntry;
 
 import java.util.LinkedList;
 import java.util.List;

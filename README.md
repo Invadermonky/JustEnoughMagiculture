@@ -168,6 +168,90 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 ### Injected loot drops
 - Enderman Skull
 
+## Erebus
+### Dungeons
+- Antlion Dungeon
+- Antlion Lair
+- Dragonfly Dungeon
+- Dung Pile
+- Giant Eucalyptus
+- Locust Shrine
+- Rotten Tree Stump
+- Spider Dungeon
+
+### JEI
+- Organic Composter
+- Offering Altar
+- ErebusCo. Smoothie-matic 2000
+
+      JEI categories are ported from the MoreTweaker mod and will only load if MoreTweaker
+      is not installed or if forceLoad is enabled in the JEM config.
+
+### Mobs
+- Antlion
+- AntlionGuardian
+- AntlionOverlord
+- BedBug
+- Beetle
+- BeetleLarva
+- BlackWidow
+- BogMaw
+- BombardierBeetle
+- BombardierBeetleLarva
+- BotFly
+- Centipede
+- ChameleonTick
+- Cicada
+- CropWeevil
+- Crushroom
+- Dragonfly
+- FireAnt
+- FireAntSoldier
+- Fly
+- FungalWeevil
+- GlowWorm
+- Grasshopper
+- HoneyPotAnt
+- JumpingSpider
+- LavaWebSpider
+- Locust
+- MagmaCrawler
+- MidgeSwarm
+- MoneySpider
+- Mosquito
+- Moth
+- PondSkater
+- PrayingMantis
+- Punchroom
+- RhinoBeetle
+- Scorpion
+- Scytodes
+- Solifuge
+- StagBeetle
+- Tarantula
+- TarantulaBroodMother
+- TitanBeetle
+- UmberGolemMud
+- UmberGolemIron
+- UmberGolemGold
+- UmberGolemJade
+- VelvetWorm
+- Wasp
+- WaspBoss
+- Woodlouse
+- WorkerBee
+- ZombieAnt
+- ZombieAntSoldier
+
+### Plants
+- Cabbage
+- DarkFruit
+- HeartBerry
+- JadeBerry
+- Mandrake
+- SwampBerry
+- Turnip
+
 ## Familiar Fauna
 ### Mobs
 - Butterfly
@@ -299,6 +383,18 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 ### Villagers
 - Barako, the Sun King
 - Barakoana
+
+## Mutant Beasts
+### Mobs
+- Creeper Minion 
+- Endersoul Clone 
+- Mutant Creeper 
+- Mutant Enderman 
+- Mutant Skeleton 
+- Mutant SnowGolem 
+- Mutant Zombie 
+- Spider Pig 
+
 
 ## NetherEx
 ### Dungeons

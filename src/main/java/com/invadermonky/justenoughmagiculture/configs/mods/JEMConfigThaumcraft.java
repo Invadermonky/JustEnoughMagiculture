@@ -25,7 +25,7 @@ public class JEMConfigThaumcraft {
     @Comment("JEM " + MOD_NAME + " Just Enough Items settings.")
     public JEI JUST_ENOUGH_ITEMS = new JEI();
     public static class JEI {
-        public boolean enableJEIInfernalFurnaceCategory = true;
+        //public boolean enableJEIInfernalFurnaceCategory = true;
         public boolean enableJEILootBags = true;
         @Comment("Removes potion loot from Loot Bags drops to reduce spam.")
         public boolean removePotionLoot = true;

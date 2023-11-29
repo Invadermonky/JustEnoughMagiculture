@@ -6,6 +6,8 @@ config.jem:jeimodule=JEI Module
 # Conditionals
 jem.axeKill.text=Axe Kill Bonus
 jem.shovelKill.text=Shovel Kill Bonus
+jem.squashed.text=Squashed
+jem.notSquashed.text=Not Squashed
 
 # Dungeon JER Strings
 #   Atum 2
@@ -37,6 +39,15 @@ dungeon.ebwizardry:library_ruins_bookshelf.name=Library Ruins
 dungeon.ebwizardry:obelisk.name=Obelisk
 dungeon.ebwizardry:shrine.name=Wizard Shrine
 dungeon.ebwizardry:wizard_tower.name=Wizard Tower
+#   The Erebus
+dungeon.erebus:antlion_dungeon.name=Antlion Dungeon
+dungeon.erebus:antlion_lair.name=Antlion Lair
+dungeon.erebus:dragonfly_dungeon.name=Dragonfly Dungeon
+dungeon.erebus:dung_pile.name=Dung Pile
+dungeon.erebus:giant_eucalyptus.name=Giant Eucalyptus
+dungeon.erebus:locust_shrine.name=Locust Shrine
+dungeon.erebus:rotten_tree_stump.name=Rotten Tree Stump
+dungeon.erebus:spider_dungeon.name=Spider Dungeon
 #   NetherEx
 dungeon.netherex:base_village.name=Pigtificate Village
 dungeon.netherex:ghast_queen_shrine.name=Ghast Queen Shrine
@@ -97,6 +108,9 @@ entity.rats:plague_doctor.name=Plague Doctor
 
 # JEI
 jei.justenoughmagiculture:loot_bag.title=Loot Bags
+jei.justenoughmagiculture:erebus_composter.title=Organic Composter
+jei.justenoughmagiculture:erebus_offering_altar.title=Offering Altar
+jei.justenoughmagiculture:erebus_smoothie_maker.title=ErebusCo. Smoothie-matic 2000
 
 # JEI Desc
 jei.jem:atum_dirty_loot.info=Throw into water to wash. There is a small chance the item will be destroyed in the process.

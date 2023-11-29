@@ -6,6 +6,7 @@ import com.invadermonky.justenoughmagiculture.init.InitIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.lootbag.LootBagCategory;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.lootbag.LootBagEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.lootbag.LootBagWrapper;
+import com.invadermonky.justenoughmagiculture.integrations.jei.mods.JEIErebusPlugin;
 import com.invadermonky.justenoughmagiculture.integrations.jer.mods.JERAtum;
 import com.invadermonky.justenoughmagiculture.registry.LootBagRegistry;
 import com.invadermonky.justenoughmagiculture.util.ModIds;
@@ -15,6 +16,7 @@ import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 @JEIPlugin
 public class JEICategories implements IModPlugin {
     public static final String LOOT_BAG = JustEnoughMagiculture.MOD_ID + ".loot_bag";
+
     private static IJeiHelpers jeiHelpers;
     private static IJeiRuntime jeiRuntime;
 
@@ -25,6 +27,10 @@ public class JEICategories implements IModPlugin {
         if(JEMConfig.MODULE_JEI.enableLootBagCategory) {
             registry.handleRecipes(LootBagEntry.class, LootBagWrapper::new, LOOT_BAG);
             registry.addRecipes(LootBagRegistry.getInstance().getAllLootBags(), LOOT_BAG);
+        }
+
+        if(ModIds.EREBUS.isLoaded) {
+            JEIErebusPlugin.getInstance().register(registry);
         }
 
         registerInfoPages(registry);
@@ -39,6 +45,10 @@ public class JEICategories implements IModPlugin {
     public void registerCategories(IRecipeCategoryRegistration registry) {
         JEICategories.jeiHelpers = registry.getJeiHelpers();
         registry.addRecipeCategories(new LootBagCategory());
+
+        if(ModIds.EREBUS.isLoaded) {
+            JEIErebusPlugin.getInstance().registerCategories(registry);
+        }
     }
 
     public static IJeiHelpers getJeiHelpers() {

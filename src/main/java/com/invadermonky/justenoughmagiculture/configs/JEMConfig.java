@@ -74,6 +74,9 @@ public class JEMConfig {
     @Comment(ConstantNames.ENDERIO + " JER integration configuration.")
     public static final JEMConfigEnderIO ENDER_IO = new JEMConfigEnderIO();
 
+    @Comment(ConstantNames.EREBUS + " JER integration configuration.")
+    public static final JEMConfigErebus EREBUS = new JEMConfigErebus();
+
     @Comment(ConstantNames.FAMILIARFAUNA + " JER integration configuration.")
     public static final JEMConfigFamiliarFauna FAMILIAR_FAUNA = new JEMConfigFamiliarFauna();
 
@@ -97,6 +100,9 @@ public class JEMConfig {
 
     @Comment(ConstantNames.MOWZIESMOBS + " JER integration configuration.")
     public static final JEMConfigMowziesMobs MOWZIES_MOBS = new JEMConfigMowziesMobs();
+
+    @Comment(ConstantNames.MUTANTBEASTS + " JER integration configuration.")
+    public static final JEMConfigMutantBeasts MUTANT_BEASTS = new JEMConfigMutantBeasts();
 
     @Comment(ConstantNames.NETHEREX + " JER integration configuration.")
     public static final JEMConfigNetherEx NETHEREX = new JEMConfigNetherEx();
