@@ -51,6 +51,7 @@ public class InitIntegration {
         if(ModIds.BEWITCHMENT.isLoaded) new JERBewitchment(BEWITCHMENT.enableJERMobs, BEWITCHMENT.enableJERPlants, BEWITCHMENT.enableJERVillagers);
         if(ModIds.BOTANIA.isLoaded) new JERBotania(BOTANIA.enableJERMobs);
         if(ModIds.CHARM.isLoaded) new JERCharm(CHARM.enableJERDungeons, CHARM.enableJERMobs);
+        if(ModIds.CHOCOLATEQUEST.isLoaded) new JERChocolateQuest(CHOCOLATE_QUEST.enableJERDungeons, CHOCOLATE_QUEST.enableJERMobs);
         if(ModIds.EBWIZARDRY.isLoaded) new JEREBWizardry(EB_WIZARDRY.enableJERDungeons, EB_WIZARDRY.enableJERMobs);
         if(ModIds.EBWIZARDRYTF.isLoaded) new JEREBWizardryTF(EB_WIZARDRY_TF.enableJERMobs);
         if(ModIds.EREBUS.isLoaded) new JERErebus(EREBUS.enableJERDungeons, EREBUS.enableJERMobs, EREBUS.enableJERPlants);

@@ -65,6 +65,9 @@ public class JEMConfig {
     @Comment(ConstantNames.CHARM + " JER integration configuration.")
     public static final JEMConfigCharm CHARM = new JEMConfigCharm();
 
+    @Comment(ConstantNames.CHOCOLATEQUEST + " JER integration configuration.")
+    public static final JEMConfigChocolateQuest CHOCOLATE_QUEST = new JEMConfigChocolateQuest();
+
     @Comment(ConstantNames.EBWIZARDRY + " JER integration configuration.")
     public static final JEMConfigEBWizardry EB_WIZARDRY = new JEMConfigEBWizardry();
 

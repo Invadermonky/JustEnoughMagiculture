@@ -34,6 +34,12 @@ dungeon.charm:librarian.name=Village Librarian
 dungeon.charm:priest.name=Village Priest
 dungeon.charm:shepherd.name=Village Shepherd
 dungeon.charm:smith.name=Village Smith
+#   Chocolate Quest: Repoured
+dungeon.cqrepoured:clutter.name=CQR Clutter
+dungeon.cqrepoured:equipment.name=CQR Equipment
+dungeon.cqrepoured:food.name=CQR Food
+dungeon.cqrepoured:material.name=CQR Materials
+dungeon.cqrepoured:treasure.name=CQR Treasure
 #   EB Wizardry
 dungeon.ebwizardry:library_ruins_bookshelf.name=Library Ruins
 dungeon.ebwizardry:obelisk.name=Obelisk
@@ -102,6 +108,7 @@ entity.apocryphal_teacher.name=Apocryphal Teacher
 entity.despot.name=Despot
 entity.noble.name=Noble
 entity.jem:botania.fel_blaze.name=Fel Blaze
+entity.cqrepoured:goblin_shaman.name=Goblin Shaman
 entity.netherex:pigtificate_chief.name=Pigtificate Chief
 entity.rats:pet_shop_owner.name=Pet Shop Owner
 entity.rats:plague_doctor.name=Plague Doctor

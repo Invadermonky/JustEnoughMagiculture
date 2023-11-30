@@ -33,6 +33,7 @@ public class JustEnoughMagiculture {
                     ";after:" + ConstantIds.BEWITCHMENT +
                     ";after:" + ConstantIds.BOTANIA +
                     ";after:" + ConstantIds.CHARM +
+                    ";after:" + ConstantIds.CHOCOLATEQUEST +
                     ";after:" + ConstantIds.EBWIZARDRY +
                     ";after:" + ConstantIds.EBWIZARDRYTF +
                     ";after:" + ConstantIds.EREBUS +

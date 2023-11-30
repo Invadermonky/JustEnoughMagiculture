@@ -28,6 +28,7 @@ import net.minecraftforge.fml.common.versioning.VersionParser;
 import net.minecraftforge.fml.common.versioning.VersionRange;
 import rustic.core.Rustic;
 import svenhjol.charm.Charm;
+import team.cqr.cqrepoured.CQRMain;
 import thaumcraft.Thaumcraft;
 import thecodex6824.thaumicaugmentation.api.ThaumicAugmentationAPI;
 import thedarkcolour.futuremc.FutureMC;
@@ -44,6 +45,7 @@ public enum ModIds {
     BEWITCHMENT(ConstantIds.BEWITCHMENT, ConstantNames.BEWITCHMENT),
     BOTANIA(ConstantIds.BOTANIA, ConstantNames.BOTANIA),
     CHARM(ConstantIds.CHARM , ConstantNames.CHARM),
+    CHOCOLATEQUEST(ConstantIds.CHOCOLATEQUEST , ConstantNames.CHOCOLATEQUEST),
     CRIMSONWARFARE(ConstantIds.CRIMSONWARFARE , ConstantNames.CRIMSONWARFARE),
     EBWIZARDRY(ConstantIds.EBWIZARDRY, ConstantNames.EBWIZARDRY),
     EBWIZARDRYTF(ConstantIds.EBWIZARDRYTF, ConstantNames.EBWIZARDRYTF),
@@ -124,6 +126,7 @@ public enum ModIds {
         public static final String BEWITCHMENT = Bewitchment.MODID;
         public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_ID;
         public static final String CHARM = Charm.MOD_ID;
+        public static final String CHOCOLATEQUEST = CQRMain.MODID;
         public static final String CRIMSONWARFARE = CrimsonWarfare.MODID;
         public static final String ENDERIO = EnderIO.MODID;
         public static final String EREBUS = erebus.lib.Reference.MOD_ID;
@@ -166,6 +169,7 @@ public enum ModIds {
         public static final String BEWITCHMENT = Bewitchment.NAME;
         public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_NAME;
         public static final String CHARM = Charm.MOD_NAME;
+        public static final String CHOCOLATEQUEST = "Chocolate Quest: Repoured";
         public static final String CRIMSONWARFARE = CrimsonWarfare.NAME;
         public static final String EBWIZARDRY = Wizardry.NAME;
         public static final String EBWIZARDRYTF = TFSpellPack.NAME;
