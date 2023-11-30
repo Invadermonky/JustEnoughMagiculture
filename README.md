@@ -142,6 +142,58 @@ This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https:/
 ### Mobs
 - Spectre
 
+## Chocolate Quest: Reforged
+### Dungeons
+- CQR Clutter
+- CQR Equipment
+- CQR Food
+- CQR Materials
+- CQR Treasure
+
+### Mobs
+#### Bosses
+- Abyss Walker King
+- Boar Mage
+- Ender Calamity
+- Enderman King
+- Exterminator
+- Giant Turtle
+- Goblin Shaman
+- Lich
+- Necromancer
+- Nether Dragon
+- Pirate Captain
+- Shelob
+- Spectre Lord
+
+#### Mobs
+- Abyss Walker
+- Boarman
+- Dwarf
+- Enderman
+- Goblin
+- Golem
+- Gremlin
+- Human
+- Illager
+- Mandril
+- Minotaur
+- Mummy
+- NPC
+- Ogre
+- Orc
+- Pirate
+- Skeleton
+- Spectre
+- Triton
+- Zombie
+
+#### Mounts
+- GiantEndermite
+- GiantSilverfish
+- GiantSilverfishGreen
+public boolean enableGiantSilverfishRed = true;
+
 ## Crimson Warfare
 ### Mobs
 - Cultist Praetor

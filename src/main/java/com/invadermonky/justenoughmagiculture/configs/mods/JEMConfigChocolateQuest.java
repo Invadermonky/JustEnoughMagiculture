@@ -27,6 +27,7 @@ public class JEMConfigChocolateQuest {
         public Mounts CQR_MOUNTS = new Mounts();
         
         public static class Bosses {
+            public boolean enableAbyssWalkerKing = true;
             public boolean enableBoarMage = true;
             public boolean enableDragonNether = true;
             public boolean enableEnderCalamity = true;
@@ -39,10 +40,10 @@ public class JEMConfigChocolateQuest {
             public boolean enablePirateCaptain = true;
             public boolean enableShelob = true;
             public boolean enableSpectreLord = true;
-            public boolean enableWalkerKing = true;
         }
         
         public static class Mobs {
+            public boolean enableAbyssWalker = true;
             public boolean enableBoarman = true;
             public boolean enableDwarf = true;
             public boolean enableEnderman = true;
@@ -61,7 +62,6 @@ public class JEMConfigChocolateQuest {
             public boolean enableSkeleton = true;
             public boolean enableSpectre = true;
             public boolean enableTriton = true;
-            public boolean enableWalker = true;
             public boolean enableZombie = true;
         }
 

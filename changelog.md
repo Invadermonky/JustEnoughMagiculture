@@ -7,6 +7,7 @@
 - Added Atum 2 JER Integration
 - Added Beast Slayer JER Integration
 - Added Bewitchment Demon/Demoness Trades
+- Added Chocolate Quest: Reforged JER Integration
 - Added Electroblob's Wizardry JER Integration
 - Added Electroblob's Wizardry: Twilight Forest Spell Pack JER Integration
 - Added Erebus JER Integration

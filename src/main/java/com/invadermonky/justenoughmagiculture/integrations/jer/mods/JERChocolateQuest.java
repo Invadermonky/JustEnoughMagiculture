@@ -5,7 +5,6 @@ import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigChocolateQue
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.util.LogHelper;
-import com.invadermonky.justenoughmagiculture.util.ModIds;
 import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import jeresources.api.conditionals.LightLevel;
 import net.minecraft.client.renderer.GlStateManager;
@@ -13,10 +12,8 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.util.ResourceLocation;
 import team.cqr.cqrepoured.entity.EntityEquipmentExtraSlot;
-import team.cqr.cqrepoured.entity.bases.AbstractEntityCQR;
 import team.cqr.cqrepoured.entity.boss.*;
 import team.cqr.cqrepoured.entity.boss.endercalamity.EntityCQREnderCalamity;
 import team.cqr.cqrepoured.entity.boss.endercalamity.EntityCQREnderKing;
@@ -31,8 +28,6 @@ import team.cqr.cqrepoured.entity.mount.EntityGiantSilverfishNormal;
 import team.cqr.cqrepoured.entity.mount.EntityGiantSilverfishRed;
 import team.cqr.cqrepoured.init.CQRItems;
 import team.cqr.cqrepoured.init.CQRLoottables;
-
-import java.lang.reflect.Field;
 
 public class JERChocolateQuest extends JERBase implements IJERIntegration {
     JEMConfigChocolateQuest.JER jerConfig = JEMConfig.CHOCOLATE_QUEST.JUST_ENOUGH_RESOURCES;
@@ -134,7 +129,7 @@ public class JERChocolateQuest extends JERBase implements IJERIntegration {
             registerCQRMob(new EntityCQRSpectreLord(world), LightLevel.any, CQRLoottables.ENTITIES_SPECTRE_LORD);
         }
 
-        if(jerConfig.CQR_BOSSES.enableWalkerKing) {
+        if(jerConfig.CQR_BOSSES.enableAbyssWalkerKing) {
             EntityCQRWalkerKing walkerKing = new EntityCQRWalkerKing(world);
             walkerKing.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(CQRItems.GREAT_SWORD_DIAMOND));
             walkerKing.setItemStackToSlot(EntityEquipmentSlot.OFFHAND, new ItemStack(CQRItems.SHIELD_WALKER_KING, 1));
@@ -216,7 +211,7 @@ public class JERChocolateQuest extends JERBase implements IJERIntegration {
             registerCQRMob(new EntityCQRTriton(world), LightLevel.any, CQRLoottables.ENTITIES_TRITON);
         }
 
-        if(jerConfig.CQR_MOBS.enableWalker) {
+        if(jerConfig.CQR_MOBS.enableAbyssWalker) {
             registerCQRMob(new EntityCQRWalker(world), LightLevel.any, CQRLoottables.ENTITIES_WALKER);
         }
 
