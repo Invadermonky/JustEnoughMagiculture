@@ -28,37 +28,39 @@ public class JustEnoughMagiculture {
             ";required-after:" + ConstantIds.JUSTENOUGHRESOURCES + "@[0.9.2.60,)" +
                     ";after:" + ConstantIds.ANIMANIA +
                     ";after:" + ConstantIds.ATUM +
-                    ";after:" + ConstantIds.BEARWITHME +
-                    ";after:" + ConstantIds.BEASTSLAYER +
+                    ";after:" + ConstantIds.BEAR_WITH_ME +
+                    ";after:" + ConstantIds.BEAST_SLAYER +
+                    ";after:" + ConstantIds.BETWEENLANDS +
                     ";after:" + ConstantIds.BEWITCHMENT +
                     ";after:" + ConstantIds.BOTANIA +
                     ";after:" + ConstantIds.CHARM +
-                    ";after:" + ConstantIds.CHOCOLATEQUEST +
-                    ";after:" + ConstantIds.EBWIZARDRY +
-                    ";after:" + ConstantIds.EBWIZARDRYTF +
+                    ";after:" + ConstantIds.CHOCOLATE_QUEST +
+                    ";after:" + ConstantIds.EB_WIZARDRY +
+                    ";after:" + ConstantIds.EB_WIZARDRY_TF +
                     ";after:" + ConstantIds.EREBUS +
-                    ";after:" + ConstantIds.ENDERIO +
-                    ";after:" + ConstantIds.FAMILIARFAUNA +
-                    ";after:" + ConstantIds.FUTUREMC +
-                    ";after:" + ConstantIds.GRIMOIREOFGAIA +
+                    ";after:" + ConstantIds.ENDER_IO +
+                    ";after:" + ConstantIds.FAMILIAR_FAUNA +
+                    ";after:" + ConstantIds.FUTURE_MC +
+                    ";after:" + ConstantIds.GRIMOIRE_OF_GAIA +
                     ";after:" + ConstantIds.HARVESTCRAFT +
-                    ";after:" + ConstantIds.HARVESTERSNIGHT +
-                    ";after:" + ConstantIds.INDUSTRIALFOREGOING +
-                    ";after:" + ConstantIds.MOWZIESMOBS +
-                    ";after:" + ConstantIds.MUTANTBEASTS +
+                    ";after:" + ConstantIds.HARVESTERS_NIGHT +
+                    ";after:" + ConstantIds.ICE_AND_FIRE +
+                    ";after:" + ConstantIds.INDUSTRIAL_FOREGOING +
+                    ";after:" + ConstantIds.MOWZIES_MOBS +
+                    ";after:" + ConstantIds.MUTANT_BEASTS +
                     ";after:" + ConstantIds.NETHEREX +
-                    ";after:" + ConstantIds.OCEANICEXPANSE +
+                    ";after:" + ConstantIds.OCEANIC_EXPANSE +
                     ";after:" + ConstantIds.PIZZACRAFT +
                     ";after:" + ConstantIds.QUARK +
                     ";after:" + ConstantIds.RATS +
-                    ";after:" + ConstantIds.ROGUELIKEDUNGEONS +
+                    ";after:" + ConstantIds.ROGUELIKE_DUNGEONS +
                     ";after:" + ConstantIds.RUSTIC +
-                    ";after:" + ConstantIds.RUSTICTHAUMATURGY +
-                    ";after:" + ConstantIds.SPECIALMOBS +
+                    ";after:" + ConstantIds.RUSTIC_THAUMATURGY +
+                    ";after:" + ConstantIds.SPECIAL_MOBS +
                     ";after:" + ConstantIds.THAUMCRAFT +
-                    ";after:" + ConstantIds.THAUMICAUGMENTATION +
-                    ";after:" + ConstantIds.THERMALFOUNDATION +
-                    ";after:" + ConstantIds.TWILIGHTFOREST +
+                    ";after:" + ConstantIds.THAUMIC_AUGMENTATION +
+                    ";after:" + ConstantIds.THERMAL_FOUNDATION +
+                    ";after:" + ConstantIds.TWILIGHT_FOREST +
                     ";after:" + ConstantIds.WADDLES
     );
 

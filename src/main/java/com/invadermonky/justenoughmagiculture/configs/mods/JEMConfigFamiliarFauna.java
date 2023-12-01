@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigFamiliarFauna {
-    private static final String MOD_NAME = ConstantNames.FAMILIARFAUNA;
+    private static final String MOD_NAME = ConstantNames.FAMILIAR_FAUNA;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

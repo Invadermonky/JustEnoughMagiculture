@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigHarvestersNight {
-    private static final String MOD_NAME = ConstantNames.HARVESTERSNIGHT;
+    private static final String MOD_NAME = ConstantNames.HARVESTERS_NIGHT;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

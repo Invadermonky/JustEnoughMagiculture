@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigEBWizardryTF {
-    private static final String MOD_NAME = ConstantNames.EBWIZARDRYTF;
+    private static final String MOD_NAME = ConstantNames.EB_WIZARDRY_TF;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

@@ -5,7 +5,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigEnderIO {
-    private static final String MOD_NAME = ConstantNames.ENDERIO;
+    private static final String MOD_NAME = ConstantNames.ENDER_IO;
 
     @RequiresMcRestart
     @Comment("Enables JEM " + MOD_NAME + " injected loot JER integration. (Enderman Skull)")

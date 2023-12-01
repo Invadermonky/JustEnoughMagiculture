@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigRusticThaumaturgy {
-    private static final String MOD_NAME = ConstantNames.RUSTICTHAUMATURGY;
+    private static final String MOD_NAME = ConstantNames.RUSTIC_THAUMATURGY;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

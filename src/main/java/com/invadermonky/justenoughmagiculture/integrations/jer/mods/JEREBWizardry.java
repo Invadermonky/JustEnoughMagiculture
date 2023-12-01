@@ -166,9 +166,9 @@ public class JEREBWizardry extends JERBase implements IJERIntegration {
         public final ResourceLocation lootTable;
 
         public JERDungeonStrings(String name) {
-            this.category = ModIds.EBWIZARDRY.MOD_ID + ":" + name;
-            this.unlocName = StringHelper.getDungeonTranslationKey(ModIds.EBWIZARDRY.MOD_ID, name);
-            this.lootTable = new ResourceLocation(ModIds.EBWIZARDRY.MOD_ID, "chests/" + name);
+            this.category = ModIds.EB_WIZARDRY.MOD_ID + ":" + name;
+            this.unlocName = StringHelper.getDungeonTranslationKey(ModIds.EB_WIZARDRY.MOD_ID, name);
+            this.lootTable = new ResourceLocation(ModIds.EB_WIZARDRY.MOD_ID, "chests/" + name);
         }
     }
 }

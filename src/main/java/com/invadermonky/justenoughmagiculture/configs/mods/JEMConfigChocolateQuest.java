@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigChocolateQuest {
-    private static final String MOD_NAME = ConstantNames.CHOCOLATEQUEST;
+    private static final String MOD_NAME = ConstantNames.CHOCOLATE_QUEST;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

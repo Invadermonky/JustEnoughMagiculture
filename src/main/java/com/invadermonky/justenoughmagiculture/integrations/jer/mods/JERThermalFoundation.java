@@ -47,7 +47,7 @@ public class JERThermalFoundation extends JERBase implements IJERIntegration {
             biomes.removeAll(BiomeDictionary.getBiomes(Type.NETHER));
             biomes.removeAll(BiomeDictionary.getBiomes(Type.END));
 
-            ResourceLocation lootTable = new ResourceLocation(ModIds.THERMALFOUNDATION.MOD_ID, "entities/basalz");
+            ResourceLocation lootTable = new ResourceLocation(ModIds.THERMAL_FOUNDATION.MOD_ID, "entities/basalz");
 
             registerMob(new EntityBasalz(world), JEMLightLevel.custom(lightLevel, false), BiomeHelper.getBiomeNamesForBiomes(biomes.toArray(new Biome[0])), lootTable);
             adjustElementalRenderHook(EntityBasalz.class);
@@ -66,7 +66,7 @@ public class JERThermalFoundation extends JERBase implements IJERIntegration {
             biomes.removeAll(BiomeDictionary.getBiomes(Type.NETHER));
             biomes.removeAll(BiomeDictionary.getBiomes(Type.END));
 
-            ResourceLocation lootTable = new ResourceLocation(ModIds.THERMALFOUNDATION.MOD_ID, "entities/blitz");
+            ResourceLocation lootTable = new ResourceLocation(ModIds.THERMAL_FOUNDATION.MOD_ID, "entities/blitz");
 
             registerMob(new EntityBlitz(world), JEMLightLevel.custom(lightLevel, false), BiomeHelper.getBiomeNamesForBiomes(biomes.toArray(new Biome[0])), lootTable);
             adjustElementalRenderHook(EntityBlitz.class);
@@ -85,7 +85,7 @@ public class JERThermalFoundation extends JERBase implements IJERIntegration {
             biomes.removeAll(BiomeDictionary.getBiomes(Type.NETHER));
             biomes.removeAll(BiomeDictionary.getBiomes(Type.END));
 
-            ResourceLocation lootTable = new ResourceLocation(ModIds.THERMALFOUNDATION.MOD_ID, "entities/blizz");
+            ResourceLocation lootTable = new ResourceLocation(ModIds.THERMAL_FOUNDATION.MOD_ID, "entities/blizz");
 
             registerMob(new EntityBlizz(world), JEMLightLevel.custom(lightLevel, false), BiomeHelper.getBiomeNamesForBiomes(biomes.toArray(new Biome[0])), lootTable);
             adjustElementalRenderHook(EntityBlizz.class);

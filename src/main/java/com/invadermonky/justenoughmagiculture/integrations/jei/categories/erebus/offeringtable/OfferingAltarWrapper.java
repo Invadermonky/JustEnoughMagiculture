@@ -15,7 +15,7 @@
 
 package com.invadermonky.justenoughmagiculture.integrations.jei.categories.erebus.offeringtable;
 
-import com.invadermonky.justenoughmagiculture.util.JEIHelper;
+import com.invadermonky.justenoughmagiculture.util.modhelpers.JEIHelper;
 import erebus.recipes.OfferingAltarRecipe;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.ingredients.VanillaTypes;

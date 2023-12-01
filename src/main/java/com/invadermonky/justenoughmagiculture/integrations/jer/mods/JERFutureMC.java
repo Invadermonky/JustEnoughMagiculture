@@ -19,7 +19,7 @@ import thedarkcolour.futuremc.entity.fish.tropical.EntityTropicalFish;
 import thedarkcolour.futuremc.registry.FBlocks;
 import thedarkcolour.futuremc.registry.FItems;
 
-import static com.invadermonky.justenoughmagiculture.util.ModIds.FUTUREMC;
+import static com.invadermonky.justenoughmagiculture.util.ModIds.FUTURE_MC;
 
 public class JERFutureMC extends JERBase implements IJERIntegration {
     private static final JEMConfigFutureMC.JER jerConfig = JEMConfig.FUTURE_MC.JUST_ENOUGH_RESOURCES;
@@ -34,24 +34,24 @@ public class JERFutureMC extends JERBase implements IJERIntegration {
         FConfig.UpdateAquatic.FishConfig fish = FConfig.INSTANCE.getUpdateAquatic().fish;
 
         if(jerConfig.JER_MOBS.enableCod && fish.cod.enabled) {
-            ResourceLocation codTable = new ResourceLocation(FUTUREMC.MOD_ID, "entities/cod");
+            ResourceLocation codTable = new ResourceLocation(FUTURE_MC.MOD_ID, "entities/cod");
             registerMob(new EntityCod(world), LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(FConfig.INSTANCE.getUpdateAquatic().fish.cod.validBiomes), codTable);
         }
 
         if(jerConfig.JER_MOBS.enablePufferfish && fish.pufferfish.enabled) {
-            ResourceLocation pufferfishTable = new ResourceLocation(FUTUREMC.MOD_ID, "entities/pufferfish");
+            ResourceLocation pufferfishTable = new ResourceLocation(FUTURE_MC.MOD_ID, "entities/pufferfish");
             registerMob(new EntityPufferfish(world), LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(FConfig.INSTANCE.getUpdateAquatic().fish.pufferfish.validBiomes), pufferfishTable);
         }
 
         if(jerConfig.JER_MOBS.enableSalmon && fish.salmon.enabled) {
-            ResourceLocation salmonTable = new ResourceLocation(FUTUREMC.MOD_ID, "entities/salmon");
+            ResourceLocation salmonTable = new ResourceLocation(FUTURE_MC.MOD_ID, "entities/salmon");
             registerMob(new EntitySalmon(world), LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(FConfig.INSTANCE.getUpdateAquatic().fish.salmon.validBiomes), salmonTable);
         }
 
         if(jerConfig.JER_MOBS.enableTropicalFish && fish.tropicalFish.enabled) {
             EntityTropicalFish tropicalFish = new EntityTropicalFish(world);
             tropicalFish.generateVariant();
-            ResourceLocation tropicalFishTable = new ResourceLocation(FUTUREMC.MOD_ID, "entities/tropical_fish");
+            ResourceLocation tropicalFishTable = new ResourceLocation(FUTURE_MC.MOD_ID, "entities/tropical_fish");
             registerMob(tropicalFish, LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(FConfig.INSTANCE.getUpdateAquatic().fish.tropicalFish.validBiomes), tropicalFishTable);
         }
     }

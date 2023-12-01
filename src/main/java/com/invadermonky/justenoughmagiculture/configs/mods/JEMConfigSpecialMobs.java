@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigSpecialMobs {
-    private static final String MOD_NAME = ConstantNames.SPECIALMOBS;
+    private static final String MOD_NAME = ConstantNames.SPECIAL_MOBS;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

@@ -31,7 +31,7 @@ public class JERSpecialMobs extends JERBase implements IJERIntegration {
                 try {
                     if(!disabledMobs.contains(variant.unlocalizedName)) {
                         EntityLiving entity = variant.constructor.newInstance(world);
-                        ResourceLocation lootTable = new ResourceLocation(ModIds.SPECIALMOBS.MOD_ID, "entities/" + variant.family.name.toLowerCase() + "/" + variant.name.toLowerCase());
+                        ResourceLocation lootTable = new ResourceLocation(ModIds.SPECIAL_MOBS.MOD_ID, "entities/" + variant.family.name.toLowerCase() + "/" + variant.name.toLowerCase());
                         List<LootDrop> drops = LootTableHelper.toDrops(world, lootTable);
                         if (variant.bestiaryInfo.weight > 0) {
                             registerMob(entity, LightLevel.hostile, drops.toArray(new LootDrop[0]));

@@ -47,7 +47,7 @@ public class CustomVillagerWrapper extends VillagerWrapper {
         RenderHelper.scissor(minecraft, 7, 43, 59, 79);
 
         if(entry instanceof CustomVanillaVillagerEntry) {
-            RenderHelper.renderEntity(37, 118, 36.0F, (float)(38 - mouseX), (float)(80 - mouseY), entity);
+            RenderHelper.renderEntity(37, 118, entry.getRenderScale(), (float)(38 - mouseX), (float)(80 - mouseY), entity);
         } else {
             RenderHelper.renderEntity(39, 102, entry.getRenderScale(), (float) (38 - mouseX), (float) (80 - mouseY), entity);
         }

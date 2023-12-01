@@ -13,6 +13,7 @@
 - Added Erebus JER Integration
 - Added Harvestcraft Garden drops
 - Added Harvester's Night JER Integration
+- Added Ice and Fire JER Integration
 - Added Mowzie's Mobs JER Integration
 - Added Mutant Beasts JER Integration
 - Added Rats JER Integration

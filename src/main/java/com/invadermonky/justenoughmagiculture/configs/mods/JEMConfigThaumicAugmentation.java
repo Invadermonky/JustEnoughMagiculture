@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigThaumicAugmentation {
-    private static final String MOD_NAME = ConstantNames.THAUMICAUGMENTATION;
+    private static final String MOD_NAME = ConstantNames.THAUMIC_AUGMENTATION;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

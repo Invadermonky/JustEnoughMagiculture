@@ -27,8 +27,8 @@ public class JERBeastSlayer extends JERBase implements IJERIntegration {
 
     @Override
     public void registerModDungeons() {
-        ResourceLocation lootTable = new ResourceLocation(ModIds.BEASTSLAYER.MOD_ID, "structures/circus");
-        registerDungeonLoot(lootTable.toString(), StringHelper.getDungeonTranslationKey(ModIds.BEASTSLAYER.MOD_ID, "circus"), lootTable);
+        ResourceLocation lootTable = new ResourceLocation(ModIds.BEAST_SLAYER.MOD_ID, "structures/circus");
+        registerDungeonLoot(lootTable.toString(), StringHelper.getDungeonTranslationKey(ModIds.BEAST_SLAYER.MOD_ID, "circus"), lootTable);
     }
 
     @Override

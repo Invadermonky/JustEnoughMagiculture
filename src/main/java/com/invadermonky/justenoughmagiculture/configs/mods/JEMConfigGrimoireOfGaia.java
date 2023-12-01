@@ -7,7 +7,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigGrimoireOfGaia {
-    private static final String MOD_NAME = ConstantNames.GRIMOIREOFGAIA;
+    private static final String MOD_NAME = ConstantNames.GRIMOIRE_OF_GAIA;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
     public JEMConfigGrimoireOfGaia() {}
 

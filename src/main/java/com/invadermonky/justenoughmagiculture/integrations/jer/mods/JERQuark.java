@@ -135,7 +135,6 @@ public class JERQuark extends JERBase implements IJERIntegration {
     @Override
     public void injectLoot() {
         if(JEMConfig.QUARK.enableJERInjectedLoot) {
-            MobRegistry registry = MobRegistry.getInstance();
             for (MobEntry mobEntry : MobRegistry.getInstance().getMobs()) {
                 if (isFeatureEnabled(WitchHat.class) && WitchHat.dropRate > 0 && mobEntry.getEntity() instanceof EntityWitch) {
                     try {

@@ -1,5 +1,8 @@
 # Just Enough Magiculture 
 
+### Curseforge
+https://www.curseforge.com/minecraft/mc-mods/omniwand
+
 This is a mod for Minecraft version 1.12.2 built for the [Magiculture 2](https://www.curseforge.com/minecraft/modpacks/magiculture-2) modpack that provides a large number of Just Enough Resources integrations.
 
 ## Just Enough Resources Integrations
@@ -408,6 +411,69 @@ public boolean enableGiantSilverfishRed = true;
 ### Mobs
 - The Harvester
 
+## Ice and Fire
+### Dungeons
+- Cyclops Cave
+- Fire Dragon Cave
+- Fire Dragon Roost
+- Hydra Cave
+- Ice Dragon Cave
+- Ice Dragon Roost
+- Desert Myrmex Food
+- Jungle Myrmex Food
+- Myrmex Treasure
+- Myrmex Trash
+
+### Mobs
+- Amphithere
+- Cockatrice
+- Cyclops
+- Death Worm Red
+- Death Worm Red Giant
+- Death Worm Tan
+- Death Worm Tan Giant
+- Death Worm White
+- Death Worm White Giant
+- Dread Beast
+- Dread Ghoul
+- Dread Knight
+- Dread Lich
+- Dread Scuttler
+- Dread Thrall
+- Fire Dragon Female (All Variants)
+- Fire Dragon Male (All Variants)
+- Gorgon
+- Hippocampus
+- Hippogryph
+- Hydra
+- Ice Dragon Female (All Variants)
+- Ice Dragon Male (All Variants)
+- Myrmex Desert Queen
+- Myrmex Desert Royal
+- Myrmex Desert Sentinel
+- Myrmex Desert Soldier
+- Myrmex Desert Worker
+- Myrmex Jungle Queen
+- Myrmex Jungle Royal
+- Myrmex Jungle Sentinel
+- Myrmex Jungle Soldier
+- Myrmex Jungle Worker
+- Pixie
+- Sea Serpent (All Variants)
+- Siren
+- Stymphalian Bird
+- Troll Forest
+- Troll Frost
+- Troll Mountain
+
+### Villagers
+- Myrmex Queen
+- Myrmex Royal
+- Myrmex Sentinel
+- Myrmex Soldier
+- Myrmex Worker
+- Snow Villager
+
 ## Industrial Foregoing
 ### Mobs
 - Pink Slime
@@ -445,8 +511,7 @@ public boolean enableGiantSilverfishRed = true;
 - Mutant Skeleton 
 - Mutant SnowGolem 
 - Mutant Zombie 
-- Spider Pig 
-
+- Spider Pig
 
 ## NetherEx
 ### Dungeons

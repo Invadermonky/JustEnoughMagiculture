@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigFutureMC {
-    private static final String MOD_NAME = ConstantNames.FUTUREMC;
+    private static final String MOD_NAME = ConstantNames.FUTURE_MC;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigOceanicExpanse {
-    private static final String MOD_NAME = ConstantNames.OCEANICEXPANSE;
+    private static final String MOD_NAME = ConstantNames.OCEANIC_EXPANSE;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

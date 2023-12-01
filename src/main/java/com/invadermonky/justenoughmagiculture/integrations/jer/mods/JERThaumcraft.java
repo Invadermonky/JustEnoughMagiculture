@@ -91,7 +91,7 @@ public class JERThaumcraft extends JERBase implements IJERIntegration {
     }
 
     private void registerBosses() {
-        if(JEMConfig.THAUMCRAFT.forceLoadJERMobs || ModIds.CRIMSONWARFARE.isLoaded) {
+        if(JEMConfig.THAUMCRAFT.forceLoadJERMobs || ModIds.CRIMSON_WARFARE.isLoaded) {
 
             LootDrop pearlDrop = new LootDrop(new ItemStack(ItemsTC.primordialPearl));
             LootDrop bagDrop = new LootDrop(new ItemStack(ItemsTC.lootBag, 1, 2));
@@ -148,7 +148,7 @@ public class JERThaumcraft extends JERBase implements IJERIntegration {
             if (jerConfig.enableBossTaintacleGiant) {
                 ArrayList<LootDrop> taintacleDrops = new ArrayList<>();
                 taintacleDrops.add(pearlDrop);
-                if (ModIds.THAUMICAUGMENTATION.isLoaded) {
+                if (ModIds.THAUMIC_AUGMENTATION.isLoaded) {
                     taintacleDrops.addAll(LootTableHelper.toDrops(world, TALootTables.TAINT_MOB));
                 }
                 registerMob(new EntityTaintacleGiant(world), LightLevel.any, taintacleDrops.toArray(new LootDrop[0]));
@@ -208,7 +208,7 @@ public class JERThaumcraft extends JERBase implements IJERIntegration {
             registerMob(new EntityBrainyZombie(world), LightLevel.hostile, drops.toArray(new LootDrop[0]));
         }
 
-        if(jerConfig.enableEldrichCrab && (ModIds.THAUMICAUGMENTATION.isLoaded || forceLoad)) {
+        if(jerConfig.enableEldrichCrab && (ModIds.THAUMIC_AUGMENTATION.isLoaded || forceLoad)) {
             registerMob(new EntityEldritchCrab(world), LightLevel.hostile, new LootDrop(new ItemStack(Items.ENDER_PEARL), 1, 1, (1f/3f), Conditional.affectedByLooting));
         }
 
@@ -250,7 +250,7 @@ public class JERThaumcraft extends JERBase implements IJERIntegration {
     private void registerTaintMobs() {
         ArrayList<LootDrop> taintDrops = new ArrayList<>(2);
         taintDrops.add(new LootDrop(ConfigItems.FLUX_CRYSTAL.copy()));
-        if(ModIds.THAUMICAUGMENTATION.isLoaded) {
+        if(ModIds.THAUMIC_AUGMENTATION.isLoaded) {
             taintDrops.addAll(LootTableHelper.toDrops(world, TALootTables.TAINT_MOB));
         }
 

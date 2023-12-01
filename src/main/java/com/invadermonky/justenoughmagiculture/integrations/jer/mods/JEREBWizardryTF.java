@@ -19,7 +19,7 @@ public class JEREBWizardryTF extends JERBase implements IJERIntegration {
     @Override
     public void registerModEntities() {
         if(JEMConfig.EB_WIZARDRY_TF.JUST_ENOUGH_RESOURCES.enableDruidMage) {
-            registerMob(new EntityDruidMage(world), LightLevel.hostile, BiomeHelper.getBiomeNamesForTypes(RegistryBiomeEvent.TWILIGHT), new ResourceLocation(ModIds.EBWIZARDRYTF.MOD_ID, "entities/druid_mage"));
+            registerMob(new EntityDruidMage(world), LightLevel.hostile, BiomeHelper.getBiomeNamesForTypes(RegistryBiomeEvent.TWILIGHT), new ResourceLocation(ModIds.EB_WIZARDRY_TF.MOD_ID, "entities/druid_mage"));
             registerRenderHook(EntityDruidMage.class, ((renderInfo, e) -> {
                 GlStateManager.translate(-0.05,-0.4,0);
                 return renderInfo;

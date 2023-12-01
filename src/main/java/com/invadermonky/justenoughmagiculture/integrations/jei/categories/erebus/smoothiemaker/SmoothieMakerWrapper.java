@@ -16,7 +16,7 @@
 package com.invadermonky.justenoughmagiculture.integrations.jei.categories.erebus.smoothiemaker;
 
 import com.google.common.collect.ImmutableList;
-import com.invadermonky.justenoughmagiculture.util.JEIHelper;
+import com.invadermonky.justenoughmagiculture.util.modhelpers.JEIHelper;
 import erebus.recipes.SmoothieMakerRecipe;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.ingredients.VanillaTypes;

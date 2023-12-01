@@ -23,7 +23,7 @@ import twilightforest.entity.boss.*;
 import twilightforest.entity.passive.*;
 import twilightforest.item.TFItems;
 
-import static com.invadermonky.justenoughmagiculture.util.ModIds.TWILIGHTFOREST;
+import static com.invadermonky.justenoughmagiculture.util.ModIds.TWILIGHT_FOREST;
 
 public class JERTwilightForest extends JERBase implements IJERIntegration {
     private final JEMConfigTwilightForest.JER jerConfig = JEMConfig.TWILIGHT_FOREST.JUST_ENOUGH_RESOURCES;
@@ -109,9 +109,9 @@ public class JERTwilightForest extends JERBase implements IJERIntegration {
         // Quest Ram registered as dungeon treasure due to render entity crash and that it's a quest not a kill target.
         if(jerConfig.enableQuestingRam) {
             registerDungeonLoot(
-                    TWILIGHTFOREST.MOD_ID + ":entities/quest_ram_rewards",
-                    "dungeon." + JustEnoughMagiculture.MOD_ALIAS + ":" + TWILIGHTFOREST.MOD_ID + ".quest_ram_rewards",
-                    new ResourceLocation(TWILIGHTFOREST.MOD_ID, "entities/questing_ram_rewards")
+                    TWILIGHT_FOREST.MOD_ID + ":entities/quest_ram_rewards",
+                    "dungeon." + JustEnoughMagiculture.MOD_ALIAS + ":" + TWILIGHT_FOREST.MOD_ID + ".quest_ram_rewards",
+                    new ResourceLocation(TWILIGHT_FOREST.MOD_ID, "entities/questing_ram_rewards")
             );
         }
 
@@ -364,7 +364,7 @@ public class JERTwilightForest extends JERBase implements IJERIntegration {
             for (EnumDyeColor color : EnumDyeColor.values()) {
                 EntityTFBighorn bighorn = new EntityTFBighorn(world);
                 bighorn.setFleeceColor(color);
-                ResourceLocation bighornTable = new ResourceLocation(TWILIGHTFOREST.MOD_ID, "entities/bighorn_sheep/" + color.getName());
+                ResourceLocation bighornTable = new ResourceLocation(TWILIGHT_FOREST.MOD_ID, "entities/bighorn_sheep/" + color.getName());
                 registerMob(bighorn, JEMLightLevel.animal, tfBiomeType, bighornTable);
             }
         }
@@ -390,7 +390,7 @@ public class JERTwilightForest extends JERBase implements IJERIntegration {
 
         if(jerConfig.enableFirefly) {
             EntityTFMobileFirefly firefly = new EntityTFMobileFirefly(world);
-            registerMob(firefly, JEMLightLevel.animal, tfBiomeType, new ResourceLocation(TWILIGHTFOREST.MOD_ID, "entities/mobile_firefly"));
+            registerMob(firefly, JEMLightLevel.animal, tfBiomeType, new ResourceLocation(TWILIGHT_FOREST.MOD_ID, "entities/mobile_firefly"));
         }
 
         if(jerConfig.enablePenguin) {
@@ -450,8 +450,8 @@ public class JERTwilightForest extends JERBase implements IJERIntegration {
         public final ResourceLocation lootTable;
 
         public JERDungeonStrings(String dungeon) {
-            this.category = String.format("%s:structures/%s", TWILIGHTFOREST.MOD_ID, dungeon);
-            this.unlocName = StringHelper.getDungeonTranslationKey(TWILIGHTFOREST.MOD_ID, dungeon);
+            this.category = String.format("%s:structures/%s", TWILIGHT_FOREST.MOD_ID, dungeon);
+            this.unlocName = StringHelper.getDungeonTranslationKey(TWILIGHT_FOREST.MOD_ID, dungeon);
             this.lootTable = new ResourceLocation(String.format("%s/%s", category, dungeon));
         }
     }

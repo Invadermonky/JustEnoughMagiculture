@@ -14,6 +14,10 @@ public class JEMConfigAnimaniaFarm {
     public boolean enableJERMobs = true;
 
     @RequiresMcRestart
+    @Comment("Enables render fixes. Disabling this may cause some entities to not display in JER.")
+    public boolean enableRenderFixes = true;
+
+    @RequiresMcRestart
     @Comment("JEM " + MOD_NAME + " Just Enough Resources settings.")
     public JER JUST_ENOUGH_RESOURCES = new JER();
     public static class JER {

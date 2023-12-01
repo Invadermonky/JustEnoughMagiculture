@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigIndustrialForegoing {
-    private static final String MOD_NAME = ConstantNames.INDUSTRIALFOREGOING;
+    private static final String MOD_NAME = ConstantNames.INDUSTRIAL_FOREGOING;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

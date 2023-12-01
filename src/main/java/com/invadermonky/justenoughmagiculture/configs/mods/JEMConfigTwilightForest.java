@@ -7,8 +7,8 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigTwilightForest {
-    private static final String MOD_ID = ConstantIds.TWILIGHTFOREST;
-    private static final String MOD_NAME = ConstantNames.TWILIGHTFOREST;
+    private static final String MOD_ID = ConstantIds.TWILIGHT_FOREST;
+    private static final String MOD_NAME = ConstantNames.TWILIGHT_FOREST;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

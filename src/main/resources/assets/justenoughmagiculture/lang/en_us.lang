@@ -4,8 +4,16 @@ config.jem:jermodule=JER Module
 config.jem:jeimodule=JEI Module
 
 # Conditionals
-jem.axeKill.text=Axe Kill Bonus
-jem.shovelKill.text=Shovel Kill Bonus
+jem.affectedByAncient.text=Drops Massively Increased for Ancient
+jem.affectedByResearch=Affected by Thaumic Research
+jem.dependsOnAge.text=Drops Increase with Age
+jem.dependsOnSize.text=Drops Increase with Size
+jem.dependsOnVariant.text=Depends on Mob Variant
+jem.adult.text=Requires Adult
+jem.notAdult.text=Requires Child
+jem.axeKill.text=Killed with Axe
+jem.shovelKill.text=Killed with Shovel
+jem.requiresBottle.text=Requires Empty Bottle
 jem.squashed.text=Squashed
 jem.notSquashed.text=Not Squashed
 
@@ -54,6 +62,17 @@ dungeon.erebus:giant_eucalyptus.name=Giant Eucalyptus
 dungeon.erebus:locust_shrine.name=Locust Shrine
 dungeon.erebus:rotten_tree_stump.name=Rotten Tree Stump
 dungeon.erebus:spider_dungeon.name=Spider Dungeon
+#   Ice and Fire
+dungeon.iceandfire:cyclops_cave.name=Cyclops Cave
+dungeon.iceandfire:fire_dragon_female_cave.name=Fire Dragon Cave
+dungeon.iceandfire:fire_dragon_male_cave.name=Fire Dragon Roost
+dungeon.iceandfire:hydra_cave.name=Hydra Cave
+dungeon.iceandfire:ice_dragon_female_cave.name=Ice Dragon Cave
+dungeon.iceandfire:ice_dragon_male_cave.name=Ice Dragon Roost
+dungeon.iceandfire:myrmex_desert_food_chest.name=Desert Myrmex Food
+dungeon.iceandfire:myrmex_jungle_food_chest.name=Jungle Myrmex Food
+dungeon.iceandfire:myrmex_loot_chest.name=Myrmex Treasure
+dungeon.iceandfire:myrmex_trash_chest.name=Myrmex Trash
 #   NetherEx
 dungeon.netherex:base_village.name=Pigtificate Village
 dungeon.netherex:ghast_queen_shrine.name=Ghast Queen Shrine
@@ -109,6 +128,10 @@ entity.despot.name=Despot
 entity.noble.name=Noble
 entity.jem:botania.fel_blaze.name=Fel Blaze
 entity.cqrepoured:goblin_shaman.name=Goblin Shaman
+entity.jem:iaf_fire_dragon_male.name=Male Fire Dragon
+entity.jem:iaf_fire_dragon_female.name=Female Fire Dragon
+entity.jem:iaf_ice_dragon_male.name=Male Fire Dragon
+entity.jem:iaf_ice_dragon_female.name=Female Fire Dragon
 entity.netherex:pigtificate_chief.name=Pigtificate Chief
 entity.rats:pet_shop_owner.name=Pet Shop Owner
 entity.rats:plague_doctor.name=Plague Doctor

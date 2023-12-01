@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigBearWithMe {
-    private static final String MOD_NAME = ConstantNames.BEARWITHME;
+    private static final String MOD_NAME = ConstantNames.BEAR_WITH_ME;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

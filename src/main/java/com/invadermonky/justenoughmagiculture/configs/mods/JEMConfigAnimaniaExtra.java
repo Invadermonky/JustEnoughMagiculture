@@ -14,8 +14,8 @@ public class JEMConfigAnimaniaExtra {
     public boolean enableJERMobs = true;
 
     @RequiresMcRestart
-    @Comment("Enables JEM " + MOD_NAME + " JER plant integration.")
-    public boolean enableJERPlants = true;
+    @Comment("Enables render fixes. Disabling this may cause some entities to not display in JER.")
+    public boolean enableRenderFixes = true;
 
     @RequiresMcRestart
     @Comment("JEM " + MOD_NAME + " Just Enough Resources settings.")

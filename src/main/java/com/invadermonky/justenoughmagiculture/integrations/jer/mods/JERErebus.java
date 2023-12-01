@@ -130,11 +130,11 @@ public class JERErebus extends JERBase implements IJERIntegration {
 
         if(jerConfig.JER_MOBS.enableBeetleLarva) {
             List<LootDrop> larvaDrops = new ArrayList<>();
-            LootDrop foodDrop = new LootDrop(new ItemStack(ModItems.EREBUS_FOOD, 1, 0), 1, 1, JEMConditional.notSquashed);
+            LootDrop foodDrop = new LootDrop(new ItemStack(ModItems.EREBUS_FOOD, 1, 0), 1, 1, JEMConditional.isNotSquashed);
             foodDrop.smeltedItem = new ItemStack(ModItems.EREBUS_FOOD, 1, 1);
             larvaDrops.add(foodDrop);
-            larvaDrops.add(new LootDrop(Items.SLIME_BALL, 1, 1, ((float)199/200), JEMConditional.squashed));
-            larvaDrops.add(new LootDrop(Items.DIAMOND, 0, 1, ((float)1/200), JEMConditional.squashed, Conditional.rareDrop));
+            larvaDrops.add(new LootDrop(Items.SLIME_BALL, 1, 1, ((float)199/200), JEMConditional.isSquashed));
+            larvaDrops.add(new LootDrop(Items.DIAMOND, 0, 1, ((float)1/200), JEMConditional.isSquashed, Conditional.rareDrop));
             registerMob(new EntityBeetleLarva(world), LightLevel.hostile, getSpawnBiomes(EntityBeetleLarva.class), larvaDrops);
             adjustBugRenderHookUp(EntityBeetleLarva.class);
         }
@@ -163,11 +163,11 @@ public class JERErebus extends JERBase implements IJERIntegration {
 
         if(jerConfig.JER_MOBS.enableBombardierBeetleLarva) {
             List<LootDrop> larvaDrops = new ArrayList<>();
-            LootDrop foodDrop = new LootDrop(new ItemStack(ModItems.EREBUS_FOOD, 1, 0), 1, 1, JEMConditional.notSquashed);
+            LootDrop foodDrop = new LootDrop(new ItemStack(ModItems.EREBUS_FOOD, 1, 0), 1, 1, JEMConditional.isNotSquashed);
             foodDrop.smeltedItem = new ItemStack(ModItems.EREBUS_FOOD, 1, 1);
             larvaDrops.add(foodDrop);
-            larvaDrops.add(new LootDrop(Items.SLIME_BALL, 1, 1, ((float)199/200), JEMConditional.squashed));
-            larvaDrops.add(new LootDrop(Items.DIAMOND, 0, 1, ((float)1/200), JEMConditional.squashed));
+            larvaDrops.add(new LootDrop(Items.SLIME_BALL, 1, 1, ((float)199/200), JEMConditional.isSquashed));
+            larvaDrops.add(new LootDrop(Items.DIAMOND, 0, 1, ((float)1/200), JEMConditional.isSquashed));
             registerMob(new EntityBombardierBeetleLarva(world), LightLevel.hostile, getSpawnBiomes(EntityBombardierBeetleLarva.class), larvaDrops);
         }
 

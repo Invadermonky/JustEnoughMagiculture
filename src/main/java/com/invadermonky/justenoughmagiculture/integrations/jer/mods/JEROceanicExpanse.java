@@ -103,8 +103,8 @@ public class JEROceanicExpanse extends JERBase implements IJERIntegration {
         public final ResourceLocation lootTable;
 
         public JERDungeonStrings(String name, String type) {
-            this.category = String.format("%s:%s/%s", ModIds.OCEANICEXPANSE.MOD_ID, type, name);
-            this.unlocName = StringHelper.getDungeonTranslationKey(ModIds.OCEANICEXPANSE.MOD_ID, name);
+            this.category = String.format("%s:%s/%s", ModIds.OCEANIC_EXPANSE.MOD_ID, type, name);
+            this.unlocName = StringHelper.getDungeonTranslationKey(ModIds.OCEANIC_EXPANSE.MOD_ID, name);
             this.lootTable = new ResourceLocation(category);
         }
     }

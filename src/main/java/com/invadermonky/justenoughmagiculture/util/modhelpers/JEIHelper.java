@@ -1,4 +1,4 @@
-package com.invadermonky.justenoughmagiculture.util;
+package com.invadermonky.justenoughmagiculture.util.modhelpers;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.item.ItemStack;

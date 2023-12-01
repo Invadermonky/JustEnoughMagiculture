@@ -126,7 +126,7 @@ public class JERRoguelikeDungeons extends JERBase implements IJERIntegration {
             floorLoot.forEach((floor, lootPools) -> {
                 registerDungeonLoot(
                         "roguelike:floor_" + floor,
-                        StringHelper.getDungeonTranslationKey(ModIds.ROGUELIKEDUNGEONS.MOD_ID, "floor_" + floor),
+                        StringHelper.getDungeonTranslationKey(ModIds.ROGUELIKE_DUNGEONS.MOD_ID, "floor_" + floor),
                         new LootTable(lootPools.toArray(new LootPool[0]))
                 );
             });
