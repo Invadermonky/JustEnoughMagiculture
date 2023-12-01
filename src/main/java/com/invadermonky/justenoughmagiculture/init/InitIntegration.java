@@ -46,42 +46,43 @@ public class InitIntegration {
             if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_FARM)) new JERAnimaniaFarm(ANIMANIA_FARM.enableJERMobs);
         }
         if(ModIds.ATUM.isLoaded) new JERAtum(ATUM.enableJERDungeons, ATUM.enableJERMobs, ATUM.enableJERPlants, ATUM.enableJERVillagers);
-        if(ModIds.BEARWITHME.isLoaded) new JERBearWithMe(BEAR_WITH_ME.enableJERMobs);
-        if(ModIds.BEASTSLAYER.isLoaded) new JERBeastSlayer(BEAST_SLAYER.enableJERDungeons, BEAST_SLAYER.enableJERMobs);
+        if(ModIds.BEAR_WITH_ME.isLoaded) new JERBearWithMe(BEAR_WITH_ME.enableJERMobs);
+        if(ModIds.BEAST_SLAYER.isLoaded) new JERBeastSlayer(BEAST_SLAYER.enableJERDungeons, BEAST_SLAYER.enableJERMobs);
         if(ModIds.BEWITCHMENT.isLoaded) new JERBewitchment(BEWITCHMENT.enableJERMobs, BEWITCHMENT.enableJERPlants, BEWITCHMENT.enableJERVillagers);
         if(ModIds.BOTANIA.isLoaded) new JERBotania(BOTANIA.enableJERMobs);
         if(ModIds.CHARM.isLoaded) new JERCharm(CHARM.enableJERDungeons, CHARM.enableJERMobs);
-        if(ModIds.CHOCOLATEQUEST.isLoaded) new JERChocolateQuest(CHOCOLATE_QUEST.enableJERDungeons, CHOCOLATE_QUEST.enableJERMobs);
-        if(ModIds.EBWIZARDRY.isLoaded) new JEREBWizardry(EB_WIZARDRY.enableJERDungeons, EB_WIZARDRY.enableJERMobs);
-        if(ModIds.EBWIZARDRYTF.isLoaded) new JEREBWizardryTF(EB_WIZARDRY_TF.enableJERMobs);
+        if(ModIds.CHOCOLATE_QUEST.isLoaded) new JERChocolateQuest(CHOCOLATE_QUEST.enableJERDungeons, CHOCOLATE_QUEST.enableJERMobs);
+        if(ModIds.EB_WIZARDRY.isLoaded) new JEREBWizardry(EB_WIZARDRY.enableJERDungeons, EB_WIZARDRY.enableJERMobs);
+        if(ModIds.EB_WIZARDRY_TF.isLoaded) new JEREBWizardryTF(EB_WIZARDRY_TF.enableJERMobs);
         if(ModIds.EREBUS.isLoaded) new JERErebus(EREBUS.enableJERDungeons, EREBUS.enableJERMobs, EREBUS.enableJERPlants);
-        if(ModIds.FAMILIARFAUNA.isLoaded) new JERFamiliarFauna(FAMILIAR_FAUNA.enableJERMobs);
-        if(ModIds.FUTUREMC.isLoaded) new JERFutureMC(FUTURE_MC.enableJERMobs, FUTURE_MC.enableJERPlants);
-        if(ModIds.GRIMOIREOFGAIA.isLoaded) new JERGrimoireOfGaia(GRIMOIRE_OF_GAIA.enableJERMobs);
+        if(ModIds.FAMILIAR_FAUNA.isLoaded) new JERFamiliarFauna(FAMILIAR_FAUNA.enableJERMobs);
+        if(ModIds.FUTURE_MC.isLoaded) new JERFutureMC(FUTURE_MC.enableJERMobs, FUTURE_MC.enableJERPlants);
+        if(ModIds.GRIMOIRE_OF_GAIA.isLoaded) new JERGrimoireOfGaia(GRIMOIRE_OF_GAIA.enableJERMobs);
         if(ModIds.HARVESTCRAFT.isLoaded) new JERHarvestcraft(HARVESTCRAFT.enableJERPlants);
-        if(ModIds.HARVESTERSNIGHT.isLoaded) new JERHarvestersNight(HARVESTERSNIGHT.enableJERMobs);
-        if(ModIds.INDUSTRIALFOREGOING.isLoaded) new JERIndustrialForegoing(INDUSTRIAL_FOREGOING.enableJERMobs);
-        if(ModIds.MOWZIESMOBS.isLoaded) new JERMowziesMobs(MOWZIES_MOBS.enableJERMobs, MOWZIES_MOBS.enableJERVillagers);
-        if(ModIds.MUTANTBEASTS.isLoaded) new JERMutantBeasts(MUTANT_BEASTS.enableJERMobs);
+        if(ModIds.HARVESTERS_NIGHT.isLoaded) new JERHarvestersNight(HARVESTERSNIGHT.enableJERMobs);
+        if(ModIds.ICE_AND_FIRE.isLoaded) new JERIceAndFire(ICE_AND_FIRE.enableJERDungeons, ICE_AND_FIRE.enableJERMobs, ICE_AND_FIRE.enableJERVillagers);
+        if(ModIds.INDUSTRIAL_FOREGOING.isLoaded) new JERIndustrialForegoing(INDUSTRIAL_FOREGOING.enableJERMobs);
+        if(ModIds.MOWZIES_MOBS.isLoaded) new JERMowziesMobs(MOWZIES_MOBS.enableJERMobs, MOWZIES_MOBS.enableJERVillagers);
+        if(ModIds.MUTANT_BEASTS.isLoaded) new JERMutantBeasts(MUTANT_BEASTS.enableJERMobs);
         if(ModIds.NETHEREX.isLoaded) new JERNetherEx(NETHEREX.enableJERDungeons, NETHEREX.enableJERMobs, NETHEREX.enableJERVillagers);
-        if(ModIds.OCEANICEXPANSE.isLoaded) new JEROceanicExpanse(OCEANIC_EXPANSE.enableJERDungeons, OCEANIC_EXPANSE.enableJERMobs);
+        if(ModIds.OCEANIC_EXPANSE.isLoaded) new JEROceanicExpanse(OCEANIC_EXPANSE.enableJERDungeons, OCEANIC_EXPANSE.enableJERMobs);
         if(ModIds.PIZZACRAFT.isLoaded) new JERPizzacraft(PIZZACRAFT.enableJERPlants);
         if(ModIds.QUARK.isLoaded) new JERQuark(QUARK.enableJERDungeons, QUARK.enableJERMobs, QUARK.enableJERVillagers);
         if(ModIds.RATS.isLoaded) new JERRats(RATS.enableJERDungeons, RATS.enableJERMobs);
-        /* TODO: This is a massive amount of work and I'm not sure I want to go through with it. */ if(ModIds.ROGUELIKEDUNGEONS.isLoaded) new JERRoguelikeDungeons(ROGUELIKE_DUNGEONS.enableJERDungeons);
+        /* TODO: This is a massive amount of work and I'm not sure I want to go through with it. */ if(ModIds.ROGUELIKE_DUNGEONS.isLoaded) new JERRoguelikeDungeons(ROGUELIKE_DUNGEONS.enableJERDungeons);
         if(ModIds.RUSTIC.isLoaded) new JERRustic(RUSTIC.enableJERPlants);
-        if(ModIds.RUSTICTHAUMATURGY.isLoaded) new JERRusticThaumaturgy(RUSTIC_THAUMATURGY.enableJERPlants);
-        if(ModIds.SPECIALMOBS.isLoaded) new JERSpecialMobs(SPECIAL_MOBS.enableJERMobs);
+        if(ModIds.RUSTIC_THAUMATURGY.isLoaded) new JERRusticThaumaturgy(RUSTIC_THAUMATURGY.enableJERPlants);
+        if(ModIds.SPECIAL_MOBS.isLoaded) new JERSpecialMobs(SPECIAL_MOBS.enableJERMobs);
         if(ModIds.THAUMCRAFT.isLoaded) new JERThaumcraft(THAUMCRAFT.enableJERDungeons, THAUMCRAFT.enableJERMobs);
-        if(ModIds.THAUMICAUGMENTATION.isLoaded) new JERThaumicAugmentation(THAUMIC_AUGMENTATION.enableJERMobs);
-        if(ModIds.THERMALFOUNDATION.isLoaded) new JERThermalFoundation(THERMAL_FOUNDATION.enableJERMobs);
-        if(ModIds.TWILIGHTFOREST.isLoaded) new JERTwilightForest(TWILIGHT_FOREST.enableJERDungeons, TWILIGHT_FOREST.enableJERMobs);
+        if(ModIds.THAUMIC_AUGMENTATION.isLoaded) new JERThaumicAugmentation(THAUMIC_AUGMENTATION.enableJERMobs);
+        if(ModIds.THERMAL_FOUNDATION.isLoaded) new JERThermalFoundation(THERMAL_FOUNDATION.enableJERMobs);
+        if(ModIds.TWILIGHT_FOREST.isLoaded) new JERTwilightForest(TWILIGHT_FOREST.enableJERDungeons, TWILIGHT_FOREST.enableJERMobs);
         if(ModIds.WADDLES.isLoaded) new JERWaddles(WADDLES.enableJERMobs);
     }
 
     private static void registerLootBags() {
         if(ModIds.THAUMCRAFT.isLoaded) JERThaumcraft.getInstance().registerLootBagEntries();
-        if(ModIds.THAUMICAUGMENTATION.isLoaded) JERThaumicAugmentation.getInstance().registerLootBagEntries();
+        if(ModIds.THAUMIC_AUGMENTATION.isLoaded) JERThaumicAugmentation.getInstance().registerLootBagEntries();
     }
 
     /**
@@ -89,9 +90,11 @@ public class InitIntegration {
      */
     public static void lateInit() {
         if(ModIds.CHARM.isLoaded) JERCharm.getInstance().injectLoot();
-        if(ModIds.ENDERIO.isLoaded) JEREnderIO.getInstance().injectLoot();
+        if(ModIds.ENDER_IO.isLoaded) JEREnderIO.getInstance().injectLoot();
         if(ModIds.HARVESTCRAFT.isLoaded) JERHarvestcraft.getInstance().injectLoot();
+        if(ModIds.ICE_AND_FIRE.isLoaded) JERIceAndFire.getInstance().lateInit();
         if(ModIds.QUARK.isLoaded) JERQuark.getInstance().injectLoot();
+        if(ModIds.RATS.isLoaded) JERRats.getInstance().registerRenderOverrides();
     }
 
     public static void registerRenderOverrides() {
@@ -99,10 +102,10 @@ public class InitIntegration {
             return;
 
         if(ModIds.ANIMANIA.isLoaded) {
-            if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_EXTRA)) {
+            if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_EXTRA) && ANIMANIA_EXTRA.enableRenderFixes) {
                 JERAnimaniaExtra.getInstance().registerRenderOverrides();
             }
-            if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_FARM)) {
+            if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_FARM) && ANIMANIA_FARM.enableRenderFixes) {
                 JERAnimaniaFarm.getInstance().registerRenderOverrides();
             }
         }

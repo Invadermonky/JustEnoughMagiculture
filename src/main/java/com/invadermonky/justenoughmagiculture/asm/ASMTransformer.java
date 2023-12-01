@@ -1,7 +1,6 @@
 package com.invadermonky.justenoughmagiculture.asm;
 
 import com.invadermonky.justenoughmagiculture.asm.mods.ASMJER;
-import com.invadermonky.justenoughmagiculture.asm.mods.ASMRats;
 import net.minecraft.launchwrapper.IClassTransformer;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
@@ -11,7 +10,6 @@ import java.util.Arrays;
 
 public class ASMTransformer implements IClassTransformer {
     private static final String[] classesBeingTransformed = {
-            "com.github.alexthe666.rats.client.render.entity.RenderRat",
             "jeresources.jei.JEIConfig"
     };
 
@@ -32,9 +30,6 @@ public class ASMTransformer implements IClassTransformer {
 
             switch(index) {
                 case 0:
-                    ASMRats.transformLayerRatEyes(classNode, isObfuscated);
-                    break;
-                case 1:
                     ASMJER.transformJEIConfig(classNode, isObfuscated);
                     break;
             }

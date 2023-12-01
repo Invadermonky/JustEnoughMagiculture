@@ -1,7 +1,6 @@
 package com.invadermonky.justenoughmagiculture.client.render.entity.mods.rats;
 
 import com.github.alexthe666.rats.client.model.ModelRat;
-import com.github.alexthe666.rats.client.render.entity.LayerRatEyes;
 import com.github.alexthe666.rats.client.render.entity.RenderRat;
 import com.github.alexthe666.rats.server.entity.EntityRat;
 import com.github.alexthe666.rats.server.items.RatsItemRegistry;
@@ -9,21 +8,21 @@ import jeresources.util.FakeClientWorld;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.OpenGlHelper;
+import net.minecraft.client.renderer.entity.layers.LayerRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.EnumSkyBlock;
 
-public class JERLayerRatEyes extends LayerRatEyes {
+public class JERLayerRatEyes implements LayerRenderer<EntityRat> {
     private static final ResourceLocation TEXTURE = new ResourceLocation("rats:textures/entity/rat/rat_eye_glow.png");
     private static final ResourceLocation TEXTURE_PLAGUE = new ResourceLocation("rats:textures/entity/rat/rat_eye_plague.png");
     private static final ResourceLocation TEXTURE_ENDER = new ResourceLocation("rats:textures/entity/rat/rat_eye_ender_upgrade.png");
     private static final ResourceLocation TEXTURE_RATINATOR = new ResourceLocation("rats:textures/entity/rat/rat_eye_ratinator_upgrade.png");
     private static final ResourceLocation TEXTURE_NONBELIEVER = new ResourceLocation("rats:textures/entity/rat/rat_eye_nonbeliever_upgrade.png");
     private static final ResourceLocation TEXTURE_DRAGON = new ResourceLocation("rats:textures/entity/rat/rat_eye_dragon_upgrade.png");
-    private final RenderRat ratRenderer;
+    private final JERRenderRat ratRenderer;
 
-    public JERLayerRatEyes(RenderRat ratRendererIn) {
-        super(ratRendererIn);
+    public JERLayerRatEyes(JERRenderRat ratRendererIn) {
         this.ratRenderer = ratRendererIn;
     }
 
@@ -73,7 +72,10 @@ public class JERLayerRatEyes extends LayerRatEyes {
                 GlStateManager.disableBlend();
                 GlStateManager.depthFunc(515);
             }
-
         }
+    }
+
+    public boolean shouldCombineTextures() {
+        return false;
     }
 }

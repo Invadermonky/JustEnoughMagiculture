@@ -7,6 +7,8 @@ import com.github.alexthe666.rats.server.world.RatsWorldRegistry;
 import com.github.alexthe666.rats.server.world.village.RatsVillageRegistry;
 import com.github.alexthe666.rats.server.world.village.WorldGenPetShop;
 import com.github.alexthe666.rats.server.world.village.WorldGenPlagueDoctor;
+import com.invadermonky.justenoughmagiculture.client.render.entity.mods.rats.JERRenderPirat;
+import com.invadermonky.justenoughmagiculture.client.render.entity.mods.rats.JERRenderRat;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigRats;
 import com.invadermonky.justenoughmagiculture.integrations.jei.categories.jer.villager.CustomVanillaVillagerEntry;
@@ -28,6 +30,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.VillagerRegistry.VillagerCareer;
 
 import javax.annotation.Nonnull;
@@ -39,10 +42,17 @@ public class JERRats extends JERBase implements IJERIntegration {
     private static JERRats instance;
     JEMConfigRats.JER jerConfig = JEMConfig.RATS.JUST_ENOUGH_RESOURCES;
 
+    private JERRats() {}
+
     public JERRats(boolean enableJERDungeons, boolean enableJERMobs) {
         if(enableJERDungeons) registerModDungeons();
         if(enableJERMobs) registerModEntities();
         registerModVillagers();
+        getInstance();
+    }
+
+    public static JERRats getInstance() {
+        return instance != null ? instance : (instance = new JERRats());
     }
 
     @Override
@@ -116,6 +126,14 @@ public class JERRats extends JERBase implements IJERIntegration {
         if(JEMConfig.RATS.fixJERVillagers) {
             registerPetShopOwner();
             registerPlagueDoctorVillager();
+        }
+    }
+
+    public void registerRenderOverrides() {
+        if(JEMConfig.RATS.enableRenderFixes) {
+            //Rats uses a depreciated method for rendering.
+            RenderingRegistry.registerEntityRenderingHandler(EntityRat.class, new JERRenderRat(Minecraft.getMinecraft().getRenderManager()));
+            RenderingRegistry.registerEntityRenderingHandler(EntityPirat.class, new JERRenderPirat(Minecraft.getMinecraft().getRenderManager()));
         }
     }
 
