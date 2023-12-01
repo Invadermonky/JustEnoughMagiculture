@@ -17,26 +17,42 @@ public class ASMRats {
             final String RENDERRATINIT = "<init>";
             final String RENDERRATINIT_DESC = "()V";
 
+            final String LAYERRATEYES_DESC = "com/github/alexthe666/rats/client/render/entity/LayerRatEyes";
+
+            final String ADDLAYER = "addLayer";
+            final String ADDLAYER_DESC = "(Lnet/minecraft/client/renderer/entity/layers/LayerRenderer;)Z";
+
             for (MethodNode method : classNode.methods) {
                 if (method.name.equals(RENDERRATINIT) && method.desc.equals(RENDERRATINIT_DESC)) {
                     AbstractInsnNode targetNode = null;
                     AbstractInsnNode popNode = null;
                     for (AbstractInsnNode instruction : method.instructions.toArray()) {
                         if (instruction.getOpcode() == ALOAD && ((VarInsnNode) instruction).var == 0) {
-                            final String LAYERRATEYES_DESC = "com/github/alexthe666/rats/client/render/entity/LayerRatEyes";
                             if (instruction.getNext().getOpcode() == NEW && ((TypeInsnNode) instruction.getNext()).desc.equals(LAYERRATEYES_DESC)) {
                                 targetNode = instruction;
                                 continue;
                             }
                         }
-                        if(targetNode != null && instruction.getOpcode() == POP) {
-                            popNode = instruction;
-                            break;
+                        if(targetNode != null && instruction.getOpcode() == INVOKEVIRTUAL) {
+                            MethodInsnNode methodNode = (MethodInsnNode) instruction;
+                            if(methodNode.name.equals(ADDLAYER) && methodNode.desc.equals(ADDLAYER_DESC)) {
+                                popNode = instruction;
+                                break;
+                            }
                         }
                     }
 
                     if (targetNode != null && popNode != null) {
                         LabelNode newLabelNode = new LabelNode();
+
+                        /*
+                            methodVisitor.visitVarInsn(ALOAD, 0);
+                            methodVisitor.visitTypeInsn(NEW, "com/github/alexthe666/rats/client/render/entity/LayerRatEyes");
+                            methodVisitor.visitInsn(DUP);
+                            methodVisitor.visitVarInsn(ALOAD, 0);
+                            methodVisitor.visitMethodInsn(INVOKESPECIAL, "com/github/alexthe666/rats/client/render/entity/LayerRatEyes", "<init>", "(Lcom/github/alexthe666/rats/client/render/entity/RenderRat;)V", false);
+                            methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "com/github/alexthe666/rats/client/render/entity/RenderRat", "addLayer", "(Lnet/minecraft/client/renderer/entity/layers/LayerRenderer;)Z", false);
+                        */
 
                         InsnList toInsert = new InsnList();
                         toInsert.add(new VarInsnNode(ALOAD, 0));
