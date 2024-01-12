@@ -2,9 +2,11 @@ package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigGrimoireOfGaia;
+import com.invadermonky.justenoughmagiculture.integrations.jei.categories.lootbag.LootBagEntry;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
 import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.integrations.jer.conditionals.JEMConditional;
+import com.invadermonky.justenoughmagiculture.registry.LootBagRegistry;
 import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
 import gaia.GaiaConfig;
 import gaia.entity.monster.*;
@@ -27,19 +29,51 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemEnchantedBook;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.storage.loot.*;
+import net.minecraft.world.storage.loot.conditions.LootCondition;
+import net.minecraft.world.storage.loot.functions.LootFunction;
+import net.minecraft.world.storage.loot.functions.SetCount;
+import net.minecraft.world.storage.loot.functions.SetMetadata;
 import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class JERGrimoireOfGaia extends JERBase implements IJERIntegration {
+    private static JERGrimoireOfGaia instance;
     private final JEMConfigGrimoireOfGaia.JER jerConfig = JEMConfig.GRIMOIRE_OF_GAIA.JUST_ENOUGH_RESOURCES;
+
+    private JERGrimoireOfGaia() {}
 
     private String[] validUnderground = new String[] {"CONIFEROUS", "DENSE", "FOREST", "JUNGLE", "MESA", "MOUNTAIN", "PLAINS", "SANDY", "SAVANNA", "SNOWY", "SPOOKY", "SWAMP"};
     private String[] invalidUnderground = new String[] {"BEACH", "COLD", "HOT", "OCEAN", "RIVER", "SPARSE"};
 
     public JERGrimoireOfGaia(boolean enableJERMobs) {
         if(enableJERMobs) registerModEntities();
+        getInstance();
+    }
+
+    public static JERGrimoireOfGaia getInstance() {
+        return instance != null ? instance : (instance = new JERGrimoireOfGaia());
+    }
+
+    public void registerLootBagEntries() {
+        if(JEMConfig.GRIMOIRE_OF_GAIA.JUST_ENOUGH_ITEMS.enableJEILootBags) {
+            LootBagRegistry registry = LootBagRegistry.getInstance();
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BAG_ARROW), manager.getLootTableFromLocation(GaiaLootTables.BAG_ARROW)));
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BOX_IRON), manager.getLootTableFromLocation(GaiaLootTables.BOXES_IRON)));
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BOX_GOLD), manager.getLootTableFromLocation(GaiaLootTables.BOXES_GOLD)));
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BOX_DIAMOND), manager.getLootTableFromLocation(GaiaLootTables.BOXES_DIAMOND)));
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BOX,1,0), manager.getLootTableFromLocation(GaiaLootTables.BOXES_OVERWORLD)));
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BOX,1,1), manager.getLootTableFromLocation(GaiaLootTables.BOXES_NETHER)));
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BOX,1,2), manager.getLootTableFromLocation(GaiaLootTables.BOXES_END)));
+
+            //TODO: Hardcoded drops
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BAG_RECORD), getRecordBagDrops()));
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.SPAWN), getSpawnBagDrops()));
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BOX_OLD), getOldBoxDrops()));
+            registry.registerLootBag(new LootBagEntry(new ItemStack(GaiaItems.BOX_HAT), getHatBoxDrops()));
+        }
     }
 
     @Override
@@ -49,10 +83,67 @@ public class JERGrimoireOfGaia extends JERBase implements IJERIntegration {
         registerHostileMobs();
         registerHostileDayMobs();
     }
+    
+    /*
+        Loot Bags
+    */
+    private LootTable getRecordBagDrops() {
+        LootPool pool = new LootPool(new LootEntry[0], new LootCondition[0], new RandomValueRange(1, 1), new RandomValueRange(0, 0), "main");
+        pool.addEntry(getSingleLootEntry(Items.RECORD_13));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_CAT));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_BLOCKS));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_CHIRP));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_FAR));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_MALL));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_MELLOHI));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_STAL));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_STRAD));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_WARD));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_11));
+        pool.addEntry(getSingleLootEntry(Items.RECORD_WAIT));
+        return new LootTable(new LootPool[] {pool});
+    }
+    
+    private LootTable getSpawnBagDrops() {
+        LootPool pool = new LootPool(new LootEntry[0], new LootCondition[0], new RandomValueRange(1, 1), new RandomValueRange(0, 0), "main");
+        pool.addEntry(getSingleLootEntry(GaiaItems.SPAWN_CREEPER_GIRL));
+        pool.addEntry(getSingleLootEntry(GaiaItems.SPAWN_ENDER_GIRL));
+        pool.addEntry(getSingleLootEntry(GaiaItems.SPAWN_HOLSTAURUS));
+        pool.addEntry(getSingleLootEntry(GaiaItems.SPAWN_SLIME_GIRL));
+        pool.addEntry(getSingleLootEntry(GaiaItems.SPAWN_TRADER));
+        pool.addEntry(getSingleLootEntry(GaiaItems.SPAWN_WERESHEEP));
+        return new LootTable(new LootPool[] {pool});
+    }
+    
+    private LootTable getOldBoxDrops() {
+        LootPool pool = new LootPool(new LootEntry[0], new LootCondition[0], new RandomValueRange(1, 1), new RandomValueRange(0, 0), "main");
+        pool.addEntry(getSingleLootEntry(GaiaItems.MISC_GIGA_GEAR));
+        pool.addEntry(getSingleLootEntry(GaiaItems.WEAPON_BOOK_WITHER));
+        pool.addEntry(getSingleLootEntry(GaiaItems.SPAWN));
+        pool.addEntry(getSingleLootEntry(GaiaItems.BAG_BOOK));
+        return new LootTable(new LootPool[] {pool});
+    }
+    
+    private LootTable getHatBoxDrops() {
+        LootPool pool = new LootPool(new LootEntry[0], new LootCondition[0], new RandomValueRange(1, 1), new RandomValueRange(0, 0), "main");
+        pool.addEntry(getSingleLootEntry(GaiaItems.ACCESSORY_HEADGEAR));
+        pool.addEntry(getSingleLootEntry(GaiaItems.ACCESSORY_HEADGEAR_MOB));
+        pool.addEntry(getSingleLootEntry(GaiaItems.ACCESSORY_HEADGEAR_BOLT));
+        pool.addEntry(getSingleLootEntry(GaiaItems.ACCESSORY_HEADGEAR_ARROW));
+        pool.addEntry(getSingleLootEntry(GaiaItems.ACCESSORY_HEADGEAR_DOLL));
+        return new LootTable(new LootPool[] {pool});
+    }
+
+    private LootEntryItem getSingleLootEntry(Item item) {
+        return new LootEntryItem(item, 1, 1,
+                new LootFunction[]{new SetCount(new LootCondition[0], new RandomValueRange(0, 1))},
+                new LootCondition[0], item.delegate.name().toString()
+        );
+    }
 
     /*
-    General Registry
-*/
+        General Registry
+    */
     private void registerAssistMobs() {
         if(jerConfig.enableEnderDragonGirl) { registerEnderDragonGirl(); }
         if(jerConfig.enableEnderEye) { registerEnderEye(); }

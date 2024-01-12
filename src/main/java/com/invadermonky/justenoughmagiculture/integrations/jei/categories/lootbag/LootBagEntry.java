@@ -5,20 +5,15 @@ import jeresources.util.LootTableHelper;
 import mezz.jei.api.recipe.IFocus;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.storage.loot.LootEntryItem;
-import net.minecraft.world.storage.loot.LootEntryTable;
-import net.minecraft.world.storage.loot.LootTable;
-import net.minecraft.world.storage.loot.LootTableManager;
+import net.minecraft.world.storage.loot.*;
 import net.minecraftforge.items.ItemHandlerHelper;
 
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class LootBagEntry {
     private final ItemStack lootBag;
-    private final Set<LootDrop> drops = new TreeSet<>();
+    private final List<LootDrop> drops = new ArrayList<>();
     private final int minStacks;
     private final int maxStacks;
 
@@ -33,21 +28,25 @@ public class LootBagEntry {
     }
 
     private void handleTable(LootTable lootTable, LootTableManager manager, float[] tmpMinStacks, float[] tmpMaxStacks) {
-        LootTableHelper.getPools(lootTable).forEach(
-                pool -> {
-                    tmpMinStacks[0] += pool.getRolls().getMin();
-                    tmpMaxStacks[0] += pool.getRolls().getMax() + pool.getBonusRolls().getMax();
-                    final float totalWeight = LootTableHelper.getEntries(pool).stream().mapToInt(entry -> entry.getEffectiveWeight(0)).sum();
-                    LootTableHelper.getEntries(pool).stream()
-                            .filter(entry -> entry instanceof LootEntryItem).map(entry -> (LootEntryItem) entry)
-                            .map(entry -> new LootDrop(LootTableHelper.getItem(entry), entry.getEffectiveWeight(0) / totalWeight, LootTableHelper.getFunctions(entry))).forEach(drops::add);
 
-                    LootTableHelper.getEntries(pool).stream()
-                            .filter(entry -> entry instanceof LootEntryTable).map(entry -> (LootEntryTable) entry)
-                            .map(entry -> manager.getLootTableFromLocation(entry.table))
-                            .forEach(table -> handleTable(table, manager, tmpMinStacks, tmpMaxStacks));
+        List<LootPool> pools = LootTableHelper.getPools(lootTable);
+        for(LootPool pool : pools) {
+            tmpMinStacks[0] += pool.getRolls().getMin();
+            tmpMaxStacks[0] += pool.getRolls().getMax() + pool.getBonusRolls().getMax();
+            final float totalWeight = LootTableHelper.getEntries(pool).stream().mapToInt(entry -> entry.getEffectiveWeight(0)).sum();
+
+            List<LootEntry> entries = LootTableHelper.getEntries(pool);
+            for(LootEntry entry : entries) {
+                if(entry instanceof LootEntryItem) {
+                    LootEntryItem entryItem = (LootEntryItem) entry;
+                    drops.add(new LootDrop(LootTableHelper.getItem(entryItem), entryItem.getEffectiveWeight(0) / totalWeight, LootTableHelper.getFunctions(entryItem)));
+                } else if(entry instanceof LootEntryTable) {
+                    LootEntryTable entryTable = (LootEntryTable) entry;
+                    LootTable table = manager.getLootTableFromLocation(entryTable.table);
+                    handleTable(table, manager, tmpMinStacks, tmpMaxStacks);
                 }
-        );
+            }
+        }
     }
 
     public boolean containsItem(ItemStack itemStack) {

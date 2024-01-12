@@ -16,6 +16,15 @@ public class JEMConfigGrimoireOfGaia {
     public boolean enableJERMobs = true;
 
     @RequiresMcRestart
+    @Comment("JEM " + MOD_NAME + " Just Enough Items settings.")
+    public JEI JUST_ENOUGH_ITEMS = new JEI();
+    public static class JEI {
+        @Comment("Adds the Grimiore of Gaia loot boxes to the Loot Bag category. This is used to fix the otherwise \n" +
+                "hardcoded loot table for GoG's built-in category.")
+        public boolean enableJEILootBags = true;
+    }
+
+    @RequiresMcRestart
     @Comment("JEM " + MOD_NAME + " Just Enough Resources settings.")
     public JER JUST_ENOUGH_RESOURCES = new JER();
     public static class JER {

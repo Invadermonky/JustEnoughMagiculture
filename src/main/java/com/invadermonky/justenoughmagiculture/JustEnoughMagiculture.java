@@ -21,7 +21,7 @@ public class JustEnoughMagiculture {
     public static final String MOD_ID = "justenoughmagiculture";
     public static final String MOD_ALIAS = "jem";
     public static final String MOD_NAME = "Just Enough Magiculture";
-    public static final String MOD_VERSION = "1.12.2-1.1.0";
+    public static final String MOD_VERSION = "1.12.2-1.1.1";
     public static final String MC_VERSION = "[1.12.2]";
     public static final String DEPENDENCIES = (
             "required-after:" + ConstantIds.JUSTENOUGHITEMS + "@[4.7.0,)" +

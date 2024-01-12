@@ -2,6 +2,14 @@
 
 ## Changelog
 
+### 1.12.2-1.1.1
+- Added Grimoire of Gaia loot boxes to the JEM Loot Bags JEI category
+  - JEI will now display changes to the box loot tables
+  - This may result in duplicate JEI pages. You can disable/hide the extra categories by disabling
+  them in the JEM config, or by using Crafttweaker JEI integration.
+- Modified Loot Bags Category to better indicate the lootable item
+- Fixed a rare item bug in the Loot Bags category
+
 ### 1.12.2-1.1.0
 
 - Added Atum 2 JER Integration
