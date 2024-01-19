@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigMutantBeasts {
-    private static final String MOD_NAME = ConstantNames.TEMPLATE;
+    private static final String MOD_NAME = ConstantNames.MUTANT_BEASTS;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart

@@ -5,6 +5,7 @@ import cofh.thermalfoundation.ThermalFoundation;
 import com.animania.Animania;
 import com.bewitchment.Bewitchment;
 import com.bobmowzie.mowziesmobs.MowziesMobs;
+import com.clownvin.livingenchantment.LivingEnchantment;
 import com.github.alexthe666.iceandfire.IceAndFire;
 import com.github.alexthe666.rats.RatsMod;
 import com.github.voxelfriend.rusticthaumaturgy.core.RusticThaumaturgy;
@@ -163,6 +164,9 @@ public enum ModIds {
         public static final String THERMAL_FOUNDATION = ThermalFoundation.MOD_ID;
         public static final String TWILIGHT_FOREST = TwilightForestMod.ID;
         public static final String WADDLES = com.girafi.waddles.utils.Reference.MOD_ID;
+
+        //Non-JER Mods
+        public static final String LIVINGENCHANTMENT = LivingEnchantment.MODID;
     }
 
     public static class ConstantNames {
@@ -206,6 +210,9 @@ public enum ModIds {
         public static final String THERMAL_FOUNDATION = ThermalFoundation.MOD_NAME;
         public static final String TWILIGHT_FOREST = TwilightForestMod.NAME;
         public static final String WADDLES = com.girafi.waddles.utils.Reference.MOD_NAME;
+
+        //Non-JER Mods
+        public static final String LIVINGENCHANTMENT = LivingEnchantment.NAME;
 
         //Used by config template
         public static final String TEMPLATE = "Template";

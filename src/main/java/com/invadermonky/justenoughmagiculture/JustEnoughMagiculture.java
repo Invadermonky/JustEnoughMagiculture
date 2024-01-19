@@ -21,7 +21,7 @@ public class JustEnoughMagiculture {
     public static final String MOD_ID = "justenoughmagiculture";
     public static final String MOD_ALIAS = "jem";
     public static final String MOD_NAME = "Just Enough Magiculture";
-    public static final String MOD_VERSION = "1.12.2-1.1.1";
+    public static final String MOD_VERSION = "1.12.2-1.1.2";
     public static final String MC_VERSION = "[1.12.2]";
     public static final String DEPENDENCIES = (
             "required-after:" + ConstantIds.JUSTENOUGHITEMS + "@[4.7.0,)" +
@@ -61,7 +61,10 @@ public class JustEnoughMagiculture {
                     ";after:" + ConstantIds.THAUMIC_AUGMENTATION +
                     ";after:" + ConstantIds.THERMAL_FOUNDATION +
                     ";after:" + ConstantIds.TWILIGHT_FOREST +
-                    ";after:" + ConstantIds.WADDLES
+                    ";after:" + ConstantIds.WADDLES +
+
+                    //Mods JEM has to load after because they eat glue.
+                    ";after:" + ConstantIds.LIVINGENCHANTMENT
     );
 
     public static final String ProxyClientClass = "com.invadermonky.justenoughmagiculture.proxy.ClientProxy";
