@@ -126,46 +126,57 @@ dependencies {
     }
 
     // Example of deobfuscating a dependency
-    implementation rfg.deobf('curse.maven:had-enough-items-557549:4543375')
+    implementation rfg.deobf("curse.maven:had-enough-items-557549:4810661")
     implementation rfg.deobf("curse.maven:just-enough-resources-jer-240630:2728585")
 
-    compileOnly rfg.deobf("curse.maven:libraryex-298965:3374254")
-    compileOnly rfg.deobf("curse.maven:llibrary-243298:3116493")
+    implementation rfg.deobf("curse.maven:living-enchantment-310827:2994515")
+    implementation rfg.deobf("curse.maven:loottabletweaker-261339:2541554")
+
+    compileOnly rfg.deobf("curse.maven:angry-pixel-the-betweenlands-mod-243363:4479688")    //TODO
     compileOnly rfg.deobf("curse.maven:endercore-231868:4671384")
     compileOnly rfg.deobf("curse.maven:ender-io-64578:4674244")         //Done
+    compileOnly rfg.deobf("curse.maven:geckolib-388172:4020277")
+    compileOnly rfg.deobf("curse.maven:libraryex-298965:3374254")
+    compileOnly rfg.deobf("curse.maven:llibrary-243298:3116493")
+    compileOnly rfg.deobf("curse.maven:mowzies-mobs-250498:3048685")    //Done
+    compileOnly rfg.deobf("curse.maven:reach-fix-556777:4633407")
 
     def run_mods = [
             "com.animania:animania-1.12.2-base:2.0.3.28" : false,       //Done
             "curse.maven:animania-extra-407657:3213137" : false,        //Done
             "curse.maven:animania-farm-407632:3213139" : false,         //Done
+            "curse.maven:atum-59621:3116599" : false,                   //Done
             "curse.maven:bear-with-me-253775:2554918" : false,          //Done
+            "curse.maven:beast-slayer-518157:4060888" : false,          //Done
             "curse.maven:bewitchment-legacy-285439:3256343" : false,    //Done
             "curse.maven:botania-225643:3330934" : false,               //Done
             "curse.maven:charm-318872:3146596" : false,                 //Done
+            "curse.maven:cqrepoured-303422:4740954" : false,            //Done
             "curse.maven:crimson-warfare-361313:2879737" : false,       //Done
-            //TODO: Add Electroblob's Wizardry
-            "curse.maven:electroblobs-wizardry-265642:4617771" : true,
-            //TODO: Add EBWizardy Twilight Forest
-            "curse.maven:electroblobs-wizardry-twilight-forest-spell-pack-363993:3140441" : true,
-            //TODO: Add Embers
+            "curse.maven:electroblobs-wizardry-265642:4617771" : false, //Done
+            "curse.maven:electroblobs-wizardry-twilight-forest-spell-pack-363993:3140441" : false,  //Done
+            "curse.maven:the-erebus-220698:3211974" : false,            //Done (thank god)
             "curse.maven:familiar-fauna-289347:2644656" : false,        //Done
             "curse.maven:future-mc-310059:3924863" : false,             //Done
-            "curse.maven:grimoire-of-gaia-228948:2891787" : false,      //Done
+            "curse.maven:grimoire-of-gaia-228948:2891787" : true,      //Done
             "curse.maven:harvesters-night-rotn-edition-413088:3080511" : false, //Done
+            "curse.maven:ice-and-fire-dragons-264231:2939529" : false,  //Done
             "curse.maven:pams-harvestcraft-221857:2904825" : false,     //Done
-            "curse.maven:industrial-foregoing-266515:2745321" : false,  //Done - Add JEI?
+            "curse.maven:industrial-foregoing-266515:2745321" : false,  //Done - Add JEI for missing machines?
+            "curse.maven:mutant-beasts-336272:3225395" : false,         //Done
             "curse.maven:netherex-248039:3374256" : false,              //Done
             "curse.maven:oceanic-expanse-840576:4670168" : false,       //Done
             "curse.maven:pizzacraft-292056:2986635" : false,            //Done
             "curse.maven:quark-rotn-edition-417392:4641362" : false,    //Done
-            "curse.maven:rats-ratn-edition-439001:3711122" : true,
+            "curse.maven:rats-ratn-edition-439001:3711122" : false,     //Done
             "curse.maven:roguelike-dungeons-221585:2492586" : true,    //Incomplete - I might come back to this later
             "curse.maven:rustic-256141:3107974" : false,                //Done
             "curse.maven:rustic-thaumaturgy-302020:2702097" : false,    //Done
+            "curse.maven:special-mobs-59968:3320102" : false,           //Done
             "curse.maven:thaumcraft-223628:2629023" : false,            //Done
             "curse.maven:thaumic-augmentation-319441:4486505" : false,  //Done
             "curse.maven:thermal-foundation-222880:2926428" : false,    //Done
-            "curse.maven:the-twilight-forest-227639:3051450" : true,   //Done - Fix Frost Queen
+            "curse.maven:the-twilight-forest-227639:3051450" : false,   //Done - Fix Frost Queen (check if it's only a dev problem)
             "curse.maven:waddles-251767:2553465" : false,               //Done
     ]
 
