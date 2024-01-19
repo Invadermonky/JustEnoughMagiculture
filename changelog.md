@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.12.2-1.1.2
+- Fixed a CTD bug caused by LootTableTweaker + LivingEnchantments + JEM interaction
+
 ### 1.12.2-1.1.1
 - Added Grimoire of Gaia loot boxes to the JEM Loot Bags JEI category
   - JEI will now display changes to the box loot tables
