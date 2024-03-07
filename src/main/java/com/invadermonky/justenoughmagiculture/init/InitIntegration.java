@@ -82,6 +82,7 @@ public class InitIntegration {
 
     private static void registerLootBags() {
         if(ModIds.GRIMOIRE_OF_GAIA.isLoaded) JERGrimoireOfGaia.getInstance().registerLootBagEntries();
+        if(ModIds.SERIOUS_LOOT_CHESTS.isLoaded) JERSeriousLootChests.getInstance().registerLootBagEntries();
         if(ModIds.THAUMCRAFT.isLoaded) JERThaumcraft.getInstance().registerLootBagEntries();
         if(ModIds.THAUMIC_AUGMENTATION.isLoaded) JERThaumicAugmentation.getInstance().registerLootBagEntries();
     }

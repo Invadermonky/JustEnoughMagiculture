@@ -137,6 +137,9 @@ public class JEMConfig {
     @Comment(ConstantNames.THAUMCRAFT + " JER integration configuration.")
     public static final JEMConfigThaumcraft THAUMCRAFT = new JEMConfigThaumcraft();
 
+    @Comment(ConstantNames.SERIOUS_LOOT_CHESTS + " JEI integration configuration.")
+    public static final JEMConfigSeriousLootChests SERIOUS_LOOT_CHESTS = new JEMConfigSeriousLootChests();
+
     @Comment(ConstantNames.SPECIAL_MOBS + " JER integration configuration.")
     public static final JEMConfigSpecialMobs SPECIAL_MOBS = new JEMConfigSpecialMobs();
 

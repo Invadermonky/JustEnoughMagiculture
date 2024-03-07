@@ -9,6 +9,7 @@ import com.clownvin.livingenchantment.LivingEnchantment;
 import com.github.alexthe666.iceandfire.IceAndFire;
 import com.github.alexthe666.rats.RatsMod;
 import com.github.voxelfriend.rusticthaumaturgy.core.RusticThaumaturgy;
+import com.seriouscreeper.lootchests.LootChests;
 import com.sirsquidly.oe.Main;
 import com.tage.crimson_warfare.CrimsonWarfare;
 import com.tiviacz.pizzacraft.PizzaCraft;
@@ -73,6 +74,7 @@ public enum ModIds {
     ROGUELIKE_DUNGEONS(ConstantIds.ROGUELIKE_DUNGEONS, ConstantNames.ROGUELIKE_DUNGEONS),
     RUSTIC(ConstantIds.RUSTIC, ConstantNames.RUSTIC),
     RUSTIC_THAUMATURGY(ConstantIds.RUSTIC_THAUMATURGY, ConstantNames.RUSTIC_THAUMATURGY),
+    SERIOUS_LOOT_CHESTS(ConstantIds.SERIOUS_LOOT_CHESTS, ConstantNames.SERIOUS_LOOT_CHESTS),
     SPECIAL_MOBS(ConstantIds.SPECIAL_MOBS, ConstantNames.SPECIAL_MOBS),
     THAUMCRAFT(ConstantIds.THAUMCRAFT, ConstantNames.THAUMCRAFT),
     THAUMIC_AUGMENTATION(ConstantIds.THAUMIC_AUGMENTATION, ConstantNames.THAUMIC_AUGMENTATION),
@@ -158,8 +160,9 @@ public enum ModIds {
         public static final String ROGUELIKE_DUNGEONS = "roguelike";
         public static final String RUSTIC = Rustic.MODID;
         public static final String RUSTIC_THAUMATURGY = RusticThaumaturgy.MODID;
-        public static final String THAUMCRAFT = Thaumcraft.MODID;
+        public static final String SERIOUS_LOOT_CHESTS = LootChests.MODID;
         public static final String SPECIAL_MOBS = SpecialMobsMod.MOD_ID;
+        public static final String THAUMCRAFT = Thaumcraft.MODID;
         public static final String THAUMIC_AUGMENTATION = ThaumicAugmentationAPI.MODID;
         public static final String THERMAL_FOUNDATION = ThermalFoundation.MOD_ID;
         public static final String TWILIGHT_FOREST = TwilightForestMod.ID;
@@ -204,6 +207,7 @@ public enum ModIds {
         public static final String ROGUELIKE_DUNGEONS = "Roguelike Dungeons";
         public static final String RUSTIC = Rustic.NAME;
         public static final String RUSTIC_THAUMATURGY = RusticThaumaturgy.NAME;
+        public static final String SERIOUS_LOOT_CHESTS = "SeriousCreepers Loot Chests";
         public static final String SPECIAL_MOBS = SpecialMobsMod.NAME;
         public static final String THAUMCRAFT = Thaumcraft.MODNAME;
         public static final String THAUMIC_AUGMENTATION = ThaumicAugmentationAPI.NAME;

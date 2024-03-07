@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.12.2-1.1.3
+- Added SeriousCreeper's Loot Chest integration to the JEM Loot Bags JEI category
+
 ### 1.12.2-1.1.2
 - Fixed a CTD bug caused by LootTableTweaker + LivingEnchantments + JEM interaction
 

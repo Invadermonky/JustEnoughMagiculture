@@ -1,7 +1,6 @@
 package com.invadermonky.justenoughmagiculture.client.render.entity.mods.rats;
 
 import com.github.alexthe666.rats.client.model.ModelRat;
-import com.github.alexthe666.rats.client.render.entity.RenderRat;
 import com.github.alexthe666.rats.server.entity.EntityRat;
 import com.github.alexthe666.rats.server.items.ItemChefToque;
 import com.github.alexthe666.rats.server.items.ItemPiperHat;

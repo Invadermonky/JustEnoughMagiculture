@@ -158,7 +158,7 @@ dependencies {
             "curse.maven:the-erebus-220698:3211974" : false,            //Done (thank god)
             "curse.maven:familiar-fauna-289347:2644656" : false,        //Done
             "curse.maven:future-mc-310059:3924863" : false,             //Done
-            "curse.maven:grimoire-of-gaia-228948:2891787" : true,      //Done
+            "curse.maven:grimoire-of-gaia-228948:2891787" : false,      //Done
             "curse.maven:harvesters-night-rotn-edition-413088:3080511" : false, //Done
             "curse.maven:ice-and-fire-dragons-264231:2939529" : false,  //Done
             "curse.maven:pams-harvestcraft-221857:2904825" : false,     //Done
@@ -172,6 +172,7 @@ dependencies {
             "curse.maven:roguelike-dungeons-221585:2492586" : true,    //Incomplete - I might come back to this later
             "curse.maven:rustic-256141:3107974" : false,                //Done
             "curse.maven:rustic-thaumaturgy-302020:2702097" : false,    //Done
+            "curse.maven:serious-loot-chests-267344:2682989" : true,   //Done
             "curse.maven:special-mobs-59968:3320102" : false,           //Done
             "curse.maven:thaumcraft-223628:2629023" : false,            //Done
             "curse.maven:thaumic-augmentation-319441:4486505" : false,  //Done

@@ -21,7 +21,7 @@ public class JustEnoughMagiculture {
     public static final String MOD_ID = "justenoughmagiculture";
     public static final String MOD_ALIAS = "jem";
     public static final String MOD_NAME = "Just Enough Magiculture";
-    public static final String MOD_VERSION = "1.12.2-1.1.2";
+    public static final String MOD_VERSION = "1.12.2-1.1.3";
     public static final String MC_VERSION = "[1.12.2]";
     public static final String DEPENDENCIES = (
             "required-after:" + ConstantIds.JUSTENOUGHITEMS + "@[4.7.0,)" +
@@ -56,6 +56,7 @@ public class JustEnoughMagiculture {
                     ";after:" + ConstantIds.ROGUELIKE_DUNGEONS +
                     ";after:" + ConstantIds.RUSTIC +
                     ";after:" + ConstantIds.RUSTIC_THAUMATURGY +
+                    ";after:" + ConstantIds.SERIOUS_LOOT_CHESTS +
                     ";after:" + ConstantIds.SPECIAL_MOBS +
                     ";after:" + ConstantIds.THAUMCRAFT +
                     ";after:" + ConstantIds.THAUMIC_AUGMENTATION +
