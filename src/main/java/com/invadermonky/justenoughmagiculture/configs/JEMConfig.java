@@ -53,7 +53,7 @@ public class JEMConfig {
     @Comment(ConstantNames.BEAR_WITH_ME + " JER integration configuration.")
     public static final JEMConfigBearWithMe BEAR_WITH_ME = new JEMConfigBearWithMe();
 
-    @Comment(ConstantNames.BEAST_SLAYER + " JER integration configuration.")
+    @Comment(ConstantNames.BEAST_SLAYER_BETA + " JER integration configuration.")
     public static final JEMConfigBeastSlayer BEAST_SLAYER = new JEMConfigBeastSlayer();
 
     @Comment(ConstantNames.BEWITCHMENT + " JER integration configuration.")

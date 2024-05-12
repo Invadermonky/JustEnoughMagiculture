@@ -47,7 +47,13 @@ public class InitIntegration {
         }
         if(ModIds.ATUM.isLoaded) new JERAtum(ATUM.enableJERDungeons, ATUM.enableJERMobs, ATUM.enableJERPlants, ATUM.enableJERVillagers);
         if(ModIds.BEAR_WITH_ME.isLoaded) new JERBearWithMe(BEAR_WITH_ME.enableJERMobs);
-        if(ModIds.BEAST_SLAYER.isLoaded) new JERBeastSlayer(BEAST_SLAYER.enableJERDungeons, BEAST_SLAYER.enableJERMobs);
+
+        //TODO: Adding a couple of checks to ensure Beast Slayer doesn't crash anything if loaded with new versions.
+        if(BEAST_SLAYER.enableJERDungeons || BEAST_SLAYER.enableJERMobs) {
+            if (ModIds.BEAST_SLAYER.isLoaded)
+                new JERBeastSlayer(BEAST_SLAYER.enableJERDungeons, BEAST_SLAYER.enableJERMobs);
+        }
+        
         if(ModIds.BEWITCHMENT.isLoaded) new JERBewitchment(BEWITCHMENT.enableJERMobs, BEWITCHMENT.enableJERPlants, BEWITCHMENT.enableJERVillagers);
         if(ModIds.BOTANIA.isLoaded) new JERBotania(BOTANIA.enableJERMobs);
         if(ModIds.CHARM.isLoaded) new JERCharm(CHARM.enableJERDungeons, CHARM.enableJERMobs);

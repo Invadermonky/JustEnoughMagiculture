@@ -45,7 +45,7 @@ public enum ModIds {
     ANIMANIA(ConstantIds.ANIMANIA, ConstantNames.ANIMANIA),
     ATUM(ConstantIds.ATUM, ConstantNames.ATUM),
     BEAR_WITH_ME(ConstantIds.BEAR_WITH_ME, ConstantNames.BEAR_WITH_ME),
-    BEAST_SLAYER(ConstantIds.BEAST_SLAYER, ConstantNames.BEAST_SLAYER),
+    BEAST_SLAYER(ConstantIds.BEAST_SLAYER_BETA, ConstantNames.BEAST_SLAYER_BETA, ConstantVersions.BEAST_SLAYER_BETA),
     BETWEENLANDS(ConstantIds.BETWEENLANDS, ConstantNames.BETWEENLANDS),
     BEWITCHMENT(ConstantIds.BEWITCHMENT, ConstantNames.BEWITCHMENT),
     BOTANIA(ConstantIds.BOTANIA, ConstantNames.BOTANIA),
@@ -129,7 +129,7 @@ public enum ModIds {
         public static final String ANIMANIA_FARM = "farm";
         public static final String ATUM = com.teammetallurgy.atum.utils.Constants.MOD_ID;
         public static final String BEAR_WITH_ME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_ID;
-        public static final String BEAST_SLAYER = AncientBeasts.MODID;
+        public static final String BEAST_SLAYER_BETA = AncientBeasts.MODID;
         public static final String BETWEENLANDS = ModInfo.ID;
         public static final String BEWITCHMENT = Bewitchment.MODID;
         public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_ID;
@@ -178,7 +178,7 @@ public enum ModIds {
         public static final String ANIMANIA_FARM = ANIMANIA + " - Farm";
         public static final String ATUM = com.teammetallurgy.atum.utils.Constants.MOD_NAME;
         public static final String BEAR_WITH_ME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_NAME;
-        public static final String BEAST_SLAYER = AncientBeasts.NAME;
+        public static final String BEAST_SLAYER_BETA = AncientBeasts.NAME;
         public static final String BETWEENLANDS = ModInfo.NAME;
         public static final String BEWITCHMENT = Bewitchment.NAME;
         public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_NAME;
@@ -220,5 +220,9 @@ public enum ModIds {
 
         //Used by config template
         public static final String TEMPLATE = "Template";
+    }
+
+    public static class ConstantVersions {
+        public static final String BEAST_SLAYER_BETA = "(,"+ AncientBeasts.VERSION +"]";
     }
 }

@@ -23,6 +23,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.monster.EntityWitch;
 import net.minecraft.entity.monster.EntityWitherSkeleton;
+import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.init.Biomes;
 import net.minecraft.init.Items;
@@ -38,6 +39,7 @@ import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import vazkii.quark.base.module.Feature;
 import vazkii.quark.base.module.ModuleLoader;
+import vazkii.quark.decoration.feature.TallowAndCandles;
 import vazkii.quark.misc.feature.BlackAsh;
 import vazkii.quark.vanity.feature.WitchHat;
 import vazkii.quark.world.entity.*;
@@ -183,6 +185,20 @@ public class JERQuark extends JERBase implements IJERIntegration {
                         if(BlackAsh.removeCoalDrops)
                             drops.removeIf(drop -> (drop.item.getItem().equals(Items.COAL)));
                         mobEntry.addDrop(new LootDrop(Item.getItemFromBlock(BlackAsh.black_ash), BlackAsh.witherSkeletonMin, BlackAsh.witherSkeletonMax, Conditional.affectedByLooting));
+                        mobEntries.add(mobEntry);
+                    } catch(Exception ignored) {}
+                }
+
+                if (isFeatureEnabled(TallowAndCandles.class) && TallowAndCandles.enableTallow && mobEntry.getEntity() instanceof EntityPig) {
+                    try {
+                        Field entryField = MobRegistry.getInstance().getClass().getDeclaredField("registry");
+                        entryField.setAccessible(true);
+                        Set<MobEntry> mobEntries = (Set<MobEntry>) entryField.get(MobRegistry.getInstance());
+
+                        LootDrop tallowDrop = new LootDrop(TallowAndCandles.tallow, TallowAndCandles.minDrop, TallowAndCandles.maxDrop);
+
+                        mobEntries.remove(mobEntry);
+                        mobEntry.addDrop(tallowDrop);
                         mobEntries.add(mobEntry);
                     } catch(Exception ignored) {}
                 }

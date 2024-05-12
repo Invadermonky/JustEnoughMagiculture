@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### 1.12.2-1.1.4
+- Added tallow drop to pigs when Quark Tallow and Candles feature is enabled
+- Modified some code to support Beast Slayer 1.9 and  2.0 when it is released
+  - If using the alpha release of Beast Slayer, you can disable JER integration in the JEM config to fix the crash. 
+
 ### 1.12.2-1.1.3
 - Added SeriousCreeper's Loot Chest integration to the JEM Loot Bags JEI category
 

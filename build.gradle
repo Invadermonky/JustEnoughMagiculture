@@ -167,7 +167,7 @@ dependencies {
             "curse.maven:netherex-248039:3374256" : false,              //Done
             "curse.maven:oceanic-expanse-840576:4670168" : false,       //Done
             "curse.maven:pizzacraft-292056:2986635" : false,            //Done
-            "curse.maven:quark-rotn-edition-417392:4641362" : false,    //Done
+            "curse.maven:quark-rotn-edition-417392:4641362" : true,    //Done
             "curse.maven:rats-ratn-edition-439001:3711122" : false,     //Done
             "curse.maven:roguelike-dungeons-221585:2492586" : true,    //Incomplete - I might come back to this later
             "curse.maven:rustic-256141:3107974" : false,                //Done

@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.RequiresMcRestart;
 
 public class JEMConfigBeastSlayer {
-    private static final String MOD_NAME = ConstantNames.BEAST_SLAYER;
+    private static final String MOD_NAME = ConstantNames.BEAST_SLAYER_BETA;
     private static final String LANG_KEY = "config." + JustEnoughMagiculture.MOD_ALIAS + ":";
 
     @RequiresMcRestart
