@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.12.2-1.1.5
+- Fixed a crash with Mystcraft
+
 ### 1.12.2-1.1.4
 - Added tallow drop to pigs when Quark Tallow and Candles feature is enabled
 - Modified some code to support Beast Slayer 1.9 and  2.0 when it is released
