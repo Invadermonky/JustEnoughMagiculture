@@ -13,8 +13,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
         modid = JustEnoughMagiculture.MOD_ID
 )
 public class ConfigHandlerJEM {
-
-    @Comment("")
     public static final JERPlantConfig jer_crops = new JERPlantConfig();
     public static final JERDungeonsConfig jer_dungeons = new JERDungeonsConfig();
     public static final JEREntityConfig jer_entities = new JEREntityConfig();
