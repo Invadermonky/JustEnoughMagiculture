@@ -1,297 +1,58 @@
-import org.jetbrains.gradle.ext.Gradle
-
-plugins {
-    id 'java'
-    id 'java-library'
-    id 'maven-publish'
-    id 'org.jetbrains.gradle.plugin.idea-ext' version '1.1.7'
-    id 'eclipse'
-    id 'com.gtnewhorizons.retrofuturagradle' version '1.3.16'
-    id 'com.matthewprenger.cursegradle' version '1.4.0'
-}
-
-version = project.mod_version
-group = project.maven_group
-archivesBaseName = project.archives_base_name
-
-// Set the toolchain version to decouple the Java we run Gradle with from the Java used to compile and run the mod
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(8))
-        // Azul covers the most platforms for Java 8 toolchains, crucially including MacOS arm64
-        vendor.set(org.gradle.jvm.toolchain.JvmVendorSpec.AZUL)
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "http://files.minecraftforge.net/maven" }
     }
-    // Generate sources and javadocs jars when building and publishing
-    withSourcesJar()
-    // withJavadocJar()
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+    }
 }
+apply plugin: 'net.minecraftforge.gradle.forge'
+//Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
 
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8'
-}
 
-configurations {
-    embed
-    implementation.extendsFrom(embed)
+version = "1.10.2-1.0.0"
+group= "com.invadermonky.justenoughmagiculture" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "justenoughmagiculture"
+
+sourceCompatibility = targetCompatibility = "1.8" // Need this here so eclipse task generates correctly.
+compileJava {
+    sourceCompatibility = targetCompatibility = "1.8"
 }
 
 minecraft {
-    mcVersion = '1.12.2'
+    version = "1.10.2-12.18.3.2511"
+    runDir = "run"
 
-    // MCP Mappings
-    mcpMappingChannel = 'stable'
-    mcpMappingVersion = '39'
-    
-    // Set username here, the UUID will be looked up automatically
-    username = 'Invadermonky'
-    
-    // Add any additional tweaker classes here
-    // extraTweakClasses.add('org.spongepowered.asm.launch.MixinTweaker')
-    
-    // Add various JVM arguments here for runtime
-    def args = ["-ea:${project.group}"]
-    if (project.use_coremod.toBoolean()) {
-        args << '-Dfml.coreMods.load=' + coremod_plugin_class_name
-    }
-    if (project.use_mixins.toBoolean()) {
-        args << '-Dmixin.hotSwap=true'
-        args << '-Dmixin.checks.interfaces=true'
-        args << '-Dmixin.debug.export=true'
-    }
-    extraRunJvmArguments.addAll(args)
-
-    // Include and use dependencies' Access Transformer files
-    useDependencyAccessTransformers = true
-    
-    // Add any properties you want to swap out for a dynamic value at build time here
-    // Any properties here will be added to a class at build time, the name can be configured below
-    // Example:
-    // injectedTags.put('VERSION', project.version)
-    // injectedTags.put('MOD_ID', project.archives_base_name)
-}
-
-// Generate a group.archives_base_name.Tags class
-tasks.injectTags.configure {
-    // Change Tags class' name here:
-    outputClassName.set("${project.group}.${project.archives_base_name}.Tags")
+    mappings = "stable_29"
 }
 
 repositories {
     maven {
-        name 'CleanroomMC Maven'
-        url 'https://maven.cleanroommc.com'
+        url "https://cursemaven.com"
     }
-    maven {
-        name 'SpongePowered Maven'
-        url 'https://repo.spongepowered.org/maven'
-    }
-    maven {
-        name 'CurseMaven'
-        url 'https://cursemaven.com'
-        content {
-            includeGroup 'curse.maven'
-        }
-    }
-    maven {
-        name 'BlameJared'
-        url "https://maven.blamejared.com/"
-    }
-    maven {
-        name 'Modrinth'
-        url = "https://api.modrinth.com/maven"
-    }
-    maven {
-        // location of the maven that hosts JEI files
-        name = "Progwml6 maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
-    }
-    maven {
-        // location of a maven mirror for JEI files, as a fallback
-        name = "ModMaven"
-        url = "https://modmaven.dev"
-    }
-    maven {
-        name = "Ender IO"
-        url = "https://maven.rover656.dev/releases"
-    }
-    mavenLocal() // Must be last for caching to work
 }
 
 dependencies {
-    if (project.use_assetmover.toBoolean()) {
-        implementation 'com.cleanroommc:assetmover:2.5'
-    }
-    if (project.use_mixins.toBoolean()) {
-        implementation 'zone.rong:mixinbooter:7.1'
-    }
-
-    // Example of deobfuscating a dependency
-    implementation rfg.deobf("curse.maven:had-enough-items-557549:4810661")
-    implementation rfg.deobf("curse.maven:just-enough-resources-jer-240630:2728585")
-
-    implementation rfg.deobf("curse.maven:living-enchantment-310827:2994515")
-    implementation rfg.deobf("curse.maven:loottabletweaker-261339:2541554")
-
-    compileOnly rfg.deobf("curse.maven:angry-pixel-the-betweenlands-mod-243363:4479688")    //TODO
-    compileOnly rfg.deobf("curse.maven:endercore-231868:4671384")
-    compileOnly rfg.deobf("curse.maven:ender-io-64578:4674244")         //Done
-    compileOnly rfg.deobf("curse.maven:geckolib-388172:4020277")
-    compileOnly rfg.deobf("curse.maven:libraryex-298965:3374254")
-    compileOnly rfg.deobf("curse.maven:llibrary-243298:3116493")
-    compileOnly rfg.deobf("curse.maven:mowzies-mobs-250498:3048685")    //Done
-    compileOnly rfg.deobf("curse.maven:reach-fix-556777:4633407")
-
-    def run_mods = [
-            "com.animania:animania-1.12.2-base:2.0.3.28" : false,       //Done
-            "curse.maven:animania-extra-407657:3213137" : false,        //Done
-            "curse.maven:animania-farm-407632:3213139" : false,         //Done
-            "curse.maven:atum-59621:3116599" : false,                   //Done
-            "curse.maven:bear-with-me-253775:2554918" : false,          //Done
-            "curse.maven:beast-slayer-518157:4060888" : false,          //Done
-            "curse.maven:bewitchment-legacy-285439:3256343" : false,    //Done
-            "curse.maven:botania-225643:3330934" : false,               //Done
-            "curse.maven:charm-318872:3146596" : false,                 //Done
-            "curse.maven:cqrepoured-303422:4740954" : false,            //Done
-            "curse.maven:crimson-warfare-361313:2879737" : false,       //Done
-            "curse.maven:electroblobs-wizardry-265642:4617771" : false, //Done
-            "curse.maven:electroblobs-wizardry-twilight-forest-spell-pack-363993:3140441" : false,  //Done
-            "curse.maven:the-erebus-220698:3211974" : false,            //Done (thank god)
-            "curse.maven:familiar-fauna-289347:2644656" : false,        //Done
-            "curse.maven:future-mc-310059:3924863" : false,             //Done
-            "curse.maven:grimoire-of-gaia-228948:2891787" : false,      //Done
-            "curse.maven:harvesters-night-rotn-edition-413088:3080511" : false, //Done
-            "curse.maven:ice-and-fire-dragons-264231:2939529" : false,  //Done
-            "curse.maven:pams-harvestcraft-221857:2904825" : false,     //Done
-            "curse.maven:industrial-foregoing-266515:2745321" : false,  //Done - Add JEI for missing machines?
-            "curse.maven:mutant-beasts-336272:3225395" : false,         //Done
-            "curse.maven:netherex-248039:3374256" : false,              //Done
-            "curse.maven:oceanic-expanse-840576:4670168" : false,       //Done
-            "curse.maven:pizzacraft-292056:2986635" : false,            //Done
-            "curse.maven:quark-rotn-edition-417392:4641362" : true,    //Done
-            "curse.maven:rats-ratn-edition-439001:3711122" : false,     //Done
-            "curse.maven:roguelike-dungeons-221585:2492586" : true,    //Incomplete - I might come back to this later
-            "curse.maven:rustic-256141:3107974" : false,                //Done
-            "curse.maven:rustic-thaumaturgy-302020:2702097" : false,    //Done
-            "curse.maven:serious-loot-chests-267344:2682989" : true,   //Done
-            "curse.maven:special-mobs-59968:3320102" : false,           //Done
-            "curse.maven:thaumcraft-223628:2629023" : false,            //Done
-            "curse.maven:thaumic-augmentation-319441:4486505" : false,  //Done
-            "curse.maven:thermal-foundation-222880:2926428" : false,    //Done
-            "curse.maven:the-twilight-forest-227639:3051450" : false,   //Done - Fix Frost Queen (check if it's only a dev problem)
-            "curse.maven:waddles-251767:2553465" : false,               //Done
-    ]
-
-    run_mods.each {mod, load ->
-        if(load) {
-            implementation(rfg.deobf(mod))
-        } else {
-            compileOnly(rfg.deobf(mod))
-        }
-    }
-
-
-
-
-
-
-
-
-    if (project.use_mixins.toBoolean()) {
-        // Change your mixin refmap name here:
-        String mixin = modUtils.enableMixins('org.spongepowered:mixin:0.8.3', "mixins.${project.archives_base_name}.refmap.json")
-        api (mixin) {
-            transitive = false
-        }
-        annotationProcessor 'org.ow2.asm:asm-debug-all:5.2'
-        annotationProcessor 'com.google.guava:guava:24.1.1-jre'
-        annotationProcessor 'com.google.code.gson:gson:2.8.6'
-        annotationProcessor (mixin) {
-            transitive = false
-        }
-    }
 
 }
 
-// Adds Access Transformer files to tasks
-if (project.use_access_transformer.toBoolean()) {
-    for (File at : sourceSets.getByName("main").resources.files) {
-        if (at.name.toLowerCase().endsWith("_at.cfg")) {
-            tasks.deobfuscateMergedJarToSrg.accessTransformerFiles.from(at)
-            tasks.srgifyBinpatchedJar.accessTransformerFiles.from(at)
-        }
-    }
-}
+processResources
+{
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
 
-processResources {
-    // This will ensure that this task is redone when the versions change
-    inputs.property 'version', project.version
-    inputs.property 'mcversion', project.minecraft.version
-    
-    // Replace various properties in mcmod.info and pack.mcmeta if applicable
-    filesMatching(['mcmod.info', 'pack.mcmeta']) { fcd ->
-        // Replace version and mcversion
-        fcd.expand (
-                'version': project.version,
-                'mcversion': project.minecraft.version
-        )
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
     }
-    
-    if (project.use_access_transformer.toBoolean()) {
-        rename '(.+_at.cfg)', 'META-INF/$1' // Make sure Access Transformer files are in META-INF folder
+        
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
     }
-}
-
-jar {
-    manifest {
-        def attribute_map = [:]
-        if (project.use_coremod.toBoolean()) {
-            attribute_map['FMLCorePlugin'] = project.coremod_plugin_class_name
-            if (project.include_mod.toBoolean()) {
-                attribute_map['FMLCorePluginContainsFMLMod'] = true
-                attribute_map['ForceLoadAsMod'] = project.gradle.startParameter.taskNames[0] == "build"
-            }
-        }
-        if (project.use_access_transformer.toBoolean()) {
-            attribute_map['FMLAT'] = project.archives_base_name + '_at.cfg'
-        }
-        attributes(attribute_map)
-    }
-    // Add all embedded dependencies into the jar
-    from(provider{ configurations.embed.collect {it.isDirectory() ? it : zipTree(it)} })
-}
-
-idea {
-    module {
-        inheritOutputDirs = true
-    }
-    project {
-        settings {
-            runConfigurations {
-                "1. Run Client"(Gradle) {
-                    taskNames = ["runClient"]
-                }
-                "2. Run Server"(Gradle) {
-                    taskNames = ["runServer"]
-                }
-                "3. Run Obfuscated Client"(Gradle) {
-                    taskNames = ["runObfClient"]
-                }
-                "4. Run Obfuscated Server"(Gradle) {
-                    taskNames = ["runObfServer"]
-                }
-            }
-            compiler.javac {
-                afterEvaluate {
-                    javacAdditionalOptions = "-encoding utf8"
-                    moduleJavacAdditionalOptions = [
-                            (project.name + ".main"): tasks.compileJava.options.compilerArgs.collect { '"' + it + '"' }.join(' ')
-                    ]
-                }
-            }
-        }
-    }
-}
-
-tasks.named("processIdeaSettings").configure {
-    dependsOn("injectTags")
 }
