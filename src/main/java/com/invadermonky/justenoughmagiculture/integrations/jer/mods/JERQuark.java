@@ -72,7 +72,7 @@ public class JERQuark extends JERBase implements IJERIntegration {
     @Override
     public void registerModDungeons() {
         if(isFeatureEnabled(Archaeologist.class)) registerDungeonLoot("archaeologist");
-        if(isFeatureEnabled(BuriedTreasure.class)) registerDungeonLoot("quark:buried_treasure", "dungeon.jem:quark.buried_treasure", LootTableList.CHESTS_SIMPLE_DUNGEON);
+        if(isFeatureEnabled(BuriedTreasure.class)) registerDungeonLoot("quark:buried_treasure", StringHelper.getDungeonTranslationKey(ModIds.QUARK.MOD_ID, "buried_treasure"), LootTableList.CHESTS_SIMPLE_DUNGEON);
         if(isFeatureEnabled(PirateShips.class)) registerDungeonLoot("pirate_chest");
     }
 

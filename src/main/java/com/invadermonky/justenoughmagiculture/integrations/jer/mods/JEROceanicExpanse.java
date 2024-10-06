@@ -27,6 +27,7 @@ public class JEROceanicExpanse extends JERBase implements IJERIntegration {
     @Override
     public void registerModDungeons() {
         if(ConfigHandler.worldGen.shipwreck.enableShipwrecks) {
+            registerOEDungeon("monument_mystic", "chests");
             registerOEDungeon("shipwreck_map", "chests");
             registerOEDungeon("shipwreck_supply", "chests");
             registerOEDungeon("shipwreck_treasure", "chests");
@@ -58,6 +59,10 @@ public class JEROceanicExpanse extends JERBase implements IJERIntegration {
             registerMob(new EntityGlowSquid(world), LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(Biomes.DEEP_OCEAN), LootTableHandler.ENTITIES_GLOW_SQUID);
         }
 
+        if(jerConfig.enableLobster && ConfigHandler.entity.lobster.enableLobster) {
+            registerMob(new EntityLobster(world), LightLevel.any, LootTableHandler.ENTITIES_LOBSTER);
+        }
+
         if(jerConfig.enablePickled && ConfigHandler.entity.pickled.enablePickled) {
             registerMob(new EntityPickled(world), LightLevel.hostile, BiomeHelper.getBiomeNamesForBiomes(Biomes.OCEAN), LootTableHandler.ENTITIES_PICKLED);
         }
@@ -77,6 +82,12 @@ public class JEROceanicExpanse extends JERBase implements IJERIntegration {
             tropicalFish.setTropicalFishVariant(3);
             registerMob(tropicalFish, LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(Biomes.OCEAN), LootTableHandler.ENTITIES_TROPICAL_FISH);
             adjustCreatureRenderHook(tropicalFish.getClass());
+        }
+
+        if(jerConfig.enableTropicalSlime && ConfigHandler.entity.tropicalSlime.enableTropicalSlime) {
+            EntityTropicalSlime tropicalSlime = new EntityTropicalSlime(world);
+            tropicalSlime.setSlimeSize(2, true);
+            registerMob(tropicalSlime, LightLevel.hostile, LootTableHandler.ENTITIES_TROPICAL_SLIME);
         }
 
         if(jerConfig.enableTurtle && ConfigHandler.entity.turtle.enableTurtle) {

@@ -13,14 +13,17 @@ import com.seriouscreeper.lootchests.LootChests;
 import com.sirsquidly.oe.Main;
 import com.tage.crimson_warfare.CrimsonWarfare;
 import com.tiviacz.pizzacraft.PizzaCraft;
-import com.unoriginal.ancientbeasts.AncientBeasts;
+import com.unoriginal.beastslayer.BeastSlayer;
 import crazypants.enderio.base.EnderIO;
 import electroblob.tfspellpack.TFSpellPack;
 import electroblob.wizardry.Wizardry;
+import elementalitems.ElementalItems;
 import familiarfauna.core.FamiliarFauna;
 import fathertoast.specialmobs.SpecialMobsMod;
 import gaia.GaiaReference;
+import hellfirepvp.astralsorcery.AstralSorcery;
 import jeresources.reference.Reference;
+import leviathan143.loottweaker.common.LootTweaker;
 import logictechcorp.netherex.NetherEx;
 import lykrast.harvestersnight.common.HarvestersNight;
 import mezz.jei.config.Constants;
@@ -43,9 +46,10 @@ import javax.annotation.Nullable;
 
 public enum ModIds {
     ANIMANIA(ConstantIds.ANIMANIA, ConstantNames.ANIMANIA),
+    ASTRAL_SORCERY(ConstantIds.ASTRAL_SORCERY, ConstantNames.ASTRAL_SORCERY),
     ATUM(ConstantIds.ATUM, ConstantNames.ATUM),
     BEAR_WITH_ME(ConstantIds.BEAR_WITH_ME, ConstantNames.BEAR_WITH_ME),
-    BEAST_SLAYER(ConstantIds.BEAST_SLAYER_BETA, ConstantNames.BEAST_SLAYER_BETA, ConstantVersions.BEAST_SLAYER_BETA),
+    BEAST_SLAYER(ConstantIds.BEAST_SLAYER, ConstantNames.BEAST_SLAYER, ConstantVersions.BEAST_SLAYER),
     BETWEENLANDS(ConstantIds.BETWEENLANDS, ConstantNames.BETWEENLANDS),
     BEWITCHMENT(ConstantIds.BEWITCHMENT, ConstantNames.BEWITCHMENT),
     BOTANIA(ConstantIds.BOTANIA, ConstantNames.BOTANIA),
@@ -63,11 +67,12 @@ public enum ModIds {
     HARVESTERS_NIGHT(ConstantIds.HARVESTERS_NIGHT, ConstantNames.HARVESTERS_NIGHT),
     ICE_AND_FIRE(ConstantIds.ICE_AND_FIRE, ConstantNames.ICE_AND_FIRE),
     INDUSTRIAL_FOREGOING(ConstantIds.INDUSTRIAL_FOREGOING, ConstantNames.INDUSTRIAL_FOREGOING),
+    LOOT_TWEAKER(ConstantIds.LOOTTWEAKER, ConstantNames.LOOTTWEAKER),
     MORETWEAKER(ConstantIds.MORETWEAKER, ConstantNames.MORETWEAKER),
     MOWZIES_MOBS(ConstantIds.MOWZIES_MOBS, ConstantNames.MOWZIES_MOBS),
     MUTANT_BEASTS(ConstantIds.MUTANT_BEASTS, ConstantNames.MUTANT_BEASTS),
     NETHEREX(ConstantIds.NETHEREX, ConstantNames.NETHEREX),
-    OCEANIC_EXPANSE(ConstantIds.OCEANIC_EXPANSE, ConstantNames.OCEANIC_EXPANSE),
+    OCEANIC_EXPANSE(ConstantIds.OCEANIC_EXPANSE, ConstantNames.OCEANIC_EXPANSE, ConstantVersions.OCEANIC_EXPANSE),
     QUARK(ConstantIds.QUARK, ConstantNames.QUARK),
     PIZZACRAFT(ConstantIds.PIZZACRAFT, ConstantNames.PIZZACRAFT),
     RATS(ConstantIds.RATS, ConstantNames.RATS),
@@ -127,9 +132,10 @@ public enum ModIds {
         public static final String ANIMANIA = Animania.MODID;
         public static final String ANIMANIA_EXTRA = "extra";
         public static final String ANIMANIA_FARM = "farm";
+        public static final String ASTRAL_SORCERY = AstralSorcery.MODID;
         public static final String ATUM = com.teammetallurgy.atum.utils.Constants.MOD_ID;
         public static final String BEAR_WITH_ME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_ID;
-        public static final String BEAST_SLAYER_BETA = AncientBeasts.MODID;
+        public static final String BEAST_SLAYER = BeastSlayer.MODID;
         public static final String BETWEENLANDS = ModInfo.ID;
         public static final String BEWITCHMENT = Bewitchment.MODID;
         public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_ID;
@@ -169,16 +175,21 @@ public enum ModIds {
         public static final String WADDLES = com.girafi.waddles.utils.Reference.MOD_ID;
 
         //Non-JER Mods
+        public static final String ELEMENTAL_ITEMS = ElementalItems.MOD_ID;
         public static final String LIVINGENCHANTMENT = LivingEnchantment.MODID;
+        public static final String LOOTTABLETWEAKER = net.darkhax.lttweaker.libs.Constants.MODID;
+        public static final String LOOTTWEAKER = LootTweaker.MODID;
+        public static final String MYSTCRAFT = "mystcraft";
     }
 
     public static class ConstantNames {
         public static final String ANIMANIA = Animania.NAME;
         public static final String ANIMANIA_EXTRA = ANIMANIA + " - Extra";
         public static final String ANIMANIA_FARM = ANIMANIA + " - Farm";
+        public static final String ASTRAL_SORCERY = AstralSorcery.NAME;
         public static final String ATUM = com.teammetallurgy.atum.utils.Constants.MOD_NAME;
         public static final String BEAR_WITH_ME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_NAME;
-        public static final String BEAST_SLAYER_BETA = AncientBeasts.NAME;
+        public static final String BEAST_SLAYER = BeastSlayer.NAME;
         public static final String BETWEENLANDS = ModInfo.NAME;
         public static final String BEWITCHMENT = Bewitchment.NAME;
         public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_NAME;
@@ -217,12 +228,14 @@ public enum ModIds {
 
         //Non-JER Mods
         public static final String LIVINGENCHANTMENT = LivingEnchantment.NAME;
+        public static final String LOOTTWEAKER = LootTweaker.MODNAME;
 
         //Used by config template
         public static final String TEMPLATE = "Template";
     }
 
     public static class ConstantVersions {
-        public static final String BEAST_SLAYER_BETA = "(,"+ AncientBeasts.VERSION +"]";
+        public static final String BEAST_SLAYER = "[1.9.99999,)";
+        public static final String OCEANIC_EXPANSE = "[1.1.0,)";
     }
 }

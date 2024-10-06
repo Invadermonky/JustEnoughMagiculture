@@ -18,6 +18,9 @@ jem.squashed.text=Squashed
 jem.notSquashed.text=Not Squashed
 
 # Dungeon JER Strings
+#   Astral Sorcery
+dungeon.astralsorcery:chest_shrine.name=Astral Shrine
+dungeon.astralsorcery:shooting_star.name=Shooting Star
 #   Atum 2
 dungeon.atum:crate.name=Deadwood Crate
 dungeon.atum:crate_bonus.name=Rare Deadwood Crate
@@ -78,10 +81,11 @@ dungeon.netherex:base_village.name=Pigtificate Village
 dungeon.netherex:ghast_queen_shrine.name=Ghast Queen Shrine
 #   Oceanic Expanse
 dungeon.oe:crab_dig.name=Crab Digging
+dungeon.oe:monument_mystic.name=Mystic Monument
 dungeon.oe:shell_sand.name=Shelly Sand
 dungeon.oe:shipwreck_map.name=Shipwreck Map
-dungeon.oe:shipwreck_supply.name=Shipwreck Supply
-dungeon.oe:shipwreck_treasure.name=Shipwreck Treasure
+dungeon.oe:shipwreck_supply.name=Supply Shipwreck
+dungeon.oe:shipwreck_treasure.name=Treasure Shipwreck
 #   Quark
 dungeon.quark:archaeologist.name=Archaeologist's Chest
 dungeon.quark:buried_treasure.name=Buried Treasure

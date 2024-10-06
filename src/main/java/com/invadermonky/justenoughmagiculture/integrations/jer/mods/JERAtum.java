@@ -249,7 +249,7 @@ public class JERAtum extends JERBase implements IJERIntegration {
         }
 
         if(jerConfig.JER_MOBS.enableScarab) {
-            registerMob(new EntityScarab(world), LightLevel.any, BiomeHelper.getBiomeNamesForTypes(AtumBiomes.BiomeTags.ATUM), AtumLootTables.CAMEL);
+            registerMob(new EntityScarab(world), LightLevel.any, BiomeHelper.getBiomeNamesForTypes(AtumBiomes.BiomeTags.ATUM), AtumLootTables.SCARAB);
         }
 
         if(jerConfig.JER_MOBS.enableTarantula) {

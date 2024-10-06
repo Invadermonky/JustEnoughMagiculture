@@ -1,6 +1,5 @@
 package com.invadermonky.justenoughmagiculture.integrations.jer.mods;
 
-import com.invadermonky.justenoughmagiculture.JustEnoughMagiculture;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.configs.mods.JEMConfigTwilightForest;
 import com.invadermonky.justenoughmagiculture.integrations.jer.IJERIntegration;
@@ -110,7 +109,7 @@ public class JERTwilightForest extends JERBase implements IJERIntegration {
         if(jerConfig.enableQuestingRam) {
             registerDungeonLoot(
                     TWILIGHT_FOREST.MOD_ID + ":entities/quest_ram_rewards",
-                    "dungeon." + JustEnoughMagiculture.MOD_ALIAS + ":" + TWILIGHT_FOREST.MOD_ID + ".quest_ram_rewards",
+                    StringHelper.getDungeonTranslationKey(TWILIGHT_FOREST.MOD_ID, "quest_ram_rewards"),
                     new ResourceLocation(TWILIGHT_FOREST.MOD_ID, "entities/questing_ram_rewards")
             );
         }

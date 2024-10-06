@@ -27,7 +27,7 @@ public class JEMConfigThaumcraft {
     public static class JEI {
         //public boolean enableJEIInfernalFurnaceCategory = true;
         public boolean enableJEILootBags = true;
-        @Comment("Removes potion loot from Loot Bags drops to reduce spam.")
+        @Comment("Removes potion loot display from JEI Loot Bag category to reduce spam.")
         public boolean removePotionLoot = true;
     }
 

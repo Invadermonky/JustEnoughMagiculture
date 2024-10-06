@@ -7,8 +7,8 @@ import com.invadermonky.justenoughmagiculture.integrations.jer.JERBase;
 import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
 import com.invadermonky.justenoughmagiculture.util.ModIds;
 import com.invadermonky.justenoughmagiculture.util.StringHelper;
-import com.unoriginal.ancientbeasts.config.AncientBeastsConfig;
-import com.unoriginal.ancientbeasts.entity.Entities.*;
+import com.unoriginal.beastslayer.config.BeastSlayerConfig;
+import com.unoriginal.beastslayer.entity.Entities.*;
 import jeresources.api.conditionals.LightLevel;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.EntityLiving;
@@ -33,7 +33,7 @@ public class JERBeastSlayer extends JERBase implements IJERIntegration {
 
     @Override
     public void registerModEntities() {
-        if(jerConfig.enableBonepile && AncientBeastsConfig.bonepileSpawnChance > 0) {
+        if(jerConfig.enableBonepile && BeastSlayerConfig.bonepileSpawnChance > 0) {
             registerMob(new EntityBonepile(world), LightLevel.hostile, EntityBonepile.LOOT);
             registerRenderHook(EntityBonepile.class, ((renderInfo, e) -> {
                 GlStateManager.scale(1.3,1.3,1.3);
@@ -45,7 +45,7 @@ public class JERBeastSlayer extends JERBase implements IJERIntegration {
             registerMob(new EntityBoulderer(world), LightLevel.hostile, LootTableList.ENTITIES_ZOMBIE);
         }
 
-        if(jerConfig.enableDamcell && AncientBeastsConfig.damcellSpawnChance > 0) {
+        if(jerConfig.enableDamcell && BeastSlayerConfig.damcellSpawnChance > 0) {
             registerMob(new EntityDamcell(world), LightLevel.hostile, EntityDamcell.LOOT);
             registerRenderHook(EntityDamcell.class, ((renderInfo, e) -> {
                 GlStateManager.translate(-0.05,-0.8, 0);
@@ -98,7 +98,7 @@ public class JERBeastSlayer extends JERBase implements IJERIntegration {
             adjustHumanoidRenderHook(EntityRiftedEnderman.class);
         }
 
-        if(jerConfig.enableSandMonster && AncientBeastsConfig.isSandmonsterEnabled) {
+        if(jerConfig.enableSandMonster && BeastSlayerConfig.sandmonsterSpawnChance > 0) {
             registerMob(new EntitySandy(world), LightLevel.hostile, BiomeHelper.getBiomeNamesForBiomes(Biomes.DESERT, Biomes.DESERT_HILLS), EntitySandy.LOOT);
             registerRenderHook(EntitySandy.class, ((renderInfo, e) -> {
                 GlStateManager.translate(-0.08,0.3, 0);
@@ -111,7 +111,7 @@ public class JERBeastSlayer extends JERBase implements IJERIntegration {
         }
 
         if(jerConfig.enableZealot) {
-            if(AncientBeastsConfig.zealotSpawnEverywhere) {
+            if(BeastSlayerConfig.zealotSpawnEverywhere) {
                 registerMob(new EntityZealot(world), LightLevel.hostile, EntityZealot.LOOT);
             } else {
                 registerMob(new EntityZealot(world), LightLevel.hostile, BiomeHelper.getBiomeNamesForTypes(Type.SPOOKY), EntityZealot.LOOT);

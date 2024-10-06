@@ -36,10 +36,12 @@ public class JEMConfigOceanicExpanse {
         public boolean enableCrab = true;
         public boolean enableDrowned = true;
         public boolean enableGlowSquid = true;
+        public boolean enableLobster = true;
         public boolean enablePickled = true;
         public boolean enablePufferfish = true;
         public boolean enableSalmon = true;
         public boolean enableTropicalFish = true;
+        public boolean enableTropicalSlime = true;
         public boolean enableTurtle = true;
     }
 }

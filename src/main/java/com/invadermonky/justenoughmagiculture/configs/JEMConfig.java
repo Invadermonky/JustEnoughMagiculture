@@ -47,13 +47,16 @@ public class JEMConfig {
     @Comment(ConstantNames.ANIMANIA_FARM + " JER integration configuration.")
     public static final JEMConfigAnimaniaFarm ANIMANIA_FARM = new JEMConfigAnimaniaFarm();
 
+    @Comment(ConstantNames.ASTRAL_SORCERY + " JER integration configuration.")
+    public static final JEMConfigAstralSorcery ASTRAL_SORCERY = new JEMConfigAstralSorcery();
+
     @Comment(ConstantNames.ATUM + " JER integration configuration.")
     public static final JEMConfigAtum ATUM = new JEMConfigAtum();
 
     @Comment(ConstantNames.BEAR_WITH_ME + " JER integration configuration.")
     public static final JEMConfigBearWithMe BEAR_WITH_ME = new JEMConfigBearWithMe();
 
-    @Comment(ConstantNames.BEAST_SLAYER_BETA + " JER integration configuration.")
+    @Comment(ConstantNames.BEAST_SLAYER + " JER integration configuration.")
     public static final JEMConfigBeastSlayer BEAST_SLAYER = new JEMConfigBeastSlayer();
 
     @Comment(ConstantNames.BEWITCHMENT + " JER integration configuration.")
