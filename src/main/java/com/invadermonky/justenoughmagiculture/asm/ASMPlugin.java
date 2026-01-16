@@ -5,6 +5,7 @@ import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import javax.annotation.Nullable;
 import java.util.Map;
 
+//TODO: Swamp out ASM for Mixins
 @IFMLLoadingPlugin.MCVersion(value = "1.12.2")
 @IFMLLoadingPlugin.TransformerExclusions({"com.invadermonky.justenoughmagiculture.asm"})
 public class ASMPlugin implements IFMLLoadingPlugin {

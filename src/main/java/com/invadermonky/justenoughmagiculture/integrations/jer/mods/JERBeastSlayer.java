@@ -9,13 +9,21 @@ import com.invadermonky.justenoughmagiculture.util.ModIds;
 import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import com.unoriginal.beastslayer.config.BeastSlayerConfig;
 import com.unoriginal.beastslayer.entity.Entities.*;
+import com.unoriginal.beastslayer.init.ModItems;
+import jeresources.api.conditionals.Conditional;
 import jeresources.api.conditionals.LightLevel;
+import jeresources.api.drop.LootDrop;
+import jeresources.util.LootTableHelper;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.init.Biomes;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.common.BiomeDictionary.Type;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class JERBeastSlayer extends JERBase implements IJERIntegration {
     JEMConfigBeastSlayer.JER jerConfig = JEMConfig.BEAST_SLAYER.JUST_ENOUGH_RESOURCES;
@@ -55,7 +63,22 @@ public class JERBeastSlayer extends JERBase implements IJERIntegration {
         }
 
         if(jerConfig.enableFrostwalker) {
-            registerMob(new EntityFrostWalker(world), LightLevel.hostile, BiomeHelper.getBiomeNamesForTypes(Type.SNOWY), LootTableList.ENTITIES_ZOMBIE);
+            List<LootDrop> whiteDrops = new ArrayList<>(LootTableHelper.toDrops(world, LootTableList.ENTITIES_ZOMBIE));
+            List<LootDrop> redDrops = new ArrayList<>(whiteDrops);
+            whiteDrops.add(new LootDrop(new ItemStack(ModItems.ICE_WAND), 1, 1, 0.25f, Conditional.playerKill));
+            whiteDrops.add(new LootDrop(new ItemStack(ModItems.ICE_DART), 0, 2, 1.0f));
+            redDrops.add(new LootDrop(new ItemStack(ModItems.ICE_WAND_RED), 1, 1, 0.25f, Conditional.playerKill));
+            redDrops.add(new LootDrop(new ItemStack(ModItems.ICE_DART, 1, 1), 0, 2, 1.0f));
+
+            EntityFrostWalker whiteWalker = new EntityFrostWalker(world);
+            whiteWalker.setVariant(0);
+            registerMob(whiteWalker, LightLevel.hostile, BiomeHelper.getBiomeNamesForTypes(Type.SNOWY), whiteDrops.toArray(new LootDrop[0]));
+
+            EntityFrostWalker redWalker = new EntityFrostWalker(world);
+            redWalker.setVariant(1);
+            registerMob(redWalker, LightLevel.hostile, BiomeHelper.getBiomeNamesForTypes(Type.SNOWY), redDrops.toArray(new LootDrop[0]));
+
+
             registerRenderHook(EntityFrostWalker.class, ((renderInfo, e) -> {
                 GlStateManager.scale(1.3,1.3,1.3);
                 GlStateManager.translate(0.1,0,0);

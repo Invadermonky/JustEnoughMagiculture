@@ -41,6 +41,16 @@ public class InitIntegration {
     private static void initJERMods() {
         /* Zee Minecraft is special boi */ new JERMinecraft(MINECRAFT.enableJERMobs, MINECRAFT.enableJERPlants);
 
+        /* TODO: New Mods
+            - Aether Legacy - https://www.curseforge.com/minecraft/mc-mods/aether
+            - Aether Continuation - https://www.curseforge.com/minecraft/mc-mods/aether-addon
+            - Aether II - https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included
+            - The Betweenlands - https://www.curseforge.com/minecraft/mc-mods/angry-pixel-the-betweenlands-mod
+            - Bosses of Mass Destruction - https://www.curseforge.com/minecraft/mc-mods/unofficial-bosses-of-mass-destruction-dungeon
+            - Deeper Depths - https://www.curseforge.com/minecraft/mc-mods/deeper-depths
+            - Scape and Run: Parasites - https://www.curseforge.com/minecraft/mc-mods/scape-and-run-parasites
+         */
+
         if(ModIds.ANIMANIA.isLoaded) {
             if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_EXTRA)) new JERAnimaniaExtra(ANIMANIA_EXTRA.enableJERMobs);
             if(AddonHandler.isAddonLoaded(ModIds.ConstantIds.ANIMANIA_FARM)) new JERAnimaniaFarm(ANIMANIA_FARM.enableJERMobs);

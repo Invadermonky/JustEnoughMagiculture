@@ -7,6 +7,7 @@ import com.invadermonky.justenoughmagiculture.util.ModIds.ConstantVersions;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -22,7 +23,7 @@ public class JustEnoughMagiculture {
     public static final String MOD_ID = "justenoughmagiculture";
     public static final String MOD_ALIAS = "jem";
     public static final String MOD_NAME = "Just Enough Magiculture";
-    public static final String MOD_VERSION = "1.12.2-1.2.0";
+    public static final String MOD_VERSION = "1.12.2-1.3.0";
     public static final String MC_VERSION = "[1.12.2]";
     public static final String DEPENDENCIES = (
             "required-after:" + ConstantIds.JUSTENOUGHITEMS + "@[4.7.0,)" +
@@ -99,5 +100,11 @@ public class JustEnoughMagiculture {
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit(event);
         LogHelper.debug("Finished postInit phase.");
+    }
+
+    @Mod.EventHandler
+    public void loadComplete(FMLLoadCompleteEvent event) {
+        //TODO: See if I can move everything to load complete to avoid the glue eater mods.
+
     }
 }
