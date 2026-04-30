@@ -3,7 +3,6 @@ package com.invadermonky.justenoughmagiculture;
 import com.invadermonky.justenoughmagiculture.proxy.CommonProxy;
 import com.invadermonky.justenoughmagiculture.util.LogHelper;
 import com.invadermonky.justenoughmagiculture.util.ModIds.ConstantIds;
-import com.invadermonky.justenoughmagiculture.util.ModIds.ConstantVersions;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -31,7 +30,7 @@ public class JustEnoughMagiculture {
                     ";after:" + ConstantIds.ANIMANIA +
                     ";after:" + ConstantIds.ATUM +
                     ";after:" + ConstantIds.BEAR_WITH_ME +
-                    ";after:" + ConstantIds.BEAST_SLAYER + "@" + ConstantVersions.BEAST_SLAYER +
+                    ";after:" + ConstantIds.BEAST_SLAYER +
                     ";after:" + ConstantIds.BETWEENLANDS +
                     ";after:" + ConstantIds.BEWITCHMENT +
                     ";after:" + ConstantIds.BOTANIA +

@@ -1,46 +1,10 @@
 package com.invadermonky.justenoughmagiculture.util;
 
-import chumbanotz.mutantbeasts.MutantBeasts;
-import cofh.thermalfoundation.ThermalFoundation;
-import com.animania.Animania;
-import com.bewitchment.Bewitchment;
-import com.bobmowzie.mowziesmobs.MowziesMobs;
-import com.clownvin.livingenchantment.LivingEnchantment;
-import com.github.alexthe666.iceandfire.IceAndFire;
-import com.github.alexthe666.rats.RatsMod;
-import com.github.voxelfriend.rusticthaumaturgy.core.RusticThaumaturgy;
-import com.seriouscreeper.lootchests.LootChests;
-import com.sirsquidly.oe.Main;
-import com.tage.crimson_warfare.CrimsonWarfare;
-import com.tiviacz.pizzacraft.PizzaCraft;
-import com.unoriginal.beastslayer.BeastSlayer;
-import crazypants.enderio.base.EnderIO;
-import electroblob.tfspellpack.TFSpellPack;
-import electroblob.wizardry.Wizardry;
-import elementalitems.ElementalItems;
-import familiarfauna.core.FamiliarFauna;
-import fathertoast.specialmobs.SpecialMobsMod;
-import gaia.GaiaReference;
-import hellfirepvp.astralsorcery.AstralSorcery;
-import jeresources.reference.Reference;
-import leviathan143.loottweaker.common.LootTweaker;
-import logictechcorp.netherex.NetherEx;
-import lykrast.harvestersnight.common.HarvestersNight;
-import mezz.jei.config.Constants;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.LoaderException;
 import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.common.versioning.VersionParser;
 import net.minecraftforge.fml.common.versioning.VersionRange;
-import rustic.core.Rustic;
-import svenhjol.charm.Charm;
-import team.cqr.cqrepoured.CQRMain;
-import thaumcraft.Thaumcraft;
-import thebetweenlands.common.lib.ModInfo;
-import thecodex6824.thaumicaugmentation.api.ThaumicAugmentationAPI;
-import thedarkcolour.futuremc.FutureMC;
-import twilightforest.TwilightForestMod;
-import vazkii.quark.base.lib.LibMisc;
 
 import javax.annotation.Nullable;
 
@@ -49,7 +13,7 @@ public enum ModIds {
     ASTRAL_SORCERY(ConstantIds.ASTRAL_SORCERY, ConstantNames.ASTRAL_SORCERY),
     ATUM(ConstantIds.ATUM, ConstantNames.ATUM),
     BEAR_WITH_ME(ConstantIds.BEAR_WITH_ME, ConstantNames.BEAR_WITH_ME),
-    BEAST_SLAYER(ConstantIds.BEAST_SLAYER, ConstantNames.BEAST_SLAYER, ConstantVersions.BEAST_SLAYER),
+    BEAST_SLAYER(ConstantIds.BEAST_SLAYER, ConstantNames.BEAST_SLAYER),
     BETWEENLANDS(ConstantIds.BETWEENLANDS, ConstantNames.BETWEENLANDS),
     BEWITCHMENT(ConstantIds.BEWITCHMENT, ConstantNames.BEWITCHMENT),
     BOTANIA(ConstantIds.BOTANIA, ConstantNames.BOTANIA),
@@ -129,113 +93,112 @@ public enum ModIds {
 
 
     public static class ConstantIds {
-        public static final String ANIMANIA = Animania.MODID;
+        public static final String ANIMANIA = "animania";
         public static final String ANIMANIA_EXTRA = "extra";
         public static final String ANIMANIA_FARM = "farm";
-        public static final String ASTRAL_SORCERY = AstralSorcery.MODID;
-        public static final String ATUM = com.teammetallurgy.atum.utils.Constants.MOD_ID;
-        public static final String BEAR_WITH_ME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_ID;
-        public static final String BEAST_SLAYER = BeastSlayer.MODID;
-        public static final String BETWEENLANDS = ModInfo.ID;
-        public static final String BEWITCHMENT = Bewitchment.MODID;
-        public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_ID;
-        public static final String CHARM = Charm.MOD_ID;
-        public static final String CHOCOLATE_QUEST = CQRMain.MODID;
-        public static final String CRIMSON_WARFARE = CrimsonWarfare.MODID;
-        public static final String ENDER_IO = EnderIO.MODID;
-        public static final String EREBUS = erebus.lib.Reference.MOD_ID;
-        public static final String EB_WIZARDRY = Wizardry.MODID;
-        public static final String EB_WIZARDRY_TF = TFSpellPack.MODID;
-        public static final String FAMILIAR_FAUNA = FamiliarFauna.MOD_ID;
-        public static final String FUTURE_MC = FutureMC.ID;
-        public static final String GRIMOIRE_OF_GAIA = GaiaReference.MOD_ID;
-        public static final String HARVESTCRAFT = com.pam.harvestcraft.Reference.MODID;
-        public static final String HARVESTERS_NIGHT = HarvestersNight.MODID;
-        public static final String ICE_AND_FIRE = IceAndFire.MODID;
-        public static final String INDUSTRIAL_FOREGOING = com.buuz135.industrial.utils.Reference.MOD_ID;
-        public static final String JUSTENOUGHITEMS = Constants.MOD_ID;
-        public static final String JUSTENOUGHRESOURCES = Reference.ID;
+        public static final String ASTRAL_SORCERY = "astralsorcery";
+        public static final String ATUM = "atum";
+        public static final String BEAR_WITH_ME = "bearwithme";
+        public static final String BEAST_SLAYER = "ancientbeasts";
+        public static final String BETWEENLANDS = "thebetweenlands";
+        public static final String BEWITCHMENT = "bewitchment";
+        public static final String BOTANIA = "botania";
+        public static final String CHARM = "charm";
+        public static final String CHOCOLATE_QUEST = "cqrepoured";
+        public static final String CRIMSON_WARFARE = "crimsonwarfare";
+        public static final String ENDER_IO = "enderio";
+        public static final String EREBUS = "erebus";
+        public static final String EB_WIZARDRY = "ebwizardry";
+        public static final String EB_WIZARDRY_TF = "tfspellpack";
+        public static final String FAMILIAR_FAUNA = "familiarfauna";
+        public static final String FUTURE_MC = "futuremc";
+        public static final String GRIMOIRE_OF_GAIA = "grimoireofgaia";
+        public static final String HARVESTCRAFT = "harvestcraft";
+        public static final String HARVESTERS_NIGHT = "harvestersnight";
+        public static final String ICE_AND_FIRE = "iceandfire";
+        public static final String INDUSTRIAL_FOREGOING = "industrialforegoing";
+        public static final String JUSTENOUGHITEMS = "jei";
+        public static final String JUSTENOUGHRESOURCES = "jeresources";
         public static final String MORETWEAKER = "moretweaker";
-        public static final String MOWZIES_MOBS = MowziesMobs.MODID;
-        public static final String MUTANT_BEASTS = MutantBeasts.MOD_ID;
-        public static final String NETHEREX = NetherEx.MOD_ID;
-        public static final String OCEANIC_EXPANSE = Main.MOD_ID;
-        public static final String PIZZACRAFT = PizzaCraft.MODID;
-        public static final String QUARK = LibMisc.MOD_ID;
-        public static final String RATS = RatsMod.MODID;
+        public static final String MOWZIES_MOBS = "mowziesmobs";
+        public static final String MUTANT_BEASTS = "mutantbeasts";
+        public static final String NETHEREX = "netherex";
+        public static final String OCEANIC_EXPANSE = "oe";
+        public static final String PIZZACRAFT = "pizzacraft";
+        public static final String QUARK = "quark";
+        public static final String RATS = "rats";
         public static final String ROGUELIKE_DUNGEONS = "roguelike";
-        public static final String RUSTIC = Rustic.MODID;
-        public static final String RUSTIC_THAUMATURGY = RusticThaumaturgy.MODID;
-        public static final String SERIOUS_LOOT_CHESTS = LootChests.MODID;
-        public static final String SPECIAL_MOBS = SpecialMobsMod.MOD_ID;
-        public static final String THAUMCRAFT = Thaumcraft.MODID;
-        public static final String THAUMIC_AUGMENTATION = ThaumicAugmentationAPI.MODID;
-        public static final String THERMAL_FOUNDATION = ThermalFoundation.MOD_ID;
-        public static final String TWILIGHT_FOREST = TwilightForestMod.ID;
-        public static final String WADDLES = com.girafi.waddles.utils.Reference.MOD_ID;
+        public static final String RUSTIC = "rustic";
+        public static final String RUSTIC_THAUMATURGY = "rusticthaumaturgy";
+        public static final String SERIOUS_LOOT_CHESTS = "lootchests";
+        public static final String SPECIAL_MOBS = "specialmobs";
+        public static final String THAUMCRAFT = "thaumcraft";
+        public static final String THAUMIC_AUGMENTATION = "thaumicaugmentation";
+        public static final String THERMAL_FOUNDATION = "thermalfoundation";
+        public static final String TWILIGHT_FOREST = "twilightforest";
+        public static final String WADDLES = "waddles";
 
         //Non-JER Mods
-        public static final String ELEMENTAL_ITEMS = ElementalItems.MOD_ID;
-        public static final String LIVINGENCHANTMENT = LivingEnchantment.MODID;
-        public static final String LOOTTABLETWEAKER = net.darkhax.lttweaker.libs.Constants.MODID;
-        public static final String LOOTTWEAKER = LootTweaker.MODID;
+        public static final String ELEMENTAL_ITEMS = "elementalitems";
+        public static final String LIVINGENCHANTMENT = "livingenchantment";
+        public static final String LOOTTABLETWEAKER = "lttweaker";
+        public static final String LOOTTWEAKER = "loottweaker";
         public static final String MYSTCRAFT = "mystcraft";
     }
 
     public static class ConstantNames {
-        public static final String ANIMANIA = Animania.NAME;
+        public static final String ANIMANIA = "Animania";
         public static final String ANIMANIA_EXTRA = ANIMANIA + " - Extra";
         public static final String ANIMANIA_FARM = ANIMANIA + " - Farm";
-        public static final String ASTRAL_SORCERY = AstralSorcery.NAME;
-        public static final String ATUM = com.teammetallurgy.atum.utils.Constants.MOD_NAME;
-        public static final String BEAR_WITH_ME = com.mrtrollnugnug.bearwithme.lib.Constants.MOD_NAME;
-        public static final String BEAST_SLAYER = BeastSlayer.NAME;
-        public static final String BETWEENLANDS = ModInfo.NAME;
-        public static final String BEWITCHMENT = Bewitchment.NAME;
-        public static final String BOTANIA = vazkii.botania.common.lib.LibMisc.MOD_NAME;
-        public static final String CHARM = Charm.MOD_NAME;
+        public static final String ASTRAL_SORCERY = "Astral Sorcery";
+        public static final String ATUM = "atum";
+        public static final String BEAR_WITH_ME = "Bear With Me";
+        public static final String BEAST_SLAYER = "Beast Slayer";
+        public static final String BETWEENLANDS = "The Betweenlands";
+        public static final String BEWITCHMENT = "Bewitchment";
+        public static final String BOTANIA = "Botania";
+        public static final String CHARM = "Charm";
         public static final String CHOCOLATE_QUEST = "Chocolate Quest: Repoured";
-        public static final String CRIMSON_WARFARE = CrimsonWarfare.NAME;
-        public static final String EB_WIZARDRY = Wizardry.NAME;
-        public static final String EB_WIZARDRY_TF = TFSpellPack.NAME;
-        public static final String ENDER_IO = EnderIO.MOD_NAME;
-        public static final String EREBUS = erebus.lib.Reference.MOD_NAME;
-        public static final String FAMILIAR_FAUNA = FamiliarFauna.MOD_NAME;
-        public static final String FUTURE_MC = FutureMC.NAME;
-        public static final String GRIMOIRE_OF_GAIA = GaiaReference.MOD_NAME;
-        public static final String HARVESTERS_NIGHT = HarvestersNight.NAME;
-        public static final String HARVESTCRAFT = com.pam.harvestcraft.Reference.NAME;
-        public static final String ICE_AND_FIRE = IceAndFire.NAME;
-        public static final String INDUSTRIAL_FOREGOING = com.buuz135.industrial.utils.Reference.NAME;
+        public static final String CRIMSON_WARFARE = "Crimson Warfare";
+        public static final String EB_WIZARDRY = "Electroblob's Wizardry";
+        public static final String EB_WIZARDRY_TF = "Electroblob's Wizardry: Twilight Forest Spell Pack";
+        public static final String ENDER_IO = "Ender IO";
+        public static final String EREBUS = "Erebus";
+        public static final String FAMILIAR_FAUNA = "FamiliarFauna";
+        public static final String FUTURE_MC = "Future MC";
+        public static final String GRIMOIRE_OF_GAIA = "Grimoire of Gaia 3";
+        public static final String HARVESTERS_NIGHT = "Harvester's Night";
+        public static final String HARVESTCRAFT = "Pam's HarvestCraft";
+        public static final String ICE_AND_FIRE = "Ice And Fire";
+        public static final String INDUSTRIAL_FOREGOING = "Industrial Foregoing";
         public static final String MORETWEAKER = "MoreTweaker";
-        public static final String MOWZIES_MOBS = MowziesMobs.NAME;
+        public static final String MOWZIES_MOBS = "Mowzie's Mobs";
         public static final String MUTANT_BEASTS = "Mutant Beasts";
-        public static final String NETHEREX = NetherEx.NAME;
-        public static final String OCEANIC_EXPANSE = Main.NAME;
-        public static final String PIZZACRAFT = PizzaCraft.NAME;
-        public static final String QUARK = LibMisc.MOD_NAME;
-        public static final String RATS = RatsMod.NAME;
+        public static final String NETHEREX = "NetherEx";
+        public static final String OCEANIC_EXPANSE = "Oceanic Expanse";
+        public static final String PIZZACRAFT = "PizzaCraft";
+        public static final String QUARK = "Quark: RotN Edition";
+        public static final String RATS = "Rats: Rebirth of the Plague";
         public static final String ROGUELIKE_DUNGEONS = "Roguelike Dungeons";
-        public static final String RUSTIC = Rustic.NAME;
-        public static final String RUSTIC_THAUMATURGY = RusticThaumaturgy.NAME;
+        public static final String RUSTIC = "Rustic";
+        public static final String RUSTIC_THAUMATURGY = "Rustic Thaumaturgy";
         public static final String SERIOUS_LOOT_CHESTS = "SeriousCreepers Loot Chests";
-        public static final String SPECIAL_MOBS = SpecialMobsMod.NAME;
-        public static final String THAUMCRAFT = Thaumcraft.MODNAME;
-        public static final String THAUMIC_AUGMENTATION = ThaumicAugmentationAPI.NAME;
-        public static final String THERMAL_FOUNDATION = ThermalFoundation.MOD_NAME;
-        public static final String TWILIGHT_FOREST = TwilightForestMod.NAME;
-        public static final String WADDLES = com.girafi.waddles.utils.Reference.MOD_NAME;
+        public static final String SPECIAL_MOBS = "Special Mobs";
+        public static final String THAUMCRAFT = "Thaumcraft";
+        public static final String THAUMIC_AUGMENTATION = "Thaumic Augmentation";
+        public static final String THERMAL_FOUNDATION = "Thermal Foundation";
+        public static final String TWILIGHT_FOREST = "The Twilight Forest";
+        public static final String WADDLES = "Waddles";
 
         //Non-JER Mods
-        public static final String LIVINGENCHANTMENT = LivingEnchantment.NAME;
-        public static final String LOOTTWEAKER = LootTweaker.MODNAME;
+        public static final String LIVINGENCHANTMENT = "Living Enchantment";
+        public static final String LOOTTWEAKER = "LootTweaker";
 
         //Used by config template
         public static final String TEMPLATE = "Template";
     }
 
     public static class ConstantVersions {
-        public static final String BEAST_SLAYER = "[1.9.99999,)";
         public static final String OCEANIC_EXPANSE = "[1.1.0,)";
     }
 }
