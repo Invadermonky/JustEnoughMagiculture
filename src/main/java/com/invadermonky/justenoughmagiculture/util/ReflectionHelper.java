@@ -1,7 +1,6 @@
 package com.invadermonky.justenoughmagiculture.util;
 
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.fml.relauncher.FMLLaunchHandler;
