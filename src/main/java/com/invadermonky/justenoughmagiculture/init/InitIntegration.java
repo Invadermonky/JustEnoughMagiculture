@@ -3,6 +3,7 @@ package com.invadermonky.justenoughmagiculture.init;
 import com.animania.common.handler.AddonHandler;
 import com.invadermonky.justenoughmagiculture.configs.JEMConfig;
 import com.invadermonky.justenoughmagiculture.integrations.jer.mods.*;
+import com.invadermonky.justenoughmagiculture.util.LogHelper;
 import com.invadermonky.justenoughmagiculture.util.ModIds;
 import jeresources.api.*;
 import jeresources.util.LootTableHelper;
@@ -58,7 +59,12 @@ public class InitIntegration {
         if(ModIds.ASTRAL_SORCERY.isLoaded) new JERAstralSorcery(ASTRAL_SORCERY.enableJERDungeons);
         if(ModIds.ATUM.isLoaded) new JERAtum(ATUM.enableJERDungeons, ATUM.enableJERMobs, ATUM.enableJERPlants, ATUM.enableJERVillagers);
         if(ModIds.BEAR_WITH_ME.isLoaded) new JERBearWithMe(BEAR_WITH_ME.enableJERMobs);
-        if(ModIds.BEAST_SLAYER.isLoaded) new JERBeastSlayer(BEAST_SLAYER.enableJERDungeons, BEAST_SLAYER.enableJERMobs);
+        try {
+            if (ModIds.BEAST_SLAYER.isLoaded) new JERBeastSlayer(BEAST_SLAYER.enableJERDungeons, BEAST_SLAYER.enableJERMobs);
+        } catch (Throwable throwable) {
+            LogHelper.error("Failed to load Beast Slayer integration.");
+            throwable.printStackTrace(System.err);
+        }
         if(ModIds.BEWITCHMENT.isLoaded) new JERBewitchment(BEWITCHMENT.enableJERMobs, BEWITCHMENT.enableJERPlants, BEWITCHMENT.enableJERVillagers);
         if(ModIds.BOTANIA.isLoaded) new JERBotania(BOTANIA.enableJERMobs);
         if(ModIds.CHARM.isLoaded) new JERCharm(CHARM.enableJERDungeons, CHARM.enableJERMobs);
