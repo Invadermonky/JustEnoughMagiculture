@@ -1,5 +1,6 @@
 package com.invadermonky.justenoughmagiculture.util;
 
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;
@@ -26,20 +27,27 @@ public class ReflectionHelper {
         return method;
     }
 
-    public static ResourceLocation getLootTable(EntityLivingBase entityLiving) {
+    public static ResourceLocation getLootTable(EntityLiving entityLiving) {
         try {
             String lootMethodName = isObfuscated ? "func_184647_J" : "getLootTable";
+            Method getLootMethod;
             if(!methodCache.containsKey(lootMethodName)) {
-                methodCache.put(lootMethodName, entityLiving.getClass().getDeclaredMethod(lootMethodName));
+                try {
+                    getLootMethod = entityLiving.getClass().getDeclaredMethod(lootMethodName);
+                } catch (Exception ignored) {
+                    getLootMethod = entityLiving.getClass().getSuperclass().getDeclaredMethod(lootMethodName);
+                }
+                methodCache.put(lootMethodName, getLootMethod);
+            } else {
+                getLootMethod = methodCache.get(lootMethodName);
             }
-            Method getLootMethod = methodCache.get(lootMethodName);
             if(!getLootMethod.isAccessible()) {
                 getLootMethod.setAccessible(true);
             }
             return (ResourceLocation) getLootMethod.invoke(entityLiving);
         } catch (Exception e) {
             LogHelper.error("Failed to retrieve loot table for " + entityLiving.getName());
-            e.printStackTrace(System.err);
+            LogHelper.error(e.getMessage());
         }
         return LootTableList.EMPTY;
     }

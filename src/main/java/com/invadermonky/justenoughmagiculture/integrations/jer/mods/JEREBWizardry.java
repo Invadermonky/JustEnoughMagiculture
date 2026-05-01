@@ -52,43 +52,43 @@ public class JEREBWizardry extends JERBase implements IJERIntegration {
         if(jerConfig.enableRemnantEarth) {
             EntityRemnant earthRemnant = new EntityRemnant(world);
             earthRemnant.setElement(Element.EARTH);
-            registerMob(earthRemnant, LightLevel.hostile, ReflectionHelper.getLootTable(earthRemnant));
+            registerMob(earthRemnant, LightLevel.hostile, new ResourceLocation(ModIds.EB_WIZARDRY.MOD_ID, "entities/remnant/" + earthRemnant.getElement().getName()));
         }
 
         if(jerConfig.enableRemnantFire) {
             EntityRemnant fireRemnant = new EntityRemnant(world);
             fireRemnant.setElement(Element.FIRE);
-            registerMob(fireRemnant, LightLevel.hostile, ReflectionHelper.getLootTable(fireRemnant));
+            registerMob(fireRemnant, LightLevel.hostile, new ResourceLocation(ModIds.EB_WIZARDRY.MOD_ID, "entities/remnant/" + fireRemnant.getElement().getName()));
         }
 
         if(jerConfig.enableRemnantHealing) {
             EntityRemnant healingRemnant = new EntityRemnant(world);
             healingRemnant.setElement(Element.HEALING);
-            registerMob(healingRemnant, LightLevel.hostile, ReflectionHelper.getLootTable(healingRemnant));
+            registerMob(healingRemnant, LightLevel.hostile, new ResourceLocation(ModIds.EB_WIZARDRY.MOD_ID, "entities/remnant/" + healingRemnant.getElement().getName()));
         }
 
         if(jerConfig.enableRemnantIce) {
             EntityRemnant iceRemanant = new EntityRemnant(world);
             iceRemanant.setElement(Element.ICE);
-            registerMob(iceRemanant, LightLevel.hostile, ReflectionHelper.getLootTable(iceRemanant));
+            registerMob(iceRemanant, LightLevel.hostile, new ResourceLocation(ModIds.EB_WIZARDRY.MOD_ID, "entities/remnant/" + iceRemanant.getElement().getName()));
         }
 
         if(jerConfig.enableRemnantLightning) {
             EntityRemnant lightningRemnant = new EntityRemnant(world);
             lightningRemnant.setElement(Element.LIGHTNING);
-            registerMob(lightningRemnant, LightLevel.hostile, ReflectionHelper.getLootTable(lightningRemnant));
+            registerMob(lightningRemnant, LightLevel.hostile, new ResourceLocation(ModIds.EB_WIZARDRY.MOD_ID, "entities/remnant/" + lightningRemnant.getElement().getName()));
         }
 
         if(jerConfig.enableRemnantNecromancy) {
             EntityRemnant necromancyRemnant = new EntityRemnant(world);
             necromancyRemnant.setElement(Element.NECROMANCY);
-            registerMob(necromancyRemnant, LightLevel.hostile, ReflectionHelper.getLootTable(necromancyRemnant));
+            registerMob(necromancyRemnant, LightLevel.hostile, new ResourceLocation(ModIds.EB_WIZARDRY.MOD_ID, "entities/remnant/" + necromancyRemnant.getElement().getName()));
         }
 
         if(jerConfig.enableRemnantSorcery) {
             EntityRemnant sorceryRemnant = new EntityRemnant(world);
             sorceryRemnant.setElement(Element.SORCERY);
-            registerMob(sorceryRemnant, LightLevel.hostile, ReflectionHelper.getLootTable(sorceryRemnant));
+            registerMob(sorceryRemnant, LightLevel.hostile, new ResourceLocation(ModIds.EB_WIZARDRY.MOD_ID, "entities/remnant/" + sorceryRemnant.getElement().getName()));
         }
     }
 
