@@ -2,7 +2,7 @@
 
 ## Changelog
 
-## 1.12.2-1.2.1
+## 1.12.2-1.2.2
 - Added Throwable catch for Beast Slayer (should futureproof issues with the mod)
 - Added missing Beast Slayer drops Frostwalker JER page
 - Added Oceanic Expanse clam and dolphin JER entries
