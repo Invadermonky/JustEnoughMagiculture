@@ -32,8 +32,10 @@ public class JEMConfigOceanicExpanse {
     @Comment("JEM " + MOD_NAME + " Just Enough Resources settings.")
     public JER JUST_ENOUGH_RESOURCES = new JER();
     public static class JER {
+        public boolean enableClam = true;
         public boolean enableCod = true;
         public boolean enableCrab = true;
+        public boolean enableDolphin = true;
         public boolean enableDrowned = true;
         public boolean enableGlowSquid = true;
         public boolean enableLobster = true;

@@ -2,6 +2,14 @@
 
 ## Changelog
 
+## 1.12.2-1.2.1
+- Added Throwable catch for Beast Slayer (should futureproof issues with the mod)
+- Added missing Beast Slayer drops Frostwalker JER page
+- Added Oceanic Expanse clam and dolphin JER entries
+- Fixed errors when creating EBWizardry Remnant entries
+- Removed version check for Beast Slayer
+<br><br>
+
 ### 1.12.2-1.2.0
 - Added Astral Sorcery integration
 - Added new Oceanic Expanse mobs (version 1.1.x)

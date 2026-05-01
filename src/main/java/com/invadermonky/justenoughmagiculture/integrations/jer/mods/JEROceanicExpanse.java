@@ -8,13 +8,20 @@ import com.invadermonky.justenoughmagiculture.util.BiomeHelper;
 import com.invadermonky.justenoughmagiculture.util.ModIds;
 import com.invadermonky.justenoughmagiculture.util.StringHelper;
 import com.sirsquidly.oe.entity.*;
+import com.sirsquidly.oe.init.OEItems;
 import com.sirsquidly.oe.util.handlers.ConfigHandler;
 import com.sirsquidly.oe.util.handlers.LootTableHandler;
 import jeresources.api.conditionals.LightLevel;
+import jeresources.api.drop.LootDrop;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.init.Biomes;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class JEROceanicExpanse extends JERBase implements IJERIntegration {
     JEMConfigOceanicExpanse.JER jerConfig = JEMConfig.OCEANIC_EXPANSE.JUST_ENOUGH_RESOURCES;
@@ -42,6 +49,14 @@ public class JEROceanicExpanse extends JERBase implements IJERIntegration {
 
     @Override
     public void registerModEntities() {
+        if(jerConfig.enableClam && ConfigHandler.entity.clam.enableClam) {
+            List<LootDrop> drops = new ArrayList<>();
+            drops.add(new LootDrop(new ItemStack(Blocks.GRAVEL), 0.5f));
+            if(ConfigHandler.item.pearl.enablePearl)
+                drops.add(new LootDrop(new ItemStack(OEItems.PEARL), 0.05f));
+            registerMob(new EntityClam(world), LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(Biomes.OCEAN), drops.toArray(new LootDrop[0]));
+        }
+
         if(jerConfig.enableCod && ConfigHandler.entity.cod.enableCod) {
             registerMob(new EntityCod(world), LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(Biomes.OCEAN), LootTableHandler.ENTITIES_COD);
             adjustCreatureRenderHook(EntityCod.class);
@@ -49,6 +64,10 @@ public class JEROceanicExpanse extends JERBase implements IJERIntegration {
 
         if(jerConfig.enableCrab && ConfigHandler.entity.crab.enableCrab) {
             registerMob(new EntityCrab(world), LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(Biomes.BEACH), LootTableHandler.ENTITIES_CRAB);
+        }
+
+        if(jerConfig.enableDolphin && ConfigHandler.entity.dolphin.enableDolphin) {
+            registerMob(new EntityDolphin(world), LightLevel.any, BiomeHelper.getBiomeNamesForBiomes(Biomes.OCEAN), LootTableHandler.ENTITIES_DOLPHIN);
         }
 
         if(jerConfig.enableDrowned && ConfigHandler.entity.drowned.enableDrowned) {
